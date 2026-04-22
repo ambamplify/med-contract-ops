@@ -1,0 +1,34 @@
+# Secrets — never commit
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+credentials.json
+secrets/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Logs (local-only; DAILY_CHANGES.md is checked in)
+*.log
+logs/*.log
+
+# 1Password CLI temp
+.op-*
+
+# Node / Python artifacts
+node_modules/
+__pycache__/
+*.pyc
+dist/
+build/
+
+# macOS Finder
+.Spotlight-V100
+.Trashes

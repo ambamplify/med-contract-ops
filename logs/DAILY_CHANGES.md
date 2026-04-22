@@ -1,0 +1,97 @@
+# MedContractIntel — Daily Changes Log
+
+Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here with timestamp, actor, summary. Perplexity + Claude Code both write. Read top-down.
+
+---
+
+## 2026-04-22 (Tuesday) — Day 0 pre-flight
+
+### Evening
+
+**[18:35 EDT] Claude Code (em-contract-ops thread) — Repo scaffolded**
+- Created `/Users/ambamplify/MedContractIntel/med-contract-ops/` with subdirs: ESCALATED, INBOX, logs, monitors, state
+- Moved `MEDCONTRACTINTEL_BLUEPRINT.md` from `~/Desktop/` → `~/MedContractIntel/`
+- Seeded template files: BUILD_STATUS.md, PHASE_STATUS.md (Day 0 + Day 1 hour-by-hour populated), CLAUDE_RESPONSE.md, COMPUTER_RESPONSE.md, PAUSE_ALL.md (empty), this file
+- No git init yet — deferred to Day 1 morning per blueprint §5 row 7
+
+**[evening EDT] Claude Code — med-ops-controller SKILL.md written**
+- Path: `~/.claude/scheduled-tasks/med-ops-controller/SKILL.md`
+- Target cron: `7 */4 * * *` (offset +10 min from em-ops-controller's `17 */4 * * *` to avoid Mac CPU collision)
+- iMessage digest on the 8:07 AM run only — other 5 runs do silent autonomous work
+- iMessage contact: +19167050598 (same as EMCI daily-digest)
+- **Registration blocked:** MCP `create_scheduled_task` is blocked from within a scheduled-task session. Owner must paste the script in `INBOX/register-med-ops-controller.md` into a fresh Claude Code session (2 min). Task is NOT yet registered with the scheduler — first autonomous run happens after owner registers it.
+
+**[evening EDT] Claude Code — Cross-reference in EMCI log**
+- Appended one-line pointer to `/Users/ambamplify/Desktop/em-contract-ops/logs/DAILY_CHANGES.md` noting MedCI birthed tonight, zero EMCI files touched.
+
+**[evening EDT] Claude Code — User-level memory updated**
+- New file: `~/.claude/projects/.../memory/project_medcontractintel_build.md`
+- MEMORY.md appended one line linking to it — both EMCI and MedCI sessions see it but scoped/tagged clearly
+
+### State at EOD
+- 5-day build window locked: Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27
+- Ops repo scaffolded, scheduled task live, blueprint v1.1 finalized
+- **All 3 Day 0 decisions resolved evening of 2026-04-22:**
+  - D0-6 pricing: confirmed $197/$97/$67/$47/$37 (same as blueprint)
+  - D0-7 NJ DBA: owner handles personally (no Claude Code dependency)
+  - D0-8 Better Stack: deferred post-launch (D1-23 removed)
+- No production assets created. Zero risk surface.
+- **Owner unavailable tomorrow Wed 2026-04-23.** Autonomous Day 1 will run via med-ops-controller; owner-only Day 1 items surface in ESCALATED/day1-owner.md for return.
+
+---
+
+2026-04-22 — Registered med-ops-controller scheduled task (cron: 7 */4 * * *, nextRunAt 2026-04-23T00:11:47Z). 15 em-* tasks verified intact.
+
+---
+
+## 2026-04-22 (Tuesday) — Day 0 late evening (post-registration, pre-Day-1 autonomous push)
+
+**[23:32 UTC / 19:32 EDT] Claude Code (thread session) — Cloudflare R2 bucket created**
+- Bucket `medci-social-media` created in Cloudflare account `2d8b35536675961ba3cd0fc7b56fa3cb` (ambamplify@gmail.com) via `mcp__cloudflare__r2_bucket_create`
+- Location: ENAM, Storage class: Standard, Jurisdiction: default
+- Completes D1-20 bucket-creation portion. Public domain attachment deferred to dashboard step (no MCP tool for R2 custom domains).
+- Pulled this item forward from 3:00 PM Day 1 → Day 0 pre-flight since it had zero dependencies and the MCP was already authorized.
+
+**[evening EDT] Claude Code (thread session) — Pre-populated ESCALATED/day1-owner.md**
+- Compiled 10 numbered owner-action items covering Day 1 🟣 (Owner) tasks: Google Workspace secondary domain + 8 aliases, NJ DBA, 4 1P vaults, Perplexity 1P service account, Drive folder tree, TikTok Business (Lesson #17), Kit signup, Buffer org, Sentry project, Reddit brand account.
+- Reply-shorthand convention documented: `1Y` / `1N` / `1 BLOCKER: text`, `PAUSE` / `RESUME`. Matches EMCI digest UX.
+- File referenced by BUILD_STATUS.md "Owner action queue" section and will be referenced by 8:07 AM digest on Day 1.
+
+**[evening EDT] Claude Code (thread session) — MCP capability audit**
+- Cloudflare MCP scope verified: R2, D1, KV, Workers, Hyperdrive, docs. **No DNS/zones MCP tool** — zone creation (D1-4) and record add (D1-5) require dashboard click-through or Claude-in-Chrome session, not autonomous MCP.
+- `wrangler` CLI not installed on this machine — fallback path requires either `brew install cloudflare-wrangler` + OAuth OR owner dashboard steps.
+- Cloudflare account `2d8b35536675961ba3cd0fc7b56fa3cb` set active for the session.
+- Existing R2 buckets: only `emci-social-media` (EMCI) until tonight's creation.
+- Scheduled tasks list verified: 15 `em-*` tasks intact + `med-ops-controller` registered (next run 00:11:47 UTC = 20:11 EDT tonight). Zero interference.
+
+### Outstanding blockers (documented for Day 1 autonomous runs)
+- **1Password CLI integration** not authenticated in current session — `op vault list` returns no-active-session. Blocks auto-creation of MedCI vaults + secret writes. Unblocks when owner signs in to 1P on the Mac OR enables Settings → Developer → Integrate with 1P CLI toggle.
+- **Google Workspace admin console** — admin.google.com required Google password reauth; per safety rules Claude cannot enter owner's password. Adding `medcontractintel.com` as secondary domain + 8 aliases is owner-blocked (captured in ESCALATED/day1-owner.md item #1).
+
+**[late evening EDT] Claude Code (thread session) — Cloudflare DNS live via signed-in JS POSTs**
+- Zone `medcontractintel.com` confirmed active (zone id `553606c979de315d54a696121a115c01`). Registrar: Cloudflare. NS: `lee.ns.cloudflare.com`, `yolanda.ns.cloudflare.com`.
+- Posted 3 DNS records via JS on the signed-in dash.cloudflare.com tab (no API token needed, no MCP coverage for DNS):
+  1. MX @ → `smtp.google.com` priority 1 — record id `9218770ec13fdb4b16bb6d97fd4d3786`
+  2. TXT @ → `v=spf1 include:_spf.google.com ~all` — record id `2348602bea61be57fd591ddfa576841c`
+  3. TXT `_dmarc` → `v=DMARC1; p=quarantine; rua=mailto:dmca@medcontractintel.com; ruf=mailto:dmca@medcontractintel.com; adkim=s; aspf=s` — record id `e04c17605408d5c500ae42f848c9d7af`
+- **Skipped tonight (waiting on other steps):** A/AAAA (no Railway IP until D2), DKIM (generated by Google after secondary-domain add), Google verification TXT (generated by Google admin at add-time), SPF expansion for Resend/SES (added after Resend domain verification).
+- Pulled D1-5 DNS partial forward to Day 0 evening. D1-4 zone creation = already done (domain purchased at Cloudflare registrar 2026-04-09).
+
+**[late evening EDT] Claude Code (thread session) — Lesson #19 added to blueprint (v1.2)**
+- Owner instruction captured: *"all original data for the content for EMCI was flawed. This was not discovered until claude chat reviewed the information. Claude chat write all content in opus mode. I need all content material to be reviewed by perplexity and claude chat in opus mode."*
+- Blueprint §4 lesson table expanded 18 → 19 rows. Lesson #19 = dual content review mandatory (Perplexity Gate 1 + Claude chat opus Gate 2) on every artifact before `approved` YAML.
+- Blueprint §10 Day 3 schedule amended: added explicit 9:45/10:15/4:45/5:15/7:45/8:15 review-gate slots. Content production at 10:40 now gated on 10:30 consolidated approval.
+- Blueprint §13 Launch Gates expanded 17 → 18. Gate 18 = "All launch content has passed dual review" — verified by reading `state/content-review-day3.md`.
+- BUILD_STATUS.md, PHASE_STATUS.md updated to reference 18 gates.
+- New file: `/Users/ambamplify/MedContractIntel/med-contract-ops/state/content-review-day3.md` — ledger for per-artifact review status. One row per artifact with `perplexity: PASS|FAIL|CONDITIONAL` and `claude-chat-opus: PASS|FAIL|CONDITIONAL` columns. Zero rows advance to approved without both PASS.
+- med-ops-controller SKILL.md updated: Standing context now references 19 lessons; added explicit cross-check that content items stay `pending` in PHASE_STATUS until the ledger shows dual PASS.
+- CLAUDE_RESPONSE.md: Perplexity's Day 1 brief now lists Gate 1 fact-check review as a mandatory lane (Launch Gate 18 evidence).
+- COMPUTER_RESPONSE.md: inbound directive written at top so the very next Perplexity MedCI Space session reads it first.
+
+**[late evening EDT] — ESCALATED/day1-owner.md updated downstream of Google-admin password block**
+- Item #1 (Google Workspace secondary domain + aliases) now notes that Claude attempted admin.google.com but hit password reauth. Path unchanged — owner completes on return. When Google provides the verification TXT, Claude can post it via same signed-in JS flow.
+
+### Outstanding blockers (documented for Day 1 autonomous runs)
+- **1Password CLI** not authenticated — blocks vault creation + secret writes. Unblocks when owner signs in or enables 1P CLI desktop integration.
+- **Google Workspace admin** — password reauth required; owner-only action.
+- **GitHub repo creation** (D1-12) — will attempt tonight via signed-in github.com Chrome tab; if not signed in, falls back to PAT path (which needs 1P unblock).
