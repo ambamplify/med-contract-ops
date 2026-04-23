@@ -6,6 +6,42 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ## 2026-04-23 (Wednesday) — Day 1: Legal + DNS + Infra Skeleton
 
+### 04:13 EDT — med-ops-controller 04:07 run — D2-5 Stripe products pulled forward
+
+**[04:13 EDT] ops-controller (automated) — Stripe products, prices, coupon, and payment links created (D2-5)**
+
+- **Blueprint clarification resolved:** COMPUTER_RESPONSE.md question 7 cited "Blueprint §8.2" for a separate MedCI Stripe account — §8.2 does not exist. Blueprint §2 gap analysis (line 98), §5 table (line 250), and Appendix A (line 854) all confirm: SAME Stripe account acct_1TEuuDRS3QYs0eSM. Proceeding on live account.
+- **5 products created** (all `livemode: true`):
+  - bundle: `prod_UO4a8a58qiED8T` ($197)
+  - analyzer: `prod_UO4a2irKl6Z49k` ($97)
+  - scripts: `prod_UO4aYFhkanuNpp` ($67)
+  - wrvu: `prod_UO4aJBAYjGjNv0` ($47)
+  - shift-economics: `prod_UO4aJ7yxy2HU6Z` ($37)
+- **5 prices created** (one_time, USD):
+  - `price_1TPIRdRS3QYs0eSM5WGjq1Z2` — bundle $197
+  - `price_1TPIRgRS3QYs0eSMMuh0VHUO` — analyzer $97
+  - `price_1TPIRjRS3QYs0eSMktAf6RkC` — scripts $67
+  - `price_1TPIRnRS3QYs0eSMRPjiX1o0` — wrvu $47
+  - `price_1TPIRqRS3QYs0eSMDLHGoEJW` — shift-economics $37
+- **1 coupon created**: `XlzbFyUR` — "Launch Week — 20% Off Bundle" (20% off, once)
+- **7 payment links created**:
+  - bundle/site: `plink_1TPISJRS3QYs0eSMA2sFb2u6` → https://buy.stripe.com/7sYdRbdBw58k58FggR3ZK0b
+  - analyzer/site: `plink_1TPISMRS3QYs0eSM0y5xbyxi` → https://buy.stripe.com/aFadRb1SO58kbx3c0B3ZK0c
+  - scripts/site: `plink_1TPISPRS3QYs0eSMHgfYSB6d` → https://buy.stripe.com/6oU9AV8hc58kbx32q13ZK0d
+  - wrvu/site: `plink_1TPISSRS3QYs0eSMYLmbzt3G` → https://buy.stripe.com/fZu7sN8hceIU0Sp8Op3ZK0e
+  - shift-economics/site: `plink_1TPISWRS3QYs0eSMURLFEUew` → https://buy.stripe.com/5kQ14p8hcfMY58Fc0B3ZK0f
+  - bundle/kit-welcome: `plink_1TPISaRS3QYs0eSMzTW6JVXs` → https://buy.stripe.com/3cIeVf9lgbwI1Wt4y93ZK0g
+  - bundle/tiktok-bio: `plink_1TPISdRS3QYs0eSMPEqW4Hah` → https://buy.stripe.com/00w6oJfJEasE6cJ2q13ZK0h
+- **All IDs written** to `state/stripe-ids.md`
+- **D2-5 marked done** in PHASE_STATUS.md; D2-2 is now unblocked (product IDs available)
+- **⚠ 3 Stripe dashboard follow-ups** required before launch (cannot be done via MCP):
+  1. Set `after_completion.redirect.url` = `https://medcontractintel.com/thank-you?session_id={CHECKOUT_SESSION_ID}` on ALL 7 payment links (Lesson #9 — critical, will break /thank-you if not done)
+  2. Apply coupon `XlzbFyUR` to links 6 (kit-welcome) and 7 (tiktok-bio)
+  3. Set coupon `XlzbFyUR` redeem_by = 2026-05-07 23:59 EDT
+  - Owner action: Stripe Dashboard → Payment Links → each link → Edit. Added to ESCALATED/day1-owner.md as item #11.
+- **iMessage MCP**: authorization denied (same as previous run). No owner messages processed.
+- BUILD_STATUS.md Stripe row updated: 🔴 NOT YET → 🟢 GREEN
+
 ### 00:13 EDT — med-ops-controller midnight run
 
 **[00:13 EDT] ops-controller (automated) — EMCI PDF residuals cleaned; DNS confirmed propagated**

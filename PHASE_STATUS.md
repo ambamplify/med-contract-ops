@@ -51,12 +51,12 @@
 
 ### Day 2 — Thursday 2026-04-24 (STRIPE + SITE DEPLOY)
 - [O] D2-1 Daily sync
-- [ ] D2-2 Integrate Stripe product IDs into site (blocked on D2-5)
+- [x] D2-2 Integrate Stripe product IDs into site (done 2026-04-23 04:13 EDT — pulled forward with D2-5)
 - [x] D2-3 Verify `cp -r server/pdfs dist/server/pdfs` in build (Lesson #2) — pre-verified 2026-04-22 late evening, already in package.json build script
 - [x] D2-4 Verify Stripe lazy-init in webhook (Lesson #3) — pre-verified 2026-04-22 late evening, `getStripe()` lazy-init at line 129 of stripe-webhook.ts
-- [ ] D2-5 Create Stripe products + prices + payment links via MCP (needs MedCI Stripe account — owner-downstream)
+- [x] D2-5 Create Stripe products + prices + payment links via MCP (pulled forward 2026-04-23 04:13 EDT)
 - [x] D2-6 `/checklist-thank-you` route split (Lesson #13) — pre-verified 2026-04-22 late evening, `public/checklist-thank-you/` separate from `public/thank-you/`
-- [~] D2-7 Stripe success URLs include `?session_id` (Lesson #9) — `/api/purchase-summary/:sessionId` endpoint exists; actual success_url set at D2-5 Payment Link creation time
+- [~] D2-7 Stripe success URLs include `?session_id` (Lesson #9) — endpoint exists; payment links created but after_completion redirect NOT settable via MCP. Owner must set on all 7 links via Stripe dashboard (see state/stripe-ids.md §FOLLOW-UP)
 - [ ] D2-8 Rebuild 4 IM PDFs with new palette
 - [ ] D2-9 Railway project create + env vars
 - [ ] D2-10 Deploy to Railway; verify 200 on key routes
@@ -139,12 +139,12 @@ Hour-by-hour populated 2026-04-22 late evening (Day 0 pull-forward by interactiv
 | Time | # | Task | Agent | Status |
 |---|---|---|---|---|
 | 7:00 | D2-1 | Daily sync — owner opens Claude Code + Perplexity; read BUILD_STATUS.md + this file first | 🟣 | pending |
-| 8:00 | D2-2 | ~~Finish med-contract-site string/color/logo swap~~ **Rebrand + palette DONE 2026-04-22 evening (commits 47d731a + 59becb7).** Remaining: integrate actual Stripe product IDs from D2-5 into `server/routes.ts` Stripe Payment Link map + analyzer.html checkout button wiring | 🔵 | pending |
+| 8:00 | D2-2 | ~~Finish med-contract-site string/color/logo swap~~ **Rebrand + palette DONE 2026-04-22 evening (commits 47d731a + 59becb7).** Remaining: integrate actual Stripe product IDs. | 🔵 | **done 2026-04-23 04:13 EDT** — stripe-webhook.ts PRODUCT_MAP + BUNDLE_PRODUCT_ID + new ANALYZER_PRODUCT_ID all updated to MedCI prod_* IDs. routes.ts PRODUCT_SLUG updated with all 5 products. Standalone analyzer payment-link purchase now grants credit correctly. |
 | 8:30 | D2-3 | Verify `cp -r server/pdfs dist/server/pdfs` is in build script (Lesson #2 — EMCI hot-bug) | 🔵 | **done 2026-04-22 late evening** — package.json build script: `vite build && esbuild ... && cp -r public dist/public && mkdir -p dist/server && cp -r server/pdfs dist/server/pdfs`. Pre-verified. |
 | 8:45 | D2-4 | Verify Stripe lazy-init inside webhook handler, NOT top-of-module (Lesson #3) | 🔵 | **done 2026-04-22 late evening** — `getStripe()` helper at line 129 of stripe-webhook.ts returns new Stripe(key) on demand; no module-scope Stripe initialization. Pre-verified. |
-| 9:00 | D2-5 | **Create Stripe products + prices + payment links via MCP** against `INBOX/stripe/products-prices-spec.json` (pre-specced Day 0). Capture all price IDs + payment-link URLs into `state/stripe-ids.md`. | 🔵 | pending — requires MedCI Stripe account (owner-gated per blueprint §8.2, Stripe MCP currently connected to EMCI acct_1TEuuDRS3QYs0eSM). Spec file pre-ready with all 5 products + coupon + 7 payment links. |
+| 9:00 | D2-5 | **Create Stripe products + prices + payment links via MCP** against `INBOX/stripe/products-prices-spec.json` (pre-specced Day 0). Capture all price IDs + payment-link URLs into `state/stripe-ids.md`. | 🔵 | **done 2026-04-23 04:13 EDT** — pulled forward. 5 products + 5 prices + 1 coupon (XlzbFyUR) + 7 payment links created on acct_1TEuuDRS3QYs0eSM (correct per blueprint §2). IDs in `state/stripe-ids.md`. ⚠ 3 follow-ups require Stripe dashboard (after_completion redirect, coupon on links 6+7, coupon expiry) — see state/stripe-ids.md FOLLOW-UP section. |
 | 9:30 | D2-6 | Create `/checklist-thank-you` route separate from `/thank-you` (Lesson #13 — EMCI hot-bug) | 🔵 | **done 2026-04-22 late evening** — `public/checklist-thank-you/` already a separate directory from `public/thank-you/` in the Phase A scaffold (inherited from EMCI pattern). Pre-verified. |
-| 10:00 | D2-7 | Set all Stripe payment link success URLs to include `?session_id={CHECKOUT_SESSION_ID}` (Lesson #9) | 🔵 | partial — `/api/purchase-summary/:sessionId` endpoint exists in routes.ts line 271 (reads real purchased items from Stripe); actual success_url must be set to `${origin}/thank-you?session_id={CHECKOUT_SESSION_ID}` at Payment Link creation time during D2-5. Spec updated 2026-04-22 to enforce. |
+| 10:00 | D2-7 | Set all Stripe payment link success URLs to include `?session_id={CHECKOUT_SESSION_ID}` (Lesson #9) | 🔵 | partial — endpoint exists; payment links created but MCP `create_payment_link` doesn't support after_completion parameter. Owner must update all 7 links in Stripe dashboard to redirect to `https://medcontractintel.com/thank-you?session_id={CHECKOUT_SESSION_ID}`. Flagged in state/stripe-ids.md §FOLLOW-UP #1. |
 | 10:30 | D2-8 | Rebuild 4 IM PDFs with new palette (bundle / RVU playbook / negotiation scripts / billing breakdown) via `make_og_image.py` + `make_thumbnail.py` + existing `server/pdf-report.ts` template — tokens now pull from brand palette | 🔵 | pending — prep done 2026-04-23 00:13 EDT: em-*.pdf renamed → med-*.pdf (placeholder MedCI PDFs committed, gitignore updated so Railway gets them). pdf-report.ts COLORS.navy fixed to medical-green [31,110,67]. Real IM content replaces placeholder at D2-8 once IM_DATA_2026.md populated. |
 | 11:00 | D2-9 | Create Railway project `medci-production`; connect ambamplify/med-contract-site repo; add env vars from `INBOX/site-scaffold/env-template.example` (Stripe secret, webhook secret, Resend, Kit, Anthropic, Sentry DSN) | 🔵 | pending |
 | 11:30 | D2-10 | Deploy to Railway; verify `medci-production.up.railway.app` returns 200 on homepage + /calculator + /analyzer | 🔵 | pending |

@@ -41,11 +41,11 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | Perplexity 1P service account | 🟡 OWNER-BLOCKED | ESCALATED #4 (downstream of 1P vault creation) |
 | TikTok Business accounts | 🟡 OWNER-BLOCKED | ESCALATED #6 (Lesson #17) |
 | Legal pages (privacy/terms/refund/disclaimer/dmca) | 🟢 DRAFTED | `INBOX/legal-pages-draft.md` (draft) + `INBOX/legal-pages/*.html` (5 drop-in files with README + cp script) — Day 2 site scaffold copies straight into `public/` |
-| Stripe products/prices spec (Day 2 pull-forward) | 🟢 SPECCED | `INBOX/stripe/products-prices-spec.json` — 5 products × 5 prices + 1 launch coupon + 7 Payment Links. JSON validated. Day 2 MCP-driven creation against this spec. |
+| Stripe products/prices spec (Day 2 pull-forward) | 🟢 EXECUTED | `INBOX/stripe/products-prices-spec.json` — executed 2026-04-23 04:13 EDT (Day 1 autonomous run). IDs in state/stripe-ids.md. |
 | Site scaffold runbook (Day 2 pull-forward) | 🟢 SPECCED | `INBOX/site-scaffold/RUNBOOK.md` (9-section plan) + `env-template.example` + `analysis-prompt-spec.md` (13-section IM rewrite). Day 2 runner executes against these; ~3hr of planning work pre-done. |
 | Content-review ledger (Lesson #19) | 🟢 PRE-POPULATED | `state/content-review-day3.md` — 27 tracked artifacts (15 TikTok + 3 YouTube + 1 text-lane placeholder + 8 site-copy rows). Launch Gate 18 denominator set. |
 | Kit email automations (Day 3 pull-forward) | 🟢 DRAFTED | `INBOX/kit/emails-spec.md` — 3 full HTML email drafts + automation wiring spec + Stripe→Kit tag bridge. Rides on owner Kit account creation Day 3 AM. |
-| Stripe products | 🔴 NOT YET | Day 2 (after pricing lock — already locked Day 0) |
+| Stripe products | 🟢 GREEN | 5 products + 5 prices + coupon XlzbFyUR + 7 payment links — acct_1TEuuDRS3QYs0eSM — IDs in state/stripe-ids.md. ⚠ 3 Stripe dashboard follow-ups (redirect URLs, coupon on links 6+7, coupon expiry) flagged for owner Day 2 |
 | Site deploy | 🔴 NOT YET | Day 2 |
 | Analyzer | 🔴 NOT YET | Day 3 |
 | Content pipeline | 🔴 NOT YET | Day 3 (Lesson #19 dual review gates baked into schedule) |

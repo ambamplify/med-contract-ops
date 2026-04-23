@@ -183,6 +183,36 @@ MedContractIntel/
 
 ---
 
+---
+
+### 11. Stripe Dashboard — 3 payment-link follow-ups (Lesson #9 + coupon wiring) ⚠ BEFORE LAUNCH
+
+**Why this matters:** Stripe MCP `create_payment_link` does not support `after_completion` redirect parameters. Without the `?session_id=` redirect, the /thank-you page can't identify what was purchased (EMCI 2026-04-15 bug).
+
+**Where:** https://dashboard.stripe.com/payment-links
+
+**Step A — after_completion redirect on ALL 7 payment links (CRITICAL — Lesson #9)**
+For each of the 7 payment links (IDs in `state/stripe-ids.md`):
+1. Click the link → Edit
+2. "After payment" section → select "Redirect customers to your website"
+3. URL: `https://medcontractintel.com/thank-you?session_id={CHECKOUT_SESSION_ID}`
+   ⚠ The `{CHECKOUT_SESSION_ID}` is a Stripe template variable — paste it literally, including the braces.
+4. Save
+
+**Step B — Apply LAUNCH20 coupon to links 6 & 7**
+Links 6 (kit-welcome) and 7 (tiktok-bio) should offer the LAUNCH20 discount:
+1. Click link → Edit
+2. "Promotions" → toggle "Allow promotion codes" ON (also enables customers to type any code)
+3. Alternatively: in "Discount" section, set default coupon to `XlzbFyUR`
+
+**Step C — Set coupon expiry**
+1. Dashboard → Products → Coupons → `XlzbFyUR` ("Launch Week — 20% Off Bundle")
+2. Edit → Redemption limits → set "Expire by" to 2026-05-07 23:59 EDT (launch + 10 days)
+
+**Log:** Reply `11Y` when all 3 steps complete on all 7 links.
+
+---
+
 ## ALREADY RESOLVED (Day 0 decisions locked — no owner action needed)
 
 - **Pricing** — $197 bundle / $97 analyzer / $67 scripts / $47 wRVU / $37 shift-economics (D0-6 confirmed 2026-04-22 evening)
