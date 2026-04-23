@@ -280,3 +280,29 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 **Effort saved Day 2:** ~2 hours of specialty-specific analysis, plus eliminates the risk of Claude-session-boundary drift on which benchmarks apply to which setting.
 
+
+## 2026-04-22 20:52 EDT — Kit email sequence pulled forward + 27th ledger row
+
+**Context:** Day 3 Kit setup has two unsolvable dependencies Day 0 can't touch (owner creates Kit account on admin@medcontractintel.com, Kit API key), but the *copy* of the 3 automation emails is pure content work — and content copy is exactly the thing Lesson #19 requires be reviewed under Perplexity + Claude-chat-opus dual gate. Drafting now gives both reviewers something concrete.
+
+**Actions:**
+- Created `INBOX/kit/emails-spec.md` — 5 sections:
+  1. Kit account setup steps (owner Day 3 AM)
+  2. Checklist-download welcome email (full HTML + plaintext + merge tags)
+  3. Bundle-purchase welcome email (full HTML)
+  4. 2-week analyzer follow-up email (full HTML)
+  5. Automation wiring spec (3 Kit automations, Stripe→Kit tag bridge)
+- Updated content-review ledger:
+  - `site-email-welcome` row → notes point at `INBOX/kit/emails-spec.md §1`
+  - `site-email-twoweek` row → notes point at `§2`
+  - **Added new row `site-email-bundle-welcome`** → notes point at `§3`. Ledger total now 27 rows.
+
+**Factual claims in Email #1 that require Perplexity Gate 1:**
+- "MGMA median IM panel is ~1,800 patients" → [TBD::mgma-im-panel-median]
+- "SHM industry standard is ~25%" (nocturnist differential) → [TBD::shm-nocturnist-differential]
+- "tail coverage ~$35K" → [TBD::tail-coverage-market-range midpoint]
+
+Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact numbers before Gate 1 PASS.
+
+**Effort saved Day 3:** ~45 min of email-copy authoring + automation design. Day 3 afternoon becomes: owner creates Kit account → Claude Code wires merge tags + imports HTML → fires 3 automations.
+

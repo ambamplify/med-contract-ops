@@ -67,8 +67,9 @@ Rows for the 15 TikTok hooks + 3 YouTube scripts are pre-populated below (from c
 | site-about | Site copy | /about founder bio + narrative | 🟣 Owner + Claude Code | pending | pending | no | Day 2 afternoon; requires owner input |
 | site-analysis-prompt | System prompt | server/analysis-prompt.ts (IM/Hospitalist rewrite) | Claude Code | pending | pending | no | Day 2 site scaffold RUNBOOK §4; blueprint §8.3 |
 | site-letter-template | System prompt | server/letter-docx.ts counter-proposal template | Claude Code | pending | pending | no | Day 2 site scaffold RUNBOOK §4 |
-| site-email-welcome | Email copy | Kit welcome email (post-checklist download) | Claude Code | pending | pending | no | Day 3 Kit setup |
-| site-email-twoweek | Email copy | 2-week analyzer follow-up automation | Claude Code | pending | pending | no | Day 3 Kit setup |
+| site-email-welcome | Email copy | Kit welcome email (post-checklist download) | Claude Code | pending | pending | no | Day 3 Kit setup; drafted INBOX/kit/emails-spec.md §1 |
+| site-email-twoweek | Email copy | 2-week analyzer follow-up automation | Claude Code | pending | pending | no | Day 3 Kit setup; drafted INBOX/kit/emails-spec.md §2 |
+| site-email-bundle-welcome | Email copy | Bundle-purchase welcome automation | Claude Code | pending | pending | no | Day 3 Kit setup; drafted INBOX/kit/emails-spec.md §3 |
 
 ---
 
