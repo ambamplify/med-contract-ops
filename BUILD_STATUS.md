@@ -30,7 +30,8 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | GitHub remote | 🟢 GREEN | `ambamplify/med-contract-ops` 4 commits; `ambamplify/med-contract-content` 2 commits (IM_DATA_2026.md skeleton + calendar template); `-site` empty shell until Day 2 scaffold |
 | IM_DATA_2026.md (SSOT) | 🟡 SKELETON | Structure in place, 0/~80 cells authoritative. Perplexity Day 1 Task 13 populates. Blueprint §7. |
 | Content calendar | 🟡 TEMPLATED | 15 TikTok + 3 YouTube rows pre-seeded with hooks + dates + data_cells refs. LinkedIn/X/Threads/IG/Substack empty. Day 3 7:00 PM populates text lanes. |
-| med-contract-site repo | 🟡 SCAFFOLDED | 2026-04-22 21:49 EDT — 64 files, initial commit `47d731a` pushed to `ambamplify/med-contract-site` main. EMCI forked + rebranded; analysis-prompt.ts fully rewritten for IM/Hospitalist with [TBD::cell] placeholders; legal pages dropped in. Railway deploy + Stripe product IDs + PDF rebuilds still pending Day 2 morning. |
+| med-contract-site repo | 🟡 SCAFFOLDED + REBRANDED | 2026-04-22 21:49 EDT — 64 files, initial commit `47d731a` pushed. 2026-04-22 ~22:45 EDT — brand palette migration committed as `59becb7` (green primary, trust-blue accent, gold kept, cream bg). Railway deploy + Stripe product IDs + PDF rebuilds still pending Day 2 morning. |
+| Brand palette | 🟢 GREEN | `state/brand-palette.md` (commit `4ace972`) — source of truth, WCAG AA audited, hard rules documented (gold is display-only). |
 | Railway project | 🔴 NOT YET | Day 2 |
 | Cloudflare DNS | 🟡 PARTIAL | MX + SPF + DMARC live; A/AAAA wait on Railway (Day 2), DKIM wait on Google secondary-domain add (owner) |
 | Cloudflare R2 (medci-social-media) | 🟢 GREEN | Bucket live since 2026-04-22 23:32 UTC. Public domain attach deferred to Day 1 dashboard step. |

@@ -6,6 +6,15 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ## 2026-04-22 (Tuesday) — Day 0 pre-flight
 
+### Late evening / overnight
+
+**[~22:45 EDT] Claude Code — Brand palette ratified + site migration complete**
+- Owner directive received earlier: "the colors for medcontract intel should be green and gold, with an accent color that increases trust."
+- Decision: Primary Medical Green `#1f6e43`, Secondary Insight Gold `#c9a84c` (shared with EMCI — sibling-product signal), Trust accent Clinical Blue `#0f4c75` (replaces EMCI teal — blue is universal medical trust color). Warm cream `#faf7f0` bg, green-shifted ink `#0a1f14`.
+- Source of truth: `state/brand-palette.md` (commit `4ace972`) — includes migration map, WCAG AA contrast audit, hard rules (gold is display-only, never body text — 2.14:1 contrast on cream; small links use trust-DEFAULT not trust-light).
+- Site migration (commit `59becb7` on `ambamplify/med-contract-site`): sed-based swap across 26 files. Fixed navy-dark regression (was identical to navy after sed; now correctly `#154d2f`). Tailwind `brand.*/gold/trust/cream/ink/muted` tokens exposed for semantic future use (legacy CSS var names `--navy/--teal` still in HTML inline styles — Day 2 cleanup to rename, not blocking).
+- Zero old-palette hex codes remaining in site code (grep-verified).
+
 ### Evening
 
 **[18:35 EDT] Claude Code (em-contract-ops thread) — Repo scaffolded**
