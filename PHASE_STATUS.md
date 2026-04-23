@@ -37,7 +37,7 @@
 - [x] D1-12 Create 3 GitHub repos
 - [x] D1-13 Git init + push med-contract-ops
 - [O] D1-14 Owner: register @medcontractintel TikTok Business
-- [~] D1-15 DNS propagation verify (partial, Day 2 24h re-check)
+- [x] D1-15 DNS propagation verify (MX/SPF/DMARC confirmed 2026-04-23 00:13 EDT)
 - [O] D1-16 Owner: Kit account signup
 - [O] D1-17 Owner: Buffer org + 5 socials OAuth
 - [O] D1-18 Owner: Sentry project
@@ -116,7 +116,7 @@ Pulled from blueprint §10 Day 1. All items `pending` until ops-controller or in
 | 11:00 | D1-12 | Create 3 GitHub repos: med-contract-ops, -content, -site | 🟢 | done — 2026-04-22 late evening, all 3 public (flip private after sudo email unblocked) |
 | 11:30 | D1-13 | Git init local med-contract-ops + push to GitHub | 🟢 | done — 2026-04-22 late evening, commit 3355dbd on main pushed to origin |
 | 11:45 | D1-14 | Owner: register @medcontractintel TikTok as BUSINESS account + convert @emcontractintel to Business (Lesson #17) | 🟣 | owner-blocked — ESCALATED item #6 |
-| 12:00 | D1-15 | Verify DNS propagation + mail-tester score | 🟢 | partial-check 2026-04-22 20:13 EDT — MX (`smtp.google.com` pri 1) ✅ PROPAGATING, SPF (`include:_spf.google.com ~all`) ✅ PROPAGATING, DMARC (`p=quarantine` adkim=s aspf=s) ✅ PROPAGATING, A/AAAA ⏳ waiting Railway IP (Day 2), DKIM ⏳ waiting owner Google Workspace secondary-domain add. Full 24h check Day 2. |
+| 12:00 | D1-15 | Verify DNS propagation + mail-tester score | 🟢 | **done 2026-04-23 00:13 EDT** — MX (`1 smtp.google.com.`) ✅ FULLY PROPAGATED, SPF (`v=spf1 include:_spf.google.com ~all`) ✅ FULLY PROPAGATED, DMARC (`p=quarantine; adkim=s; aspf=s`) ✅ FULLY PROPAGATED. A/AAAA ⏳ waiting Railway IP (Day 2). DKIM ⏳ waiting owner Google secondary-domain add (D1-6). |
 | 1:00 | D1-16 | Owner: sign up new Kit account on admin@medcontractintel.com, disable double opt-in | 🟣 | owner-blocked — ESCALATED item #7 (downstream of D1-7) |
 | 1:30 | D1-17 | Owner: create Buffer org, OAuth all 5 socials (TikTok Business) | 🟣 | owner-blocked — ESCALATED item #8 |
 | 2:00 | D1-18 | Owner: create Sentry project medcontractintel-production, save DSN | 🟣 | owner-blocked — ESCALATED item #9 |
@@ -145,7 +145,7 @@ Hour-by-hour populated 2026-04-22 late evening (Day 0 pull-forward by interactiv
 | 9:00 | D2-5 | **Create Stripe products + prices + payment links via MCP** against `INBOX/stripe/products-prices-spec.json` (pre-specced Day 0). Capture all price IDs + payment-link URLs into `state/stripe-ids.md`. | 🔵 | pending — requires MedCI Stripe account (owner-gated per blueprint §8.2, Stripe MCP currently connected to EMCI acct_1TEuuDRS3QYs0eSM). Spec file pre-ready with all 5 products + coupon + 7 payment links. |
 | 9:30 | D2-6 | Create `/checklist-thank-you` route separate from `/thank-you` (Lesson #13 — EMCI hot-bug) | 🔵 | **done 2026-04-22 late evening** — `public/checklist-thank-you/` already a separate directory from `public/thank-you/` in the Phase A scaffold (inherited from EMCI pattern). Pre-verified. |
 | 10:00 | D2-7 | Set all Stripe payment link success URLs to include `?session_id={CHECKOUT_SESSION_ID}` (Lesson #9) | 🔵 | partial — `/api/purchase-summary/:sessionId` endpoint exists in routes.ts line 271 (reads real purchased items from Stripe); actual success_url must be set to `${origin}/thank-you?session_id={CHECKOUT_SESSION_ID}` at Payment Link creation time during D2-5. Spec updated 2026-04-22 to enforce. |
-| 10:30 | D2-8 | Rebuild 4 IM PDFs with new palette (bundle / RVU playbook / negotiation scripts / billing breakdown) via `make_og_image.py` + `make_thumbnail.py` + existing `server/pdf-report.ts` template — tokens now pull from brand palette | 🔵 | pending |
+| 10:30 | D2-8 | Rebuild 4 IM PDFs with new palette (bundle / RVU playbook / negotiation scripts / billing breakdown) via `make_og_image.py` + `make_thumbnail.py` + existing `server/pdf-report.ts` template — tokens now pull from brand palette | 🔵 | pending — prep done 2026-04-23 00:13 EDT: em-*.pdf renamed → med-*.pdf (placeholder MedCI PDFs committed, gitignore updated so Railway gets them). pdf-report.ts COLORS.navy fixed to medical-green [31,110,67]. Real IM content replaces placeholder at D2-8 once IM_DATA_2026.md populated. |
 | 11:00 | D2-9 | Create Railway project `medci-production`; connect ambamplify/med-contract-site repo; add env vars from `INBOX/site-scaffold/env-template.example` (Stripe secret, webhook secret, Resend, Kit, Anthropic, Sentry DSN) | 🔵 | pending |
 | 11:30 | D2-10 | Deploy to Railway; verify `medci-production.up.railway.app` returns 200 on homepage + /calculator + /analyzer | 🔵 | pending |
 | 12:00 | D2-11 | Point medcontractintel.com Cloudflare zone A/AAAA at Railway IP (completes D1-5 partial); verify TLS auto-provisions | 🔵 | pending |

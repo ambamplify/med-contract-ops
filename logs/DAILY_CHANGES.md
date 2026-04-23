@@ -4,6 +4,23 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ---
 
+## 2026-04-23 (Wednesday) — Day 1: Legal + DNS + Infra Skeleton
+
+### 00:13 EDT — med-ops-controller midnight run
+
+**[00:13 EDT] ops-controller (automated) — EMCI PDF residuals cleaned; DNS confirmed propagated**
+- **D1-15 DONE**: DNS fully propagated — MX `1 smtp.google.com.` ✅, SPF `v=spf1 include:_spf.google.com ~all` ✅, DMARC `p=quarantine adkim=s aspf=s` ✅. A/AAAA pending Railway IP (Day 2). DKIM pending owner D1-6.
+- **med-contract-site commit `0e52218`** — 9 files changed (push to GitHub confirmed):
+  - `server/pdfs/`: em-*.pdf renamed → med-*.pdf with MedCI-named placeholder PDFs (real IM/Hospitalist content replaces at D2-8). Removed `server/pdfs/*.pdf` from .gitignore so Railway container receives PDFs on deploy.
+  - `server/stripe-webhook.ts`: PRODUCT_MAP PDF filenames updated (`em-rvu-playbook.pdf` → `med-wrvu-playbook.pdf`; `em-negotiation-script-pack.pdf` → `med-negotiation-script-pack.pdf`); all remaining `em-contract-ops` comment refs → `med-contract-ops`.
+  - `server/routes.ts`: uptime-webhook TODO comments `em-contract-ops` → `med-contract-ops`.
+  - `server/pdf-report.ts`: `COLORS.navy` RGB fixed from `[15,30,61]` (EMCI navy) → `[31,110,67]` (MedCI medical green). All generated analysis PDFs now have green header.
+  - `public/checklist/index.html`: free PDF redirect path `em-contract-red-flag-checklist.pdf` → `med-contract-red-flag-checklist.pdf`.
+- **iMessage MCP**: `get_unread_imessages` failed — authorization denied for `/Library/Messages/chat.db`. Owner should grant Messages access in System Settings → Privacy → Full Disk Access (or Automation) to Claude Code. No owner messages processed this run.
+- **Next**: 04:07 EDT run — DNS re-verify; check for owner iMessages; attempt Railway project init if Railway CLI session still active.
+
+---
+
 ## 2026-04-22 (Tuesday) — Day 0 pre-flight
 
 ### Late evening / overnight
