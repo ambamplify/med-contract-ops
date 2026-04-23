@@ -255,3 +255,28 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 **Day 3/4 reviewers can now:** open ledger → see exact list of what to review → change `pending` to PASS/FAIL/CONDITIONAL → move on.
 
+
+## 2026-04-22 20:46 EDT — analysis-prompt.ts IM rewrite spec pulled forward
+
+**Context:** The IM/Hospitalist rewrite of server/analysis-prompt.ts is the single most specialty-specific Day 2 deliverable — it's what makes the MedCI analyzer a real IM product vs. a EMCI paint job. Drafting the rewrite spec now means Day 2 afternoon becomes "execute this spec against the scaffolded file" instead of "figure out how to repurpose a 337-line EM-optimized prompt."
+
+**Actions:**
+- Created `INBOX/site-scaffold/analysis-prompt-spec.md` — 13-section detailed rewrite plan:
+  1. What stays identical (function signatures, JSON schema, state-law list)
+  2. Prose + language swaps (EM→IM/Hospitalist)
+  3. CPT code swaps (drop 99281-99292; add outpatient 99213-99215/99204-99205/G2211 + inpatient 99221-99233/99238-99239/99291)
+  4. getEmployerContext enum redesign (8 new employer types: Hospital System / Hospital Medicine Group / CMG / Private IM Group / Concierge / Academic / Federal / Locum)
+  5. 5 compensation-model branches (Salary / RVU / Encounter-based / Shift-Nocturnist / Capitation — up from EM's 3)
+  6. RVU multiplier analysis — 8 setting rows all TBD-referenced to IM_DATA_2026 cells
+  7. IntakeData schema extensions (panelSize, censusModel, encountersPerShift, shiftPattern, nocturnistRatio, academicRank, teachingService)
+  8. 10 new IM/Hospitalist-specific red-flag definitions
+  9. Non-compete IM-specific note (hospital-system + affiliates often broader than radius)
+  10. JSON schema additions (encounterBased / shiftBased / capitation blocks; panelSizeCommitment, censusCap)
+  11. USER_PROMPT_TEMPLATE swap
+  12. Fallback-value protocol when IM_DATA_2026 cells are still TBD on Day 2 (NEVER fabricate numbers — cite "benchmark verification in progress")
+  13. 14-item Day 2 PM executor checklist
+
+**Lesson #19 guardrail embedded in Section 12:** if Perplexity hasn't completed Task 13 cells by Day 2 PM, the prompt ships with an explicit "benchmark verification in progress" caveat rather than a fabricated number. Analyzer ships with integrity even if data isn't fully populated. Day 4 late-afternoon pass updates numbers when Perplexity closes out.
+
+**Effort saved Day 2:** ~2 hours of specialty-specific analysis, plus eliminates the risk of Claude-session-boundary drift on which benchmarks apply to which setting.
+
