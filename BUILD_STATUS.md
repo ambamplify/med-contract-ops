@@ -5,11 +5,16 @@
 ---
 
 ## Current phase
-**Day 0 → Day 1 bridge** (2026-04-22 late evening autonomous push complete)
+**Day 0 → Day 1 bridge** (2026-04-22 late evening autonomous push complete — extended pull-forward 20:15–20:52 EDT)
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 
-Owner is unavailable Wed 2026-04-23 AM. Autonomous push pulled forward D1-4, D1-5 (MX/SPF/DMARC), D1-12, D1-13, D1-20 (bucket), D1-21 (legal drafts) to Day 0 evening. Remaining Day 1 items are all owner-blocked or depend on unblocked items.
+Owner is unavailable Wed 2026-04-23 AM. Autonomous push pulled forward:
+- Day 1: D1-4, D1-5 (MX/SPF/DMARC), D1-12, D1-13, D1-15 (DNS check), D1-20 (bucket), D1-21 (legal drafts + split files).
+- Day 2: Stripe products/prices spec, site-scaffold runbook + env template, analysis-prompt.ts IM rewrite spec.
+- Day 3: content-review ledger pre-populated (27 rows), Kit email sequence (3 automations with full HTML).
+
+Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 
 ---
 
@@ -34,6 +39,10 @@ Owner is unavailable Wed 2026-04-23 AM. Autonomous push pulled forward D1-4, D1-
 | Perplexity 1P service account | 🟡 OWNER-BLOCKED | ESCALATED #4 (downstream of 1P vault creation) |
 | TikTok Business accounts | 🟡 OWNER-BLOCKED | ESCALATED #6 (Lesson #17) |
 | Legal pages (privacy/terms/refund/disclaimer/dmca) | 🟢 DRAFTED | `INBOX/legal-pages-draft.md` (draft) + `INBOX/legal-pages/*.html` (5 drop-in files with README + cp script) — Day 2 site scaffold copies straight into `public/` |
+| Stripe products/prices spec (Day 2 pull-forward) | 🟢 SPECCED | `INBOX/stripe/products-prices-spec.json` — 5 products × 5 prices + 1 launch coupon + 7 Payment Links. JSON validated. Day 2 MCP-driven creation against this spec. |
+| Site scaffold runbook (Day 2 pull-forward) | 🟢 SPECCED | `INBOX/site-scaffold/RUNBOOK.md` (9-section plan) + `env-template.example` + `analysis-prompt-spec.md` (13-section IM rewrite). Day 2 runner executes against these; ~3hr of planning work pre-done. |
+| Content-review ledger (Lesson #19) | 🟢 PRE-POPULATED | `state/content-review-day3.md` — 27 tracked artifacts (15 TikTok + 3 YouTube + 1 text-lane placeholder + 8 site-copy rows). Launch Gate 18 denominator set. |
+| Kit email automations (Day 3 pull-forward) | 🟢 DRAFTED | `INBOX/kit/emails-spec.md` — 3 full HTML email drafts + automation wiring spec + Stripe→Kit tag bridge. Rides on owner Kit account creation Day 3 AM. |
 | Stripe products | 🔴 NOT YET | Day 2 (after pricing lock — already locked Day 0) |
 | Site deploy | 🔴 NOT YET | Day 2 |
 | Analyzer | 🔴 NOT YET | Day 3 |
