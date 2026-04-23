@@ -109,3 +109,17 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 ### Blockers update
 - **GitHub sudo mode for `/settings` actions** — any settings change (visibility flip, SSH key add, collaborator changes) triggers email-code challenge to ambamplify@gmail.com. Connected Gmail MCP is service@emcontractintel.com, so Claude can't read the code autonomously. Owner-bound.
 - All other late-evening blockers unchanged (1Password CLI, Google Workspace admin).
+
+---
+
+**[late evening EDT] Claude Code (thread session) — Legal pages drafted to INBOX**
+- New file: `med-contract-ops/INBOX/legal-pages-draft.md` — 5 pages drafted MedCI-side, drop-in HTML: Privacy, Terms, Refund (full page w/ nav/footer), Disclaimer (NEW, EMCI didn't ship standalone), DMCA (NEW). Source = EMCI `public/pages/` + `public/refund/`.
+- Adaptations applied verbatim:
+  - Specialty language swap (EM → IM/Hospitalist throughout — RVU thresholds, nocturnist differential, census/panel-size, non-compete, tail).
+  - Benchmark source list rewritten: dropped ACEP (not IM-relevant); kept MGMA + CMS; added AAMC Faculty Salary Report, SHM State of Hospital Medicine, AMGA, Doximity Physician Compensation Report.
+  - Operating entity retained as AEBMD LLC (Delaware). NJ DBA flip to "AEBMD LLC dba MedContractIntel" noted as pending item #2 in ESCALATED.
+  - Footer links expanded to include Disclaimer + DMCA (EMCI launched with only Privacy + Terms visible in footer).
+  - "Not Legal Advice" section expanded to "Not Legal or Medical Advice" to cover the IM clinical-license angle.
+  - Refund language kept 30-day failure refund identical to EMCI.
+- Awaiting: Day 4 final-pass Claude-chat-opus compliance review (outside Lesson #19 content loop but owner-visible).
+- Not pushed yet to med-contract-site (that repo is still empty — scaffolds Day 2). Draft lives in ops repo until then.
