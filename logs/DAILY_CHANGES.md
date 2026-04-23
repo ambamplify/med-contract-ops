@@ -235,3 +235,23 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 **Lesson #19 flagged:** site hero copy, product-grid descriptions, analyzer FAQ, about-page founder bio all require dual review before launch. Those go through `state/content-review-day3.md` gating.
 
+
+## 2026-04-22 20:38 EDT — Content review ledger pre-populated with 26 artifact rows
+
+**Context:** Lesson #19 dual-review gate (Launch Gate 18) is the single biggest Day 5 go/no-go checkpoint. The ledger file existed with schema but no rows — Day 3 reviewers would have had to populate rows themselves. Pre-populating eliminates that friction.
+
+**Actions:** updated `state/content-review-day3.md` with:
+- 15 TikTok rows (tt-001 through tt-015) — IDs, hooks (verbatim from calendar YAML), data_cells_referenced in Notes, all perplexity/claude-chat-opus = pending, approved YAML = no
+- 3 YouTube rows (yt-m1/m2/m3) — titles, length targets, script_file paths
+- Placeholder row for Day 3 7:00 PM text-lane draft (LinkedIn/X/Threads/Substack)
+- 8 site user-facing copy rows (hero, product-grid, analyzer-faq, about, analysis-prompt, letter-template, email-welcome, email-twoweek) — these are content-adjacent per RUNBOOK Section 4 and require Lesson #19 review before launch
+
+**Total rows at launch: 26 tracked artifacts.**
+
+**Why this is safe:**
+- Table is write-only; only changes status columns, doesn't advance anything to `approved`.
+- Pre-filling `pending` for every cell is the correct default — advancement requires actual review to happen.
+- Adds the 8 site-copy rows the original ledger didn't contemplate; this closes a gap between RUNBOOK Section 4 and Launch Gate 18.
+
+**Day 3/4 reviewers can now:** open ledger → see exact list of what to review → change `pending` to PASS/FAIL/CONDITIONAL → move on.
+
