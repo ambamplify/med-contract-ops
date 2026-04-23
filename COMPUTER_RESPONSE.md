@@ -36,6 +36,48 @@ No Perplexity directives yet. First write expected Day 1 morning after owner ope
 
 ---
 
+## Claude Code status — 2026-04-22 23:50 EDT
+
+**Phase/Day:** Day 0 late evening → Day 1 pre-dawn bridge (blueprint §10). Second autonomous push since 23:20 handoff.
+
+**Completed this cycle (since 23:20 status block above):**
+- [x] Authority files amended with hard-stop escalation protocol per owner 23:30 EDT directive (commit `4a3ec9a` on med-contract-ops). `ZERO_QUESTION_CLAUDE.md` now has a "Hard-stop escalation protocol" section enumerating the 3-tier exhaustion chain before Pushover/iMessage is permitted. `WORKFLOW.md` Step 4 gained "Surface-switching rule" + "Hard-stop escalation" subsections codifying retry-once-then-switch-surface enforcement with a 3-strike ceiling.
+- [x] Perplexity Chrome tab ping landed 23:34 EDT (Lexical-editor stacked-paste artifact: input climbed to 1753 chars across retry attempts, but composite status submitted successfully — input cleared to 0 chars confirming send). Lesson logged in `DAILY_CHANGES.md` for future pings: use `dispatchEvent(new InputEvent('input', {inputType:'insertFromPaste', data:msg}))` instead of execCommand('delete').
+- [x] **Day 2 pre-execution pass** (commits `986aca8` on med-contract-site + `26ec81c` on med-contract-ops):
+  - D2-3 (Lesson #2 build-cp pdfs) → GREEN. `cp -r server/pdfs dist/server/pdfs` already in `package.json` build script.
+  - D2-4 (Lesson #3 Stripe lazy-init) → GREEN. `getStripe()` helper at line 129 of `stripe-webhook.ts`; no module-scope instantiation.
+  - D2-6 (Lesson #13 /checklist-thank-you split) → GREEN. Separate `public/checklist-thank-you/` dir in Phase A scaffold.
+  - D2-7 (Lesson #9 session_id success_url) → PARTIAL. `/api/purchase-summary/:sessionId` endpoint exists; codified `_payment_link_defaults.after_completion.redirect.url = .../thank-you?session_id={CHECKOUT_SESSION_ID}` into `INBOX/stripe/products-prices-spec.json` so the D2-5 MCP Payment Link creation emits the correct template.
+  - Bonus: fixed cross-project bug — `OPS_INBOX_DIR` on med-contract-site was still `/Users/ambamplify/Desktop/em-contract-ops/INBOX` (inherited from EMCI scaffold); corrected to MedCI repo path.
+
+**Just flipped GREEN in PHASE_STATUS.md:**
+- D2-3, D2-4, D2-6 (full GREEN)
+- D2-7 (partial; completes at D2-5 Payment Link creation)
+
+**Launch Gates (blueprint §13):**
+- GREEN: (still none fully — Launch Gates evaluate Day 5 morning; Day 0/1/2 pre-work are prerequisites)
+- RED: (none — no failed gate)
+- NOT-YET-IN-SCOPE: all 18 still pending by design
+- Gate 18 (Lesson #19 dual content review): denominator 27 artifacts, ledger initialized, review gates activate Day 3
+
+**Blockers I could not resolve with existing playbooks:** (none — everything blocked is Owner-only and already flagged)
+
+**Questions queued for Perplexity (still open from 23:20 block — act on these as if from owner):**
+1. `IM_DATA_2026.md` v1 readiness timeline — analyzer prompt + 4 PDFs + 15 TikTok scripts have `[TBD::cell-name]` render-fail placeholders waiting on this.
+2. Cross-promote EMCI content to MedCI with data-cell swaps, or keep 100% original?
+3. 16-scheduled-task list confirmed (my enumeration in `state/automation.md` omits `med-reddit-poster` since brand Reddit silent first 30 days)?
+4. Day 4 cron offsets +20min from `em-*` equivalents OK?
+5. DKIM coexistence sanity check (Google `google._domainkey` vs Resend `resend._domainkey` — different selectors, should be non-conflicting)?
+6. IG Reels first post on Day 5 launch via Buffer automatic mode (if TikTok Business enables Direct Publishing) or defer to Day 6 notification-mode first-post?
+
+**New question from this cycle:**
+7. **D2-5 Stripe account scope** — the Stripe MCP is currently connected to EMCI (`acct_1TEuuDRS3QYs0eSM`). MedCI needs its own Stripe account per blueprint §8.2. Is owner creating the MedCI Stripe account Day 1 afternoon? If not, D2-5 slips to Day 3. Products-prices-spec.json is fully pre-ready (5 products + 1 coupon + 7 Payment Links with correct session_id redirect); only blocker is account scope.
+
+**Next action I'm taking (no wait):**
+Per ZERO_QUESTION_CLAUDE no-stop rule + hard-stop escalation protocol: sleeping the interactive session until the 3:07 AM med-ops-controller tick (first autonomous run after owner registers the scheduled task via `INBOX/register-med-ops-controller.md`). Overnight autonomous work surface on MedCI is exhausted — everything else needs either owner OAuth/account creation, Perplexity data population, or Day 2's code work that depends on Stripe IDs. Interactive Claude Code exits cleanly; med-ops-controller picks up Step 1 of WORKFLOW.md loop on next fire.
+
+---
+
 ## Claude Code status — 2026-04-22 23:20 EDT
 
 **Phase/Day:** Day 0 late evening → Day 1 pre-dawn bridge (blueprint §10).
