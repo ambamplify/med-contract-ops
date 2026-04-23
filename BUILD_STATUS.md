@@ -11,7 +11,7 @@
 
 Owner is unavailable Wed 2026-04-23 AM. Autonomous push pulled forward:
 - Day 1: D1-4, D1-5 (MX/SPF/DMARC), D1-12, D1-13, D1-15 (DNS check), D1-20 (bucket), D1-21 (legal drafts + split files).
-- Day 2: Stripe products/prices spec, site-scaffold runbook + env template, analysis-prompt.ts IM rewrite spec.
+- Day 2: Stripe products/prices spec, site-scaffold runbook + env template, analysis-prompt.ts IM rewrite spec. **Phase A EXECUTED 2026-04-22 21:49 EDT:** full site scaffold (clone + rebrand + IM/Hospitalist analysis-prompt rewrite + 5 legal pages + .env template) committed as `47d731a` on `ambamplify/med-contract-site` main. Day 2 runner now picks up at Railway deploy step, not from scratch.
 - Day 3: content-review ledger pre-populated (27 rows), Kit email sequence (3 automations with full HTML).
 
 Remaining Day 1 items are all owner-blocked or depend on unblocked items.
@@ -30,6 +30,7 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | GitHub remote | 🟢 GREEN | `ambamplify/med-contract-ops` 4 commits; `ambamplify/med-contract-content` 2 commits (IM_DATA_2026.md skeleton + calendar template); `-site` empty shell until Day 2 scaffold |
 | IM_DATA_2026.md (SSOT) | 🟡 SKELETON | Structure in place, 0/~80 cells authoritative. Perplexity Day 1 Task 13 populates. Blueprint §7. |
 | Content calendar | 🟡 TEMPLATED | 15 TikTok + 3 YouTube rows pre-seeded with hooks + dates + data_cells refs. LinkedIn/X/Threads/IG/Substack empty. Day 3 7:00 PM populates text lanes. |
+| med-contract-site repo | 🟡 SCAFFOLDED | 2026-04-22 21:49 EDT — 64 files, initial commit `47d731a` pushed to `ambamplify/med-contract-site` main. EMCI forked + rebranded; analysis-prompt.ts fully rewritten for IM/Hospitalist with [TBD::cell] placeholders; legal pages dropped in. Railway deploy + Stripe product IDs + PDF rebuilds still pending Day 2 morning. |
 | Railway project | 🔴 NOT YET | Day 2 |
 | Cloudflare DNS | 🟡 PARTIAL | MX + SPF + DMARC live; A/AAAA wait on Railway (Day 2), DKIM wait on Google secondary-domain add (owner) |
 | Cloudflare R2 (medci-social-media) | 🟢 GREEN | Bucket live since 2026-04-22 23:32 UTC. Public domain attach deferred to Day 1 dashboard step. |
