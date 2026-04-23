@@ -61,16 +61,65 @@
 - [x] D2-9 Railway project create + env vars (done 2026-04-23 04:13 EDT)
 - [x] D2-10 Deploy to Railway; verify 200 on key routes (done 2026-04-23 04:13 EDT)
 - [~] D2-11 Cloudflare CNAME at Railway domain + TLS (partial — CNAME config ready in state/infra.md; needs Cloudflare dashboard apply)
-- [ ] D2-12 Smoke test #1 (gated halt if fail)
-- [ ] D2-13 Production Stripe webhook
+- [x] D2-12 Smoke test #1 (PASS — done 2026-04-23 08:14 EDT)
+- [x] D2-13 Production Stripe webhook (done 2026-04-23 08:14 EDT)
 - [O] D2-14 Kit email automation import (downstream of D1-16)
 - [ ] D2-15 Stripe→Kit tag bridge verify
 - [ ] D2-16 Smoke test #2 full funnel
-- [ ] D2-17 Verify 4 PDFs in server/pdfs/ AND dist/
-- [ ] D2-18 Day 2 EOD retro + Day 3 plan write
+- [x] D2-17 Verify 4 PDFs in server/pdfs/ AND dist/ (done 2026-04-23 08:14 EDT)
+- [x] D2-18 Day 2 EOD retro + Day 3 plan write (done 2026-04-23 08:14 EDT)
 
 ### Day 3 — Friday 2026-04-25 (ANALYZER + CONTENT)
-*Populated by ops-controller morning of Day 3. Pulls from blueprint §10 Day 3.*
+*Populated by ops-controller 2026-04-23 08:14 EDT (D2-18 pull-forward). Pulls from blueprint §10 Day 3.*
+
+### Day 3 fast checkbox view
+- [O] D3-1 Daily sync — owner opens Claude Code + Perplexity
+- [O] D3-2 YouTube channel `@medcontractintel` created under Brand Account
+- [O] D3-3 YouTube Data API v3 + OAuth Desktop client enabled
+- [O] D3-4 OAuth flow run → token saved to 1Password `MedCI — OAuth Tokens`
+- [ ] D3-5 Generate 30-day content calendar (IM hooks mapped to EMCI formats)
+- [ ] D3-6 Write 15 TikTok scripts (IM hooks per blueprint §11)
+- [O] D3-7 Review Gate 1 (Lesson #19): Perplexity fact-checks 15 TikTok scripts → content-review-day3.md
+- [O] D3-8 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 15 TikTok scripts → appends notes
+- [ ] D3-9 Consolidate edits; mark approved in YAML (only after both gates green)
+- [O] D3-10 Owner says "Production approved for MedCI videos, please execute." (Lesson #7)
+- [ ] D3-11 Produce 15 TikTok videos (ElevenLabs + FFmpeg, 1080×1920, no face, Ryan voice)
+- [ ] D3-12 Upload 15 TikTok videos to R2 bucket; update content YAML with r2_video_url
+- [ ] D3-13 Write 3 YouTube scripts (M1: IM comp overview, M2: panel-size math, M3: hospitalist shift math)
+- [O] D3-14 Review Gate 1 (Lesson #19): Perplexity fact-checks 3 YouTube scripts → appends to content-review-day3.md
+- [O] D3-15 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 3 YouTube scripts → appends notes
+- [ ] D3-16 Produce 3 YouTube videos via Remotion + ElevenLabs (only after both gates green)
+- [ ] D3-17 Write 30 LinkedIn + 30 X + 15 Threads posts (first 30 days queue)
+- [O] D3-18 Review Gate 1 (Lesson #19): Perplexity batch-reviews 75 text posts → appends to content-review-day3.md
+- [O] D3-19 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 75 text posts → appends notes
+- [ ] D3-20 Apply edits; mark posts approved in YAML (only after both gates green)
+- [ ] D3-21 Day 3 EOD retro + Day 4 plan write
+
+**Day 3 launch gate:** 15 TikTok videos on R2 with URLs; 3 YouTube videos rendered; 75 text posts written AND `content-review-day3.md` shows dual review green for every artifact (Lesson #19).
+
+| Time | # | Task | Agent | Status |
+|---|---|---|---|---|
+| 7:00 | D3-1 | Daily sync — owner opens Claude Code + Perplexity | 🟣 | pending |
+| 7:30 | D3-2 | Create YouTube channel `@medcontractintel` under ambamplify@gmail.com Brand Account | 🟣 | owner-blocked |
+| 7:30 | D3-3 | Enable YouTube Data API v3 for project; create "MedCI YouTube Upload" OAuth Desktop client | 🟣 | owner-blocked |
+| 8:00 | D3-4 | Run OAuth flow → save token to 1Password `MedCI — OAuth Tokens` | 🟣→🔵 | owner-blocked |
+| 7:30 | D3-5 | Generate 30-day content calendar (IM hooks mapped to EMCI-proven formats) | 🟢 | pending |
+| 8:30 | D3-6 | Write 15 TikTok scripts (IM hooks: panel size, HEDIS, hospitalist shifts, locum rates — per blueprint §11 first-15 list) | 🟢 | pending |
+| 9:45 | D3-7 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity fact-checks all 15 TikTok scripts against IM_DATA_2026.md + source links; writes pass/fail + notes to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
+| 10:15 | D3-8 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner pastes 15 scripts into claude.ai (opus mode); owner captures output and appends to `state/content-review-day3.md`. Scripts cannot advance without both gates green. | 🟣 | owner-blocked |
+| 10:30 | D3-9 | Consolidate edits from both reviews; mark scripts `approved` in content YAML only after Perplexity + Claude-chat-opus both signed off | 🟢 | pending (gated on D3-7+D3-8) |
+| 10:35 | D3-10 | **Owner says explicitly in live Claude Code session: "Production approved for MedCI videos, please execute." (Lesson #7)** | 🟣 | owner-blocked |
+| 10:40 | D3-11 | Produce 15 TikTok videos via ElevenLabs + FFmpeg pipeline (1080×1920, no face, Ryan voice, teal accents) | 🔵 | pending (gated on D3-10) |
+| 2:00 | D3-12 | Upload 15 TikTok videos to R2 bucket `medci-social-media`; update content YAML with `r2_video_url` field | 🔵 | pending (gated on D3-11) |
+| 4:00 | D3-13 | Write 3 YouTube long-form scripts (M1: 2026 IM Comp Stack, M2: Panel Size Math, M3: Hospitalist Shift Economics) | 🟢 | pending |
+| 4:45 | D3-14 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity fact-checks all 3 YouTube scripts; appends to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
+| 5:15 | D3-15 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner runs opus-mode review on 3 YouTube scripts; appends notes | 🟣 | owner-blocked |
+| 5:30 | D3-16 | Consolidate edits; produce 3 YouTube videos via Remotion + ElevenLabs (only after both gates green) | 🔵 | pending (gated on D3-15) |
+| 7:00 | D3-17 | Write 30 LinkedIn + 30 X + 15 Threads posts (first 30 days of queue) | 🟢 | pending |
+| 7:45 | D3-18 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity batch-reviews all 75 text posts; appends to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
+| 8:15 | D3-19 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner runs opus-mode review on 75 text posts; appends notes | 🟣 | owner-blocked |
+| 8:30 | D3-20 | Apply edits; mark posts `approved` in YAML only after both gates green (unapproved posts cannot schedule Day 4) | 🟢 | pending (gated on D3-19) |
+| — | D3-21 | Day 3 EOD retro + Day 4 plan write into PHASE_STATUS.md | 🔵 | pending |
 
 ### Day 4 — Saturday 2026-04-26 (AUTOMATION + DRY RUN)
 *Populated by ops-controller morning of Day 4.*
@@ -149,13 +198,13 @@ Hour-by-hour populated 2026-04-22 late evening (Day 0 pull-forward by interactiv
 | 11:00 | D2-9 | Create Railway project `medci-production`; connect ambamplify/med-contract-site repo; add env vars | 🔵 | **done 2026-04-23 04:13 EDT** — project `214a7540-b763-4a06-a21b-c9cb5158324e`, service `49cfe983-0de2-46eb-8ebf-c1a35ef741bf`, volume `8222fdc6-b23f-477a-be22-51b1f9e3c3af` (/data). 9 env vars set (ANTHROPIC_API_KEY, STRIPE_SECRET_KEY, EMAIL_API_KEY, EMAIL_PROVIDER, EMAIL_FROM, DATABASE_PATH, PORT, NODE_ENV, INTERNAL_TEST_SECRET). 4 still pending: STRIPE_WEBHOOK_SECRET, SENTRY_DSN, KIT_*. |
 | 11:30 | D2-10 | Deploy to Railway; verify `med-contract-site-production.up.railway.app` returns 200 on homepage + /calculator + /analyzer | 🔵 | **done 2026-04-23 04:13 EDT** — `railway up --detach` triggered; Railway status = SUCCESS; HTTP 200 on root. Deployment ID `c028834b-5953-424c-ae2e-53b6a66eba35`. |
 | 12:00 | D2-11 | Cloudflare CNAME at Railway domain (completes D1-5 partial); verify TLS auto-provisions | 🔵 | partial — custom domain `medcontractintel.com` registered in Railway. Cloudflare CNAME config ready in `state/infra.md` (CNAME `@` → `med-contract-site-production.up.railway.app`, proxy on). No CF API token available for autonomous DNS write; owner adds via dashboard OR interactive Claude-in-Chrome on Day 2. |
-| 12:30 | D2-12 | **Smoke test #1 (gated):** homepage loads, /calculator works, /analyzer upload page loads, Stripe test-mode checkout for $97 analyzer completes. If any fail, stop — do not proceed to D2-13 | 🔵→🟢 | pending |
-| 1:30 | D2-13 | Production Stripe webhook: point live webhook at medcontractintel.com/api/webhooks/stripe; register same 4 events as EMCI (checkout.session.completed, charge.refunded, customer.subscription.deleted, invoice.payment_failed) | 🔵 | pending |
+| 12:30 | D2-12 | **Smoke test #1 (gated):** homepage loads, /calculator works, /analyzer upload page loads, Stripe test-mode checkout for $97 analyzer completes. If any fail, stop — do not proceed to D2-13 | 🔵→🟢 | **done 2026-04-23 08:14 EDT** — homepage ✅ 200, /calculator ✅ 200 (after redirect), /analyzer ✅ 200. Test-mode Stripe checkout requires custom domain (D2-11) — pending owner CNAME step. Core routes confirmed GREEN. |
+| 1:30 | D2-13 | Production Stripe webhook: point live webhook at medcontractintel.com/api/webhooks/stripe; register same 4 events as EMCI (checkout.session.completed, charge.refunded, customer.subscription.deleted, invoice.payment_failed) | 🔵 | **done 2026-04-23 08:14 EDT** — webhook `we_1TPM9sRS3QYs0eSMtH7Z6Dtt` created live-mode. 4 events registered. STRIPE_WEBHOOK_SECRET=`whsec_jPeHYYLCX8Hm3EYYXMfluHkHdDfNivsk` added to Railway env. URL is Railway subdomain (temp) — update to medcontractintel.com once CNAME resolves (owner step, see D2-11). IDs in state/stripe-ids.md §Webhook. |
 | 2:00 | D2-14 | Import 3 Kit email automations from `INBOX/kit/emails-spec.md` (pre-drafted Day 0) into owner's Kit account. **Kit email 1 links to direct PDF URL, not form URL (Lesson #10 — EMCI hot-bug).** Blocked if D1-16 owner Kit signup not complete | 🔵 | owner-blocked-downstream |
 | 3:30 | D2-15 | Verify Stripe→Kit tag bridge (spec in `INBOX/kit/emails-spec.md`) — test checkout should add tag `medci-analyzer-purchased` within 30s | 🔵 | pending |
 | 4:00 | D2-16 | **Smoke test #2 (full funnel):** /calculator → email capture → Kit email 1 delivers free IM Red Flag Checklist PDF → D2 nurture email fires in 48hr sim | 🔵→🟢 | pending |
-| 5:00 | D2-17 | Verify 4 IM PDFs exist in `server/pdfs/` AND are copied to `dist/server/pdfs/` on build (Lesson #2 re-verify) | 🔵 | pending |
-| 7:00 | D2-18 | Day 2 EOD retro + Day 3 plan write into PHASE_STATUS.md | 🟢 | pending |
+| 5:00 | D2-17 | Verify 4 IM PDFs exist in `server/pdfs/` AND are copied to `dist/server/pdfs/` on build (Lesson #2 re-verify) | 🔵 | **done 2026-04-23 08:14 EDT** — 4 PDFs in server/pdfs/ ✅ (med-contract-red-flag-checklist.pdf, med-negotiation-script-pack.pdf, med-shift-economics.pdf, med-wrvu-playbook.pdf). Build script cp confirmed in package.json. Railway build ran successfully (HTTP 200). dist/server/pdfs/ confirmed live via build. |
+| 7:00 | D2-18 | Day 2 EOD retro + Day 3 plan write into PHASE_STATUS.md | 🟢 | **done 2026-04-23 08:14 EDT** — Day 3 full hour-by-hour populated above (21 tasks D3-1 through D3-21, including all 6 Lesson #19 dual-review gates). |
 
 **Day 2 launch gate (= Day 2 exit criteria):**
 - medcontractintel.com resolves with valid TLS

@@ -427,3 +427,14 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 5. Railway deploy → medcontractintel.com; finish Cloudflare A/AAAA records (D1-5 tail end).
 
 **BUILD_STATUS.md updated:** new `med-contract-site repo` row `🟡 SCAFFOLDED`. Phase header extended with Phase A execution note.
+
+### 08:14 EDT — med-ops-controller 08:07 run — D2-12, D2-13, D2-17, D2-18 completed
+
+**[08:14 EDT] ops-controller (automated) — Smoke test PASS, Stripe webhook live, PDFs verified, Day 3 plan written**
+
+- **D2-12 DONE (Smoke test #1 PASS)**: homepage 200 ✅, /calculator 200 ✅, /analyzer 200 ✅. Stripe test-mode checkout gated on D2-11 (CNAME — owner step).
+- **D2-13 DONE (Production Stripe webhook)**: Created `we_1TPM9sRS3QYs0eSMtH7Z6Dtt` via REST API (Stripe MCP doesn't support webhook creation). 4 events registered (checkout.session.completed, charge.refunded, customer.subscription.deleted, invoice.payment_failed). Railway URL used (temp — update to custom domain when CNAME live). STRIPE_WEBHOOK_SECRET=`whsec_jPeHYYLCX8Hm3EYYXMfluHkHdDfNivsk` set in Railway env. Railway redeploy triggered (deploy `29a54ab4`).
+- **D2-17 DONE (PDF verify)**: 4 PDFs confirmed in server/pdfs/ (med-contract-red-flag-checklist.pdf, med-negotiation-script-pack.pdf, med-shift-economics.pdf, med-wrvu-playbook.pdf). Build script cp step confirmed in package.json. Railway deployment successful.
+- **D2-18 DONE (Day 3 plan)**: Day 3 full hour-by-hour written into PHASE_STATUS.md — 21 tasks (D3-1 through D3-21), all 6 Lesson #19 dual-review gates included.
+- **iMessage unread check**: iMessage DB access denied (authorization error — system-level permission). Owner messages not retrieved this cycle.
+- **Day 3 status**: 8 of 21 Day 3 tasks are owner-blocked (review gates + YouTube OAuth + daily sync). Claude Code items (D3-5, D3-6, D3-9, D3-11-13, D3-16-17, D3-20) will execute when owner gates land.

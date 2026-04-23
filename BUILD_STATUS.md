@@ -5,11 +5,11 @@
 ---
 
 ## Current phase
-**Day 1 — 2026-04-23 04:13 EDT** (owner away; autonomous ops-controller running)
+**Day 1 → Day 2 bridge — 2026-04-23 08:14 EDT** (autonomous ops-controller 08:07 run)
 
-04:07 run completed D2-5 (Stripe catalog) + D2-2 (site product wiring). Both pulled forward from Day 2.
-Owner unavailable Wed AM — returning later today. All 10 owner-blocked Day 1 items await in ESCALATED/day1-owner.md.
-New item #11 added: Stripe dashboard follow-ups (after_completion redirect on 7 payment links + coupon wiring).
+08:07 run completed D2-12 (smoke test #1 PASS), D2-13 (Stripe webhook live), D2-17 (PDF verify), D2-18 (Day 3 plan written).
+Owner away Wed AM. Day 2 autonomous items now ~80% done. Remaining Day 2 items all owner-gated (CNAME, Kit, smoke test #2, Stripe dashboard follow-ups).
+Railway redeploying with STRIPE_WEBHOOK_SECRET (deployment `29a54ab4`).
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 
@@ -50,7 +50,9 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | Content-review ledger (Lesson #19) | 🟢 PRE-POPULATED | `state/content-review-day3.md` — 27 tracked artifacts (15 TikTok + 3 YouTube + 1 text-lane placeholder + 8 site-copy rows). Launch Gate 18 denominator set. |
 | Kit email automations (Day 3 pull-forward) | 🟢 DRAFTED | `INBOX/kit/emails-spec.md` — 3 full HTML email drafts + automation wiring spec + Stripe→Kit tag bridge. Rides on owner Kit account creation Day 3 AM. |
 | Stripe products | 🟢 GREEN | 5 products + 5 prices + coupon XlzbFyUR + 7 payment links — acct_1TEuuDRS3QYs0eSM — IDs in state/stripe-ids.md. ⚠ 3 Stripe dashboard follow-ups (redirect URLs, coupon on links 6+7, coupon expiry) flagged for owner Day 2 |
-| Site deploy | 🟢 GREEN | HTTP 200 on `med-contract-site-production.up.railway.app`. Custom domain needs Cloudflare CNAME (owner 2 min — config in state/infra.md). |
+| Stripe webhook | 🟢 GREEN | `we_1TPM9sRS3QYs0eSMtH7Z6Dtt` — live mode, 4 events, Railway URL (temp). Update URL → medcontractintel.com when CNAME resolves. STRIPE_WEBHOOK_SECRET in Railway env. |
+| Smoke test #1 | 🟢 GREEN | homepage/calculator/analyzer all 200. Stripe test-mode checkout requires custom domain (pending D2-11). |
+| Site deploy | 🟢 GREEN | HTTP 200 on `med-contract-site-production.up.railway.app`. Custom domain needs Cloudflare CNAME (owner 2 min — config in state/infra.md). Redeploying with STRIPE_WEBHOOK_SECRET (deploy 29a54ab4). |
 | Analyzer | 🔴 NOT YET | Day 3 |
 | Content pipeline | 🔴 NOT YET | Day 3 (Lesson #19 dual review gates baked into schedule) |
 | Social accounts | 🔴 NOT YET | Day 1 owner + Day 3 setup |

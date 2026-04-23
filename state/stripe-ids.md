@@ -54,6 +54,20 @@
 
 ---
 
+## Webhook Endpoint
+
+| Field | Value |
+|---|---|
+| ID | we_1TPM9sRS3QYs0eSMtH7Z6Dtt |
+| URL | https://med-contract-site-production.up.railway.app/api/webhooks/stripe |
+| Secret | whsec_jPeHYYLCX8Hm3EYYXMfluHkHdDfNivsk |
+| Events | checkout.session.completed, charge.refunded, customer.subscription.deleted, invoice.payment_failed |
+| Status | enabled (live mode) |
+| Created | 2026-04-23 08:14 EDT |
+| Note | URL is Railway subdomain (temp). Update to https://medcontractintel.com/api/webhooks/stripe via Stripe dashboard when CNAME resolves. STRIPE_WEBHOOK_SECRET set in Railway env. |
+
+---
+
 ## ⚠ REQUIRED FOLLOW-UP (Day 2 manual — Stripe dashboard)
 
 ### 1. Set after_completion redirect URL on ALL 7 payment links (LESSON #9 — CRITICAL)
