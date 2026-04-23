@@ -42,7 +42,7 @@ Pulled from blueprint §10 Day 1. All items `pending` until ops-controller or in
 | 11:00 | D1-12 | Create 3 GitHub repos: med-contract-ops, -content, -site | 🟢 | done — 2026-04-22 late evening, all 3 public (flip private after sudo email unblocked) |
 | 11:30 | D1-13 | Git init local med-contract-ops + push to GitHub | 🟢 | done — 2026-04-22 late evening, commit 3355dbd on main pushed to origin |
 | 11:45 | D1-14 | Owner: register @medcontractintel TikTok as BUSINESS account + convert @emcontractintel to Business (Lesson #17) | 🟣 | owner-blocked — ESCALATED item #6 |
-| 12:00 | D1-15 | Verify DNS propagation + mail-tester score | 🟢 | pending — wait 24h after D1-5 full set lands, then autonomous via `dig`/mail-tester |
+| 12:00 | D1-15 | Verify DNS propagation + mail-tester score | 🟢 | partial-check 2026-04-22 20:13 EDT — MX (`smtp.google.com` pri 1) ✅ PROPAGATING, SPF (`include:_spf.google.com ~all`) ✅ PROPAGATING, DMARC (`p=quarantine` adkim=s aspf=s) ✅ PROPAGATING, A/AAAA ⏳ waiting Railway IP (Day 2), DKIM ⏳ waiting owner Google Workspace secondary-domain add. Full 24h check Day 2. |
 | 1:00 | D1-16 | Owner: sign up new Kit account on admin@medcontractintel.com, disable double opt-in | 🟣 | owner-blocked — ESCALATED item #7 (downstream of D1-7) |
 | 1:30 | D1-17 | Owner: create Buffer org, OAuth all 5 socials (TikTok Business) | 🟣 | owner-blocked — ESCALATED item #8 |
 | 2:00 | D1-18 | Owner: create Sentry project medcontractintel-production, save DSN | 🟣 | owner-blocked — ESCALATED item #9 |

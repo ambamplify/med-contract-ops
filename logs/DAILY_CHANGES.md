@@ -133,3 +133,24 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
   - Refund language kept 30-day failure refund identical to EMCI.
 - Awaiting: Day 4 final-pass Claude-chat-opus compliance review (outside Lesson #19 content loop but owner-visible).
 - Not pushed yet to med-contract-site (that repo is still empty — scaffolds Day 2). Draft lives in ops repo until then.
+
+---
+
+## 2026-04-22 (Wednesday) — Day 0 evening → Day 1 bridge (20:13 EDT)
+
+**[20:13 EDT] med-ops-controller (scheduled, 20:07 run) — DNS propagation check (D1-15 partial)**
+- Kill switch: PAUSE_ALL.md empty — proceeded.
+- Git pull: already up to date on med-contract-ops + med-contract-content.
+- COMPUTER_RESPONSE.md: no new Perplexity directives. Perplexity Day 1 task set pending owner opening MedCI Space.
+- INBOX: `legal-pages-draft.md` only — already D1-21 done, no action needed.
+- DNS propagation verified via `dig`:
+  - MX `@` → `smtp.google.com` priority 1 — ✅ PROPAGATING
+  - TXT `@` → SPF `v=spf1 include:_spf.google.com ~all` — ✅ PROPAGATING
+  - TXT `_dmarc` → `v=DMARC1; p=quarantine; ...` — ✅ PROPAGATING
+  - A/AAAA: empty (expected — Railway IP day 2)
+  - DKIM: not yet (expected — owner Google Workspace secondary-domain add blocks this)
+- iMessage read attempted: authorization denied (scheduled-task context lacks Full Disk Access to chat.db). No owner messages received.
+- PHASE_STATUS.md D1-15 updated to reflect partial propagation check.
+- **Autonomous items available this session:** 0 pending non-owner-blocked items executable tonight. All remaining Day 1 items are owner-blocked or Day 2+.
+- **Owner-blocked count:** 10 items in ESCALATED/day1-owner.md (unchanged — awaiting owner return Day 1).
+- Next scheduled run: 00:07 EDT 2026-04-23.
