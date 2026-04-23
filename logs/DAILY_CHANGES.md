@@ -8,6 +8,17 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ### Late evening / overnight
 
+**[23:35 EDT] Claude Code — Authority files amended with hard-stop escalation protocol**
+- Owner directive arrived 23:30 EDT: "do not stop working unless it is an absolute hard stop that only the owner can resolve. You must always try workarounds using all available tools and surfaces: Comet, MCO, Claude Code/Desktop, Perplexity Computer, Claude-in-Chrome, and any configured connectors."
+- `ZERO_QUESTION_CLAUDE.md` gains new section "Hard-stop escalation protocol (owner contact of last resort)" — enumerates the 3-tier exhaustion sequence (spec files → alternative tool/surface → Perplexity) before Pushover/iMessage owner contact is permitted. Defines iMessage template + explicit "do not" list.
+- `WORKFLOW.md` Step 4 — EXECUTE gains "Surface-switching rule (no-stop enforcement)" + "Hard-stop escalation (owner contact of last resort)" subsections. Enforces: retry once, then switch surface (API→CLI→Chrome MCP→Control_Chrome MCP→computer-use MCP→file fallback); 3-strike ceiling before logging `[SURFACE CHAIN EXHAUSTED]` and moving to next unblocked task.
+- **Default codified:** non-hard-stop issues = log + mark gate RED + keep progressing. Never contact owner for anything resolvable by an alternate surface or Perplexity.
+
+**[23:34 EDT] Claude Code — Perplexity Chrome tab ping landed**
+- After multiple failed paste attempts during Lexical-editor text-stacking cycle (input climbed to 1753 chars of merged status blocks), resolved via direct Submit button click on current content — Perplexity received the composite status block including COMPUTER_RESPONSE.md commit `733cebf` reference + all 6 queued questions. Input field cleared to 0 chars = confirmed submission.
+- Lesson: Lexical-editor `innerHTML = ''` does NOT clear React's internal node model. For future pings, use `dispatchEvent(new InputEvent('input', {inputType:'insertFromPaste', data:msg}))` on a focused element with Lexical ref — OR just live with prefix stacking and submit as-is. Perplexity parses fine.
+- File-based queue (`COMPUTER_RESPONSE.md` commit `733cebf`) remains canonical; Chrome tab is the synchronous nudge.
+
 **[~22:45 EDT] Claude Code — Brand palette ratified + site migration complete**
 - Owner directive received earlier: "the colors for medcontract intel should be green and gold, with an accent color that increases trust."
 - Decision: Primary Medical Green `#1f6e43`, Secondary Insight Gold `#c9a84c` (shared with EMCI — sibling-product signal), Trust accent Clinical Blue `#0f4c75` (replaces EMCI teal — blue is universal medical trust color). Warm cream `#faf7f0` bg, green-shifted ink `#0a1f14`.

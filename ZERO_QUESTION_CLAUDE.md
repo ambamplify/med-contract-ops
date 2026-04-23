@@ -61,7 +61,7 @@ If blocked or uncertain during MedCI work:
 
 ## No-stop rules (owner may be unavailable for DAYS)
 
-Per owner directive 2026-04-22 late evening: "assume I may be unavailable for days at a time."
+Per owner directive 2026-04-22 late evening: "assume I may be unavailable for days at a time." Reinforced 2026-04-22 23:30 EDT: "do not stop working unless it is an absolute hard stop that only the owner can resolve."
 
 1. **Never stop the whole project on a single failed step.** If a step fails after the playbook's documented retries:
    - Mark the associated Launch Gate RED in `PHASE_STATUS.md` + `BUILD_STATUS.md`
@@ -71,6 +71,48 @@ Per owner directive 2026-04-22 late evening: "assume I may be unavailable for da
 2. **Retries are documented, not improvised.** If a playbook prescribes N retries for a step, do exactly N. Don't loop forever.
 3. **Escalate only for Owner-only gates** (see the 12-item list above). Everything else routes through Perplexity via `COMPUTER_RESPONSE.md`.
 4. **Silence ≠ approval.** If neither owner nor Perplexity responds inside the relevant operating window, and Perplexity's existing spec files don't resolve the question, pick the safest forward path that preserves launch and does NOT touch an Owner-only gate. Document the decision in `logs/DAILY_CHANGES.md`.
+
+## Hard-stop escalation protocol (owner contact of last resort)
+
+Per owner directive 2026-04-22 late evening (final):
+> "do not stop working unless it is an absolute hard stop that only the owner can resolve. You must always try workarounds using all available tools and surfaces: Comet, MCO, Claude Code/Desktop, Perplexity Computer, Claude-in-Chrome, and any configured connectors. If one path fails (API error, library missing, UI quirk), try an alternative path or tool instead of waiting."
+
+**Contact owner via Pushover or iMessage (9167050598) ONLY after exhausting ALL of the following:**
+
+1. **Spec files** — re-read `WORKFLOW.md`, this file, and `COMPUTER_RESPONSE.md` for latest directive that resolves the question.
+2. **Alternative tool/surface** — if the current tool/path fails, try another:
+   - Comet (owner's desktop automation)
+   - MCO (Mac Control / scheduled-tasks ecosystem)
+   - Claude Code (this session) / Claude Desktop
+   - Perplexity Computer (the MedCI Space Chrome tab)
+   - Claude-in-Chrome MCP
+   - Control_Chrome MCP
+   - Computer-use MCP
+   - Any configured connectors (Stripe, R2, Railway, Resend, Kit, Buffer, Gmail, etc.)
+   - Bash / file-system fallbacks
+3. **Perplexity guidance** — write the blocker to `COMPUTER_RESPONSE.md` question queue AND ping the MedCI Space Chrome tab. Wait the prescribed window (30 min during 7am–11pm EDT; otherwise continue with unblocked work and re-check next cycle).
+
+**Only after 1+2+3 fail** and the issue is an actual hard-stop that would freeze launch, and it hits one of the 12 Owner-only gates above, may you contact owner directly.
+
+**Hard-stop iMessage template:**
+```
+[MedCI HARD STOP] <gate name from the 12-item list>
+Blocker: <one sentence>
+Tried: <tool/surface list>
+Perplexity: <asked at HH:MM ET, no reply>
+Need from you: <one specific unambiguous action>
+```
+
+**Default for everything else** (not a hard-stop AND not an Owner-only gate):
+- Log in `logs/DAILY_CHANGES.md` with timestamp + attempted surfaces
+- Mark relevant Launch Gate RED if applicable
+- Keep progressing on any work that is not blocked by the failed step
+- Re-attempt the failed step on next `med-ops-controller` tick with a fresh surface
+
+**Do not:**
+- Sit idle waiting for owner.
+- Retry the same failing tool/path in a tight loop (> 3 attempts without a surface switch is wasted cycles).
+- Contact owner about anything resolvable by Perplexity or an alternate tool.
 
 ## Data + SSOT obedience — IM_DATA_2026.md
 

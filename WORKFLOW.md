@@ -66,6 +66,42 @@ Under `ZERO_QUESTION_CLAUDE.md` rules:
 - If uncertain about approach but not about authority: follow the ambiguity resolution protocol (write to COMPUTER_RESPONSE.md + post to Perplexity Chrome tab, act on response).
 - If Perplexity unreachable + task is time-sensitive: pick safest forward path, log rationale, continue.
 
+### Surface-switching rule (no-stop enforcement)
+
+Per owner directive 2026-04-22 23:30 EDT: **do not stop working on a tool/UI error. Switch surfaces.**
+
+If the current tool/path fails (API error, library missing, UI quirk, selector drift, permission denied):
+
+1. Retry ONCE with the same tool (idempotent refresh).
+2. If still failing, **switch surface**. Options, in preference order:
+   - Direct API / MCP connector (Stripe MCP, Cloudflare MCP, Railway MCP, scheduled-tasks MCP, Gmail MCP, etc.)
+   - Bash + CLI (gh, rclone, curl, jq, sed, node/python one-liners)
+   - Claude-in-Chrome MCP (browser-automation with DOM awareness)
+   - Control_Chrome MCP (sees all tabs + can execute JS in-page)
+   - computer-use MCP (native app / OS-level actions)
+   - File-based fallback (write a spec/INBOX stub for Perplexity or next session to pick up)
+3. If 2+ surfaces fail on the same task, write to `COMPUTER_RESPONSE.md` + `logs/DAILY_CHANGES.md` with `[SURFACE CHAIN EXHAUSTED]` tag + what was tried, mark the Launch Gate RED if applicable, and **move to the next unblocked task**.
+4. **Never** tight-loop the same failing call > 3 times without a surface switch.
+
+### Hard-stop escalation (owner contact of last resort)
+
+Contact owner via **Pushover OR iMessage (9167050598)** ONLY when ALL three apply:
+
+1. Issue is a hard-stop blocking launch (not just a partial feature).
+2. Hits one of the 12 Owner-only gates in `ZERO_QUESTION_CLAUDE.md`.
+3. Exhausted: spec-file re-read → surface chain (step above) → Perplexity via `COMPUTER_RESPONSE.md` + Chrome-tab ping.
+
+**Template:**
+```
+[MedCI HARD STOP] <gate name>
+Blocker: <one sentence>
+Tried: <surface list>
+Perplexity: <asked HH:MM ET, no reply>
+Need: <one specific action>
+```
+
+**Default for non-hard-stop issues:** log + mark gate RED + keep progressing. Do NOT message owner.
+
 ---
 
 ## Step 5 — LOG (status-writing discipline)
