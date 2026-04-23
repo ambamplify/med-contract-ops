@@ -151,6 +151,17 @@
     }
   ],
 
+  "_payment_link_defaults": {
+    "_note": "Every payment_link MUST be created with these after_completion + custom_fields settings. Lesson #9 (EMCI hot-bug): without ?session_id={CHECKOUT_SESSION_ID} on success_url, /thank-you falls back to hard-coded product list and can't read the real purchase from Stripe. This caused the 2026-04-15 purchase-summary bug on EMCI.",
+    "after_completion": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://medcontractintel.com/thank-you?session_id={CHECKOUT_SESSION_ID}"
+      }
+    },
+    "allow_promotion_codes": true,
+    "billing_address_collection": "auto"
+  },
   "payment_links": [
     { "slug": "bundle",          "metadata": { "source": "site" } },
     { "slug": "analyzer",        "metadata": { "source": "site" } },

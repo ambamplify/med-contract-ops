@@ -8,6 +8,14 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ### Late evening / overnight
 
+**[23:45 EDT] Claude Code — Day 2 pre-execution pass (no-stop directive in action)**
+- D2-3 (Lesson #2) PRE-VERIFIED GREEN — `cp -r server/pdfs dist/server/pdfs` already in `package.json` build script on med-contract-site. PHASE_STATUS flipped to done.
+- D2-4 (Lesson #3) PRE-VERIFIED GREEN — `getStripe()` lazy-init helper at line 129 of `server/stripe-webhook.ts`; no module-scope Stripe instantiation. PHASE_STATUS flipped to done.
+- D2-6 (Lesson #13) PRE-VERIFIED GREEN — `public/checklist-thank-you/` already a separate directory from `public/thank-you/` in Phase A scaffold. PHASE_STATUS flipped to done.
+- D2-7 (Lesson #9) PARTIAL — `/api/purchase-summary/:sessionId` endpoint exists at routes.ts line 271; success_url must be enforced at Payment Link creation during D2-5. Added `_payment_link_defaults` block to `INBOX/stripe/products-prices-spec.json` to codify: `after_completion.redirect.url = https://medcontractintel.com/thank-you?session_id={CHECKOUT_SESSION_ID}` + `allow_promotion_codes: true`.
+- **Cross-project bug fix on med-contract-site**: `OPS_INBOX_DIR` in `server/stripe-webhook.ts` line 60 was still pointing at `/Users/ambamplify/Desktop/em-contract-ops/INBOX` (inherited from EMCI scaffold). Corrected to `/Users/ambamplify/MedContractIntel/med-contract-ops/INBOX`. Prevents a MedCI webhook event from writing into EMCI's inbox on local dev (production runs on Railway where neither path exists — console.error JSON log is canonical).
+- Net result: 3 Day 2 items pulled forward to Day 0, 1 Day 2 item partially pulled, 1 cross-project bug squashed. Day 2 now has 4 fewer blocking items at dawn Thursday.
+
 **[23:35 EDT] Claude Code — Authority files amended with hard-stop escalation protocol**
 - Owner directive arrived 23:30 EDT: "do not stop working unless it is an absolute hard stop that only the owner can resolve. You must always try workarounds using all available tools and surfaces: Comet, MCO, Claude Code/Desktop, Perplexity Computer, Claude-in-Chrome, and any configured connectors."
 - `ZERO_QUESTION_CLAUDE.md` gains new section "Hard-stop escalation protocol (owner contact of last resort)" — enumerates the 3-tier exhaustion sequence (spec files → alternative tool/surface → Perplexity) before Pushover/iMessage owner contact is permitted. Defines iMessage template + explicit "do not" list.
