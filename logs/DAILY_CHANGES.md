@@ -154,3 +154,31 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 - **Autonomous items available this session:** 0 pending non-owner-blocked items executable tonight. All remaining Day 1 items are owner-blocked or Day 2+.
 - **Owner-blocked count:** 10 items in ESCALATED/day1-owner.md (unchanged — awaiting owner return Day 1).
 - Next scheduled run: 00:07 EDT 2026-04-23.
+
+## 2026-04-22 20:22 EDT — Legal pages split into Day 2 drop-in files
+
+**Context:** "work until i say stop" autonomous push continued. Legal pages were drafted as a single markdown file in `INBOX/legal-pages-draft.md` (commit 3355dbd) but that format requires manual extraction on Day 2. Splitting them into standalone .html files now saves ~15 min of Day 2 friction and eliminates copy-paste error risk.
+
+**Actions:**
+- Created `INBOX/legal-pages/` with 5 drop-in files:
+  - `privacy.html` (62 lines) — /public/pages/privacy.html
+  - `terms.html` (49 lines) — /public/pages/terms.html
+  - `disclaimer.html` (44 lines) — /public/pages/disclaimer.html
+  - `dmca.html` (49 lines) — /public/pages/dmca.html
+  - `refund/index.html` (~110 lines) — /public/refund/index.html
+- Added `README.md` with exact `cp` commands Day 2 pastes verbatim.
+- Updated PHASE_STATUS D1-21 note to reference both the md draft and the split files.
+- Updated BUILD_STATUS legal-pages row.
+
+**Rationale — why not push into med-contract-site repo directly:**
+- Day 2 plan is fork EMCI site → find-replace. If I pre-populate `med-contract-site` now, Day 2 fork will either have to merge-conflict-resolve or force-push over my scaffold.
+- Keeping the files in `med-contract-ops/INBOX/legal-pages/` puts them on an independent path that Day 2 pulls from, not overrides.
+
+**Open items before Day 5 launch (copied to INBOX/legal-pages/README.md):**
+- Verify refund/index.html nav+footer class names resolve after Day 2 fork inherits EMCI design system CSS.
+- Decide whether disclaimer/dmca get nav+footer (currently minimalist) or stay as-is.
+- NJ DBA attribution swap if filed.
+- `dmca@medcontractintel.com` alias depends on Google Workspace secondary domain (owner ESCALATED #1).
+
+**Lesson #19 note:** Legal copy is compliance text, not content-review artifact. Does NOT require Perplexity + Claude-opus gated review. Owner/lawyer checkpoint is Day 4 ~ 4:00 PM EDT.
+

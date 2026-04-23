@@ -48,7 +48,7 @@ Pulled from blueprint §10 Day 1. All items `pending` until ops-controller or in
 | 2:00 | D1-18 | Owner: create Sentry project medcontractintel-production, save DSN | 🟣 | owner-blocked — ESCALATED item #9 |
 | 2:30 | D1-19 | Resend domain verification started | 🟢 | pending — autonomous via signed-in resend.com browser session Day 1; blocked until @medcontractintel.com MX is live (owner D1-6) |
 | 3:00 | D1-20 | Cloudflare R2 bucket `medci-social-media` created + public domain | 🟢 | partial-done — bucket CREATED 2026-04-22 23:32 UTC (pre-flight); public domain attach pending dashboard access (no MCP path). Owner or Claude-in-Chrome on Day 1. |
-| 3:30 | D1-21 | Port legal pages from EMCI site (privacy/terms/dmca/disclaimer/refund-policy), MedCI find-replace | 🟢 | done — draft at `INBOX/legal-pages-draft.md` (commit 3355dbd). Ships to `med-contract-site/public/` on Day 2 scaffold. |
+| 3:30 | D1-21 | Port legal pages from EMCI site (privacy/terms/dmca/disclaimer/refund-policy), MedCI find-replace | 🟢 | done — markdown draft at `INBOX/legal-pages-draft.md` (commit 3355dbd); 5 drop-in HTML files split into `INBOX/legal-pages/` 2026-04-22 20:20 EDT with README + copy-ready cp commands. Ships to `med-contract-site/public/` on Day 2 scaffold. |
 | 4:00 | D1-22 | Owner: register brand Reddit `/u/MedContractIntel` with 2FA | 🟣 | owner-blocked — ESCALATED item #10 |
 | 4:30 | D1-23 | ~~Better Stack monitors~~ DEFERRED per D0-8 decision | — | deferred |
 | — | D1-24 | ~~Owner: confirm pricing~~ COMPLETED Day 0 per D0-6 | — | done |

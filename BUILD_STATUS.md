@@ -33,7 +33,7 @@ Owner is unavailable Wed 2026-04-23 AM. Autonomous push pulled forward D1-4, D1-
 | Drive folder tree | 🟡 OWNER-BLOCKED | ESCALATED #5 |
 | Perplexity 1P service account | 🟡 OWNER-BLOCKED | ESCALATED #4 (downstream of 1P vault creation) |
 | TikTok Business accounts | 🟡 OWNER-BLOCKED | ESCALATED #6 (Lesson #17) |
-| Legal pages (privacy/terms/refund/disclaimer/dmca) | 🟢 DRAFTED | `INBOX/legal-pages-draft.md` — drop-in HTML ready for Day 2 site scaffold |
+| Legal pages (privacy/terms/refund/disclaimer/dmca) | 🟢 DRAFTED | `INBOX/legal-pages-draft.md` (draft) + `INBOX/legal-pages/*.html` (5 drop-in files with README + cp script) — Day 2 site scaffold copies straight into `public/` |
 | Stripe products | 🔴 NOT YET | Day 2 (after pricing lock — already locked Day 0) |
 | Site deploy | 🔴 NOT YET | Day 2 |
 | Analyzer | 🔴 NOT YET | Day 3 |
