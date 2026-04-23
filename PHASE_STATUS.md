@@ -3,6 +3,80 @@
 **Live execution tracker. Ops-controller updates every 4hr. Interactive sessions update as they work.**
 
 **Status key:** `pending` | `in-progress` | `done` | `owner-blocked` | `deferred`
+**Checkbox key:** `[x]` done | `[~]` partial/in-progress | `[O]` owner-blocked | `[D]` deferred | `[ ]` pending
+
+---
+
+## Fast checkbox view (for Perplexity scanning)
+
+### Day 0 — Tuesday 2026-04-22 evening (PRE-FLIGHT)
+- [x] D0-1 Scaffold med-contract-ops repo
+- [x] D0-2 Move blueprint to ~/MedContractIntel/
+- [x] D0-3 Create med-ops-controller SKILL.md
+- [O] D0-3b Register med-ops-controller with scheduler (owner)
+- [x] D0-4 Cross-reference EMCI DAILY_CHANGES
+- [x] D0-5 Memory file for MedCI build
+- [x] D0-6 Owner: confirm pricing (confirmed)
+- [x] D0-7 Owner: NJ DBA filing (owner-handled)
+- [D] D0-8 Owner: Better Stack decision (deferred post-launch)
+- [x] D0-9 Brand palette ratified + site migration (added 2026-04-22 late evening)
+- [x] D0-10 ZERO_QUESTION_CLAUDE.md + WORKFLOW.md authority files (added 2026-04-22 late evening)
+
+### Day 1 — Wednesday 2026-04-23 (LEGAL + DNS + INFRA SKELETON)
+- [O] D1-1 Daily sync (owner — owner unavailable Wed AM)
+- [x] D1-2 Write Day 1 hour-by-hour
+- [O] D1-3 File DBA with NJ (owner-handled)
+- [x] D1-4 Cloudflare zone medcontractintel.com
+- [~] D1-5 DNS records (MX/SPF/DMARC propagating; A/AAAA Day 2; DKIM owner)
+- [O] D1-6 Owner: add Google Workspace secondary domain
+- [O] D1-7 Owner: create 8 email aliases
+- [O] D1-8 Owner: Google Drive folder tree
+- [O] D1-9 Owner: 4 new 1Password vaults `MedCI — *`
+- [O] D1-10 Owner: Perplexity 1P service account
+- [O] D1-11 Gmail filters (owner — Gmail MCP scope mismatch)
+- [x] D1-12 Create 3 GitHub repos
+- [x] D1-13 Git init + push med-contract-ops
+- [O] D1-14 Owner: register @medcontractintel TikTok Business
+- [~] D1-15 DNS propagation verify (partial, Day 2 24h re-check)
+- [O] D1-16 Owner: Kit account signup
+- [O] D1-17 Owner: Buffer org + 5 socials OAuth
+- [O] D1-18 Owner: Sentry project
+- [ ] D1-19 Resend domain verification (blocked on D1-6 DKIM coexistence)
+- [~] D1-20 R2 bucket created; public domain attach pending
+- [x] D1-21 Legal pages ported from EMCI
+- [O] D1-22 Owner: brand Reddit account
+- [D] D1-23 Better Stack (deferred per D0-8)
+- [x] D1-24 Pricing confirmed Day 0
+- [x] D1-25 EOD retro + Day 2 plan write (done Day 0 evening)
+
+### Day 2 — Thursday 2026-04-24 (STRIPE + SITE DEPLOY)
+- [O] D2-1 Daily sync
+- [ ] D2-2 Integrate Stripe product IDs into site
+- [ ] D2-3 Verify `cp -r server/pdfs dist/` in build (Lesson #2)
+- [ ] D2-4 Verify Stripe lazy-init in webhook (Lesson #3)
+- [ ] D2-5 Create Stripe products + prices + payment links via MCP
+- [ ] D2-6 `/checklist-thank-you` route split (Lesson #13)
+- [ ] D2-7 Stripe success URLs include `?session_id` (Lesson #9)
+- [ ] D2-8 Rebuild 4 IM PDFs with new palette
+- [ ] D2-9 Railway project create + env vars
+- [ ] D2-10 Deploy to Railway; verify 200 on key routes
+- [ ] D2-11 Cloudflare A/AAAA at Railway IP + TLS
+- [ ] D2-12 Smoke test #1 (gated halt if fail)
+- [ ] D2-13 Production Stripe webhook
+- [O] D2-14 Kit email automation import (downstream of D1-16)
+- [ ] D2-15 Stripe→Kit tag bridge verify
+- [ ] D2-16 Smoke test #2 full funnel
+- [ ] D2-17 Verify 4 PDFs in server/pdfs/ AND dist/
+- [ ] D2-18 Day 2 EOD retro + Day 3 plan write
+
+### Day 3 — Friday 2026-04-25 (ANALYZER + CONTENT)
+*Populated by ops-controller morning of Day 3. Pulls from blueprint §10 Day 3.*
+
+### Day 4 — Saturday 2026-04-26 (AUTOMATION + DRY RUN)
+*Populated by ops-controller morning of Day 4.*
+
+### Day 5 — Sunday 2026-04-27 (LAUNCH)
+*Populated by ops-controller morning of Day 5. Gated by 18 Launch Gates (§13).*
 
 ---
 
