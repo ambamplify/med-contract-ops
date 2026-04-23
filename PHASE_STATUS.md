@@ -46,20 +46,51 @@ Pulled from blueprint §10 Day 1. All items `pending` until ops-controller or in
 | 1:00 | D1-16 | Owner: sign up new Kit account on admin@medcontractintel.com, disable double opt-in | 🟣 | owner-blocked — ESCALATED item #7 (downstream of D1-7) |
 | 1:30 | D1-17 | Owner: create Buffer org, OAuth all 5 socials (TikTok Business) | 🟣 | owner-blocked — ESCALATED item #8 |
 | 2:00 | D1-18 | Owner: create Sentry project medcontractintel-production, save DSN | 🟣 | owner-blocked — ESCALATED item #9 |
-| 2:30 | D1-19 | Resend domain verification started | 🟢 | pending — autonomous via signed-in resend.com browser session Day 1; blocked until @medcontractintel.com MX is live (owner D1-6) |
+| 2:30 | D1-19 | Resend domain verification started | 🟢 | pending — MX is now PROPAGATING (per D1-15), but Resend verification still gated on owner D1-6 (Google secondary domain add) since Resend DKIM CNAME on `resend._domainkey.medcontractintel.com` needs to coexist with Google DKIM. Queued for first Day 1 autonomous run after D1-6 lands. |
 | 3:00 | D1-20 | Cloudflare R2 bucket `medci-social-media` created + public domain | 🟢 | partial-done — bucket CREATED 2026-04-22 23:32 UTC (pre-flight); public domain attach pending dashboard access (no MCP path). Owner or Claude-in-Chrome on Day 1. |
 | 3:30 | D1-21 | Port legal pages from EMCI site (privacy/terms/dmca/disclaimer/refund-policy), MedCI find-replace | 🟢 | done — markdown draft at `INBOX/legal-pages-draft.md` (commit 3355dbd); 5 drop-in HTML files split into `INBOX/legal-pages/` 2026-04-22 20:20 EDT with README + copy-ready cp commands. Ships to `med-contract-site/public/` on Day 2 scaffold. |
 | 4:00 | D1-22 | Owner: register brand Reddit `/u/MedContractIntel` with 2FA | 🟣 | owner-blocked — ESCALATED item #10 |
 | 4:30 | D1-23 | ~~Better Stack monitors~~ DEFERRED per D0-8 decision | — | deferred |
 | — | D1-24 | ~~Owner: confirm pricing~~ COMPLETED Day 0 per D0-6 | — | done |
-| 7:00 | D1-25 | EOD retro + Day 2 plan write | 🟢 | pending — controller autorun after 7:07 PM EDT, or interactive session |
+| 7:00 | D1-25 | EOD retro + Day 2 plan write | 🟢 | done — 2026-04-22 ~23:00 EDT interactive Claude Code session pre-populated Day 2 hour-by-hour below (18 tasks, D2-1 through D2-18) with Phase A scaffold already factored in. Owner walks into Day 1 morning with Day 2 already sequenced. |
 
 **Day 1 launch gate:** DNS resolving, all 8 aliases receive mail, Resend + Kit accounts created, Sentry project live, Buffer connected (TikTok Business), R2 bucket accessible, pricing locked. Any RED = Day 2 delayed.
 
 ---
 
 ## Day 2 — Thursday 2026-04-24 (STRIPE + SITE DEPLOY)
-Populated by ops-controller morning of Day 2.
+
+Hour-by-hour populated 2026-04-22 late evening (Day 0 pull-forward by interactive Claude Code session). Phase A scaffold (clone + rebrand + IM analysis-prompt + legal pages) already complete (commit `47d731a`). Brand palette migration complete (commit `59becb7`). Day 2 resumes at Stripe integration + Railway deploy.
+
+| Time | # | Task | Agent | Status |
+|---|---|---|---|---|
+| 7:00 | D2-1 | Daily sync — owner opens Claude Code + Perplexity; read BUILD_STATUS.md + this file first | 🟣 | pending |
+| 8:00 | D2-2 | ~~Finish med-contract-site string/color/logo swap~~ **Rebrand + palette DONE 2026-04-22 evening (commits 47d731a + 59becb7).** Remaining: integrate actual Stripe product IDs from D2-5 into `server/routes.ts` Stripe Payment Link map + analyzer.html checkout button wiring | 🔵 | pending |
+| 8:30 | D2-3 | Verify `cp -r server/pdfs dist/server/pdfs` is in build script (Lesson #2 — EMCI hot-bug) | 🔵 | pending |
+| 8:45 | D2-4 | Verify Stripe lazy-init inside webhook handler, NOT top-of-module (Lesson #3) | 🔵 | pending |
+| 9:00 | D2-5 | **Create Stripe products + prices + payment links via MCP** against `INBOX/stripe/products-prices-spec.json` (pre-specced Day 0). Capture all price IDs + payment-link URLs into `state/stripe-ids.md`. | 🔵 | pending |
+| 9:30 | D2-6 | Create `/checklist-thank-you` route separate from `/thank-you` (Lesson #13 — EMCI hot-bug) | 🔵 | pending |
+| 10:00 | D2-7 | Set all Stripe payment link success URLs to include `?session_id={CHECKOUT_SESSION_ID}` (Lesson #9) | 🔵 | pending |
+| 10:30 | D2-8 | Rebuild 4 IM PDFs with new palette (bundle / RVU playbook / negotiation scripts / billing breakdown) via `make_og_image.py` + `make_thumbnail.py` + existing `server/pdf-report.ts` template — tokens now pull from brand palette | 🔵 | pending |
+| 11:00 | D2-9 | Create Railway project `medci-production`; connect ambamplify/med-contract-site repo; add env vars from `INBOX/site-scaffold/env-template.example` (Stripe secret, webhook secret, Resend, Kit, Anthropic, Sentry DSN) | 🔵 | pending |
+| 11:30 | D2-10 | Deploy to Railway; verify `medci-production.up.railway.app` returns 200 on homepage + /calculator + /analyzer | 🔵 | pending |
+| 12:00 | D2-11 | Point medcontractintel.com Cloudflare zone A/AAAA at Railway IP (completes D1-5 partial); verify TLS auto-provisions | 🔵 | pending |
+| 12:30 | D2-12 | **Smoke test #1 (gated):** homepage loads, /calculator works, /analyzer upload page loads, Stripe test-mode checkout for $97 analyzer completes. If any fail, stop — do not proceed to D2-13 | 🔵→🟢 | pending |
+| 1:30 | D2-13 | Production Stripe webhook: point live webhook at medcontractintel.com/api/webhooks/stripe; register same 4 events as EMCI (checkout.session.completed, charge.refunded, customer.subscription.deleted, invoice.payment_failed) | 🔵 | pending |
+| 2:00 | D2-14 | Import 3 Kit email automations from `INBOX/kit/emails-spec.md` (pre-drafted Day 0) into owner's Kit account. **Kit email 1 links to direct PDF URL, not form URL (Lesson #10 — EMCI hot-bug).** Blocked if D1-16 owner Kit signup not complete | 🔵 | owner-blocked-downstream |
+| 3:30 | D2-15 | Verify Stripe→Kit tag bridge (spec in `INBOX/kit/emails-spec.md`) — test checkout should add tag `medci-analyzer-purchased` within 30s | 🔵 | pending |
+| 4:00 | D2-16 | **Smoke test #2 (full funnel):** /calculator → email capture → Kit email 1 delivers free IM Red Flag Checklist PDF → D2 nurture email fires in 48hr sim | 🔵→🟢 | pending |
+| 5:00 | D2-17 | Verify 4 IM PDFs exist in `server/pdfs/` AND are copied to `dist/server/pdfs/` on build (Lesson #2 re-verify) | 🔵 | pending |
+| 7:00 | D2-18 | Day 2 EOD retro + Day 3 plan write into PHASE_STATUS.md | 🟢 | pending |
+
+**Day 2 launch gate (= Day 2 exit criteria):**
+- medcontractintel.com resolves with valid TLS
+- /analyzer accepts uploads (Claude API wired + Anthropic key from env)
+- Stripe test-mode purchase of $97 analyzer completes end-to-end
+- Kit email 1 delivers a working PDF URL (not a form URL)
+- 4 IM PDFs exist in `server/pdfs/` AND `dist/server/pdfs/`
+
+Any RED = Day 3 delayed.
 
 ## Day 3 — Friday 2026-04-25 (ANALYZER + CONTENT)
 Populated by ops-controller morning of Day 3.
