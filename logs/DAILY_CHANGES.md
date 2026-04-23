@@ -182,3 +182,25 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 **Lesson #19 note:** Legal copy is compliance text, not content-review artifact. Does NOT require Perplexity + Claude-opus gated review. Owner/lawyer checkpoint is Day 4 ~ 4:00 PM EDT.
 
+
+## 2026-04-22 20:28 EDT — Stripe Day 2 spec pulled forward
+
+**Context:** Continuing "work until i say stop" — next highest-leverage Day 2 pull-forward is the Stripe product/price creation input contract. Day 2 runner can now execute Stripe MCP calls autonomously against a fully-specified JSON instead of re-deriving copy/pricing/metadata in flight.
+
+**Actions:**
+- Created `INBOX/stripe/products-prices-spec.json` (5 products, 5 prices, 1 coupon, 7 Payment Links, all metadata/tax-codes/statement-descriptors resolved). JSON validated.
+- Created `INBOX/stripe/README.md` with Day 2 runner checklist, sanity-check gates, pricing lock table, open owner items.
+- Pricing canonicalized per D0-6: `$197 bundle / $97 analyzer / $67 scripts / $47 wrvu / $37 shift-economics`. Flagged $32/$37 label inconsistency in PHASE_STATUS D0-6 as owner re-edit if desired.
+
+**Why this is safe now:**
+- Writing a spec file doesn't touch Stripe itself — zero API calls made.
+- Day 2 runner reads the spec, validates gates (account scope, 1P vault, no existing products), THEN calls `create_product` etc. Fails closed if gates don't pass.
+- Separate MedCI Stripe account requirement (NOT EMCI) is explicit in runner notes.
+
+**Dependencies still owner-blocked (spec calls these out):**
+- MedCI Stripe account creation (business details, bank, Delaware LLC)
+- 1P vault `MedCI — Stripe` (ESCALATED #3)
+- Perplexity service account write access to that vault (ESCALATED #4)
+
+**Effort saved on Day 2:** ~30 min of product copy drafting + pricing config + metadata design. Day 2 becomes: validate gates → fire 18 MCP calls → write product-data.ts → wire Payment Links into site.
+

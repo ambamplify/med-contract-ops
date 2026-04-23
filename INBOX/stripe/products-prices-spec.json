@@ -1,0 +1,177 @@
+{
+  "_meta": {
+    "spec_version": "1.0",
+    "drafted": "2026-04-22T20:25-04:00",
+    "drafted_by": "Claude Code (thread) — Day 0 evening autonomous push",
+    "executes_on": "Day 2 Thursday 2026-04-24 — via Stripe MCP (mcp__7cf0a85b-56f9-456d-a0de-f570c906de1a__create_product + _create_price)",
+    "pricing_lock_source": "PHASE_STATUS.md D0-6 — owner-confirmed 2026-04-22 evening",
+    "pricing_lock_value_note": "Blueprint/spec say $37 for shift-economics; Day 0 task label had a stale '$32' reference. Canonical = $37.",
+    "currency": "usd",
+    "mode": "one_time",
+    "tax_behavior": "exclusive",
+    "statement_descriptor": "MEDCI",
+    "post_create_actions": [
+      "Save each product.id and price.id to 1Password vault 'MedCI — Stripe' under keys 'product_<slug>' and 'price_<slug>'.",
+      "Create Stripe Payment Link for each price with metadata.slug=<slug> and save the URL to the same 1P item.",
+      "Wire Payment Links into med-contract-site/public/pages/products/<slug>.html or the product grid on '/' (copy EMCI pattern)."
+    ]
+  },
+
+  "products": [
+    {
+      "slug": "bundle",
+      "product_payload": {
+        "name": "MedContractIntel — Complete Physician Contract Bundle",
+        "description": "Everything an internal medicine or hospitalist physician needs to evaluate and negotiate a contract: AI Contract Analyzer + IM/Hospitalist Red Flag Checklist + Negotiation Script Pack + wRVU Compensation Calculator + Shift Economics Analyzer. Save $78 vs. buying individually.",
+        "metadata": {
+          "slug": "bundle",
+          "category": "bundle",
+          "specialty": "internal-medicine,hospitalist",
+          "tier": "best-value",
+          "display_order": "1"
+        },
+        "statement_descriptor": "MEDCI BUNDLE",
+        "tax_code": "txcd_10000000"
+      },
+      "price_payload": {
+        "unit_amount": 19700,
+        "currency": "usd",
+        "tax_behavior": "exclusive",
+        "nickname": "bundle — one-time $197",
+        "metadata": { "slug": "bundle", "display_price": "$197" }
+      }
+    },
+
+    {
+      "slug": "analyzer",
+      "product_payload": {
+        "name": "MedContractIntel — AI Contract Analyzer (IM/Hospitalist)",
+        "description": "Upload your internal medicine or hospitalist employment contract and receive a benchmark-graded analysis covering base compensation vs. MGMA/AAMC/SHM/AMGA/Doximity medians, RVU conversion factor fairness, wRVU threshold/multiplier analysis, nocturnist differential, census/panel-size commitments, non-compete radius and duration, tail coverage, CME, and termination terms — plus a ready-to-send counter-proposal letter.",
+        "metadata": {
+          "slug": "analyzer",
+          "category": "analyzer",
+          "specialty": "internal-medicine,hospitalist",
+          "tier": "core",
+          "display_order": "2"
+        },
+        "statement_descriptor": "MEDCI ANALYZER",
+        "tax_code": "txcd_10000000"
+      },
+      "price_payload": {
+        "unit_amount": 9700,
+        "currency": "usd",
+        "tax_behavior": "exclusive",
+        "nickname": "analyzer — one-time $97",
+        "metadata": { "slug": "analyzer", "display_price": "$97" }
+      }
+    },
+
+    {
+      "slug": "scripts",
+      "product_payload": {
+        "name": "MedContractIntel — Negotiation Script Pack",
+        "description": "Ready-to-use scripts for the eight most common hospitalist and internal medicine contract negotiation moments: compensation floor, RVU threshold push, nocturnist premium, tail coverage, non-compete reduction, CME increase, signing bonus clawback, and offer timeline. Each script includes opener, evidence line (ties to MGMA/SHM/AMGA benchmarks), ask, and fallback.",
+        "metadata": {
+          "slug": "scripts",
+          "category": "template",
+          "specialty": "internal-medicine,hospitalist",
+          "tier": "supplement",
+          "display_order": "3"
+        },
+        "statement_descriptor": "MEDCI SCRIPTS",
+        "tax_code": "txcd_10000000"
+      },
+      "price_payload": {
+        "unit_amount": 6700,
+        "currency": "usd",
+        "tax_behavior": "exclusive",
+        "nickname": "scripts — one-time $67",
+        "metadata": { "slug": "scripts", "display_price": "$67" }
+      }
+    },
+
+    {
+      "slug": "wrvu",
+      "product_payload": {
+        "name": "MedContractIntel — wRVU Compensation Calculator",
+        "description": "Interactive calculator + walkthrough PDF for internal medicine and hospitalist RVU-based compensation. Model base salary vs. threshold vs. multiplier scenarios, compare against MGMA/AMGA/SHM medians by region and employer type, and see breakeven RVU targets for a given offer.",
+        "metadata": {
+          "slug": "wrvu",
+          "category": "calculator",
+          "specialty": "internal-medicine,hospitalist",
+          "tier": "supplement",
+          "display_order": "4"
+        },
+        "statement_descriptor": "MEDCI WRVU",
+        "tax_code": "txcd_10000000"
+      },
+      "price_payload": {
+        "unit_amount": 4700,
+        "currency": "usd",
+        "tax_behavior": "exclusive",
+        "nickname": "wrvu — one-time $47",
+        "metadata": { "slug": "wrvu", "display_price": "$47" }
+      }
+    },
+
+    {
+      "slug": "shift-economics",
+      "product_payload": {
+        "name": "MedContractIntel — Shift Economics Analyzer",
+        "description": "For hospitalists and nocturnists: break down the true $/hr of any shift schedule offer. Includes admissions cap modeling, post-call differential math, 7-on/7-off vs. flex schedule comparison, nocturnist premium benchmarks (SHM), and total annual comp at different block configurations.",
+        "metadata": {
+          "slug": "shift-economics",
+          "category": "calculator",
+          "specialty": "hospitalist,nocturnist",
+          "tier": "supplement",
+          "display_order": "5"
+        },
+        "statement_descriptor": "MEDCI SHIFT",
+        "tax_code": "txcd_10000000"
+      },
+      "price_payload": {
+        "unit_amount": 3700,
+        "currency": "usd",
+        "tax_behavior": "exclusive",
+        "nickname": "shift-economics — one-time $37",
+        "metadata": { "slug": "shift-economics", "display_price": "$37" }
+      }
+    }
+  ],
+
+  "coupons": [
+    {
+      "_note": "Launch discount — 20% off bundle for launch week subscribers. Applied via Payment Link on Kit welcome email + first TikTok bio link. Auto-expires Day 12.",
+      "id": "MEDCI-LAUNCH-20",
+      "percent_off": 20,
+      "duration": "once",
+      "name": "Launch Week — 20% Off Bundle",
+      "applies_to": { "products": ["<bundle product_id after create>"] },
+      "redeem_by_epoch_hint": "Day 12 Thursday 2026-05-07 23:59 EDT — ops-controller computes actual epoch at create time"
+    }
+  ],
+
+  "payment_links": [
+    { "slug": "bundle",          "metadata": { "source": "site" } },
+    { "slug": "analyzer",        "metadata": { "source": "site" } },
+    { "slug": "scripts",         "metadata": { "source": "site" } },
+    { "slug": "wrvu",            "metadata": { "source": "site" } },
+    { "slug": "shift-economics", "metadata": { "source": "site" } },
+    { "slug": "bundle",          "metadata": { "source": "kit-welcome", "coupon": "MEDCI-LAUNCH-20" } },
+    { "slug": "bundle",          "metadata": { "source": "tiktok-bio",  "coupon": "MEDCI-LAUNCH-20" } }
+  ],
+
+  "_day2_runner_notes": [
+    "This spec is the input contract for the Day 2 Stripe-products-creation block. Owner does NOT need to be online — the create_product + create_price + create_coupon + create_payment_link MCP calls run autonomously.",
+    "Before calling create_product: confirm Stripe MCP is scoped to the MedCI Stripe account (get_stripe_account_info). MedCI uses a separate Stripe account from EMCI (Blueprint §8.2) — the MCP must switch accounts or have a MedCI-scoped connection.",
+    "If Stripe account is not yet created on Day 1 morning: this is an owner item (Stripe account setup with bank + business details). File under ESCALATED Day 1 if not present.",
+    "After create: Day 2 ops step writes each price_id + payment_link URL into med-contract-site/server/routes.ts or a product-data JSON the site reads from.",
+    "Kit welcome email uses the coupon-enabled bundle Payment Link — hard-code that URL into the welcome automation on Day 3 Kit-setup step.",
+    "DO NOT create subscription products. All 5 are one-time purchases. This matches EMCI and the blueprint spec."
+  ],
+
+  "_stripe_test_vs_live": {
+    "day2_dry_run": "Create all 5 products + prices in TEST mode first. Verify Payment Links + coupons work. Only flip to LIVE after Day 4 end-to-end dry run passes.",
+    "live_cutover": "Day 4 late afternoon — recreate prices/links in LIVE mode, update site to point at live payment_link URLs, archive test artifacts for audit."
+  }
+}
