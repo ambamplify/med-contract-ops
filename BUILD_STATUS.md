@@ -50,7 +50,7 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | Content-review ledger (Lesson #19) | 🟢 PRE-POPULATED | `state/content-review-day3.md` — 27 tracked artifacts (15 TikTok + 3 YouTube + 1 text-lane placeholder + 8 site-copy rows). Launch Gate 18 denominator set. |
 | Kit email automations (Day 3 pull-forward) | 🟢 DRAFTED | `INBOX/kit/emails-spec.md` — 3 full HTML email drafts + automation wiring spec + Stripe→Kit tag bridge. Rides on owner Kit account creation Day 3 AM. |
 | Stripe products | 🟢 GREEN | 5 products + 5 prices + coupon XlzbFyUR + 7 payment links — acct_1TEuuDRS3QYs0eSM — IDs in state/stripe-ids.md. ⚠ 3 Stripe dashboard follow-ups (redirect URLs, coupon on links 6+7, coupon expiry) flagged for owner Day 2 |
-| Site deploy | 🔴 NOT YET | Day 2 |
+| Site deploy | 🟢 GREEN | HTTP 200 on `med-contract-site-production.up.railway.app`. Custom domain needs Cloudflare CNAME (owner 2 min — config in state/infra.md). |
 | Analyzer | 🔴 NOT YET | Day 3 |
 | Content pipeline | 🔴 NOT YET | Day 3 (Lesson #19 dual review gates baked into schedule) |
 | Social accounts | 🔴 NOT YET | Day 1 owner + Day 3 setup |
