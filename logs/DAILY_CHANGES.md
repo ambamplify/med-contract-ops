@@ -204,3 +204,34 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 **Effort saved on Day 2:** ~30 min of product copy drafting + pricing config + metadata design. Day 2 becomes: validate gates → fire 18 MCP calls → write product-data.ts → wire Payment Links into site.
 
+
+## 2026-04-22 20:34 EDT — Day 2 site-scaffold runbook pulled forward
+
+**Context:** Continuing autonomous push. Day 2 site scaffold is the single biggest friction point — it's a clone-rebrand of the EMCI site with ~50 brand-token locations and 8 files that need manual rewrite beyond mechanical sed. Writing the runbook now eliminates all re-derivation on Day 2.
+
+**Actions:**
+- Created `INBOX/site-scaffold/RUNBOOK.md` — 9-section execution plan:
+  1. Pre-flight gates
+  2. Fork strategy (clone-and-rebrand, not GitHub fork — clean lineage)
+  3. Scaffold script (rsync-based with exact excludes)
+  4. Sed find-replace playbook (deterministic brand rebrand)
+  5. Files needing manual rewrite (analysis-prompt.ts, letter-docx.ts, email-service.ts, public/index.html, analyzer.html, shared/schema.ts, client/src/** employer-type enum)
+  6. Fresh artifacts to create (med-contract.db, .env, brand assets, robots.txt, sitemap.xml)
+  7. Railway deploy steps (includes finishing D1-5 A/AAAA DNS after Railway issues IP)
+  8. First commit + push
+  9. 8 post-deploy acceptance tests + open Day 2 owner decisions
+- Created `INBOX/site-scaffold/env-template.example` — full .env.example ready to rename in the site repo on Day 2.
+- Cross-references:
+  - Legal pages drop-in dir → `INBOX/legal-pages/`
+  - Stripe spec → `INBOX/stripe/products-prices-spec.json`
+  - Blueprint §8.3 for analysis-prompt rewrite content
+  - state/content-review-day3.md for Lesson #19 gating of user-facing marketing copy
+
+**Why this is safe now:**
+- Nothing touched in `/Users/ambamplify/MedContractIntel/med-contract-site/` (still doesn't exist locally). Runbook IS the artifact.
+- Day 2 runner reads runbook → validates pre-flight gates → executes.
+
+**Effort saved on Day 2:** ~45 min of exploration, 30 min of brand-token discovery, 15 min of .env design. Day 2 becomes 1 hour of rsync+sed+manual-rewrite instead of 3+ hours of figuring out what to do.
+
+**Lesson #19 flagged:** site hero copy, product-grid descriptions, analyzer FAQ, about-page founder bio all require dual review before launch. Those go through `state/content-review-day3.md` gating.
+
