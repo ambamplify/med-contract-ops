@@ -112,6 +112,16 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ---
 
+**[late evening EDT] Claude Code (thread session) — Content repo scaffolded + IM_DATA_2026.md skeleton**
+- Cloned empty `med-contract-content` repo locally to `/Users/ambamplify/MedContractIntel/med-contract-content/`.
+- First commit `382dd2f`: `.gitignore`, `README.md`, `ops/IM_DATA_2026.md` (skeleton).
+- **`ops/IM_DATA_2026.md`** is the blueprint §7 SSOT. Zero authoritative cells yet — every value marked `TBD` with blueprint-template value quoted for Perplexity cross-check. Authoritative sources listed (CMS CY2026 PFS, MGMA 2025 IM-seg, SHM 2024, ACP 2024-25, Medscape 2025, Doximity 2024, plus AAMC and AMGA newly added beyond blueprint for academic IM coverage). Perplexity Day 1 Task 13 populates.
+- Second commit `2732125`: `content/calendar-template.yaml` — 30-day calendar pre-seeded with 15 TikTok rows (every blueprint §11 hook, 2-day cadence starting Day 5) and 3 YouTube rows (M1/M2/M3). Each TikTok row lists `data_cells_referenced:` pointing back to IM_DATA_2026.md keys; hook cannot advance past Gate 1 until referenced cells are authoritative. LinkedIn/X/Threads/IG/Substack sections empty (populated Day 3 7:00 PM per blueprint).
+- Pushed to `https://github.com/ambamplify/med-contract-content.git` — 2 commits on main.
+- Purpose: Day 3 7:30 AM "Generate 30-day content calendar" slot now reduces from "design from scratch" (~45 min) to "verify + fill cells" (~15 min). Perplexity Day 1 Task 13 has a known target structure instead of starting from a blank file.
+
+---
+
 **[late evening EDT] Claude Code (thread session) — Legal pages drafted to INBOX**
 - New file: `med-contract-ops/INBOX/legal-pages-draft.md` — 5 pages drafted MedCI-side, drop-in HTML: Privacy, Terms, Refund (full page w/ nav/footer), Disclaimer (NEW, EMCI didn't ship standalone), DMCA (NEW). Source = EMCI `public/pages/` + `public/refund/`.
 - Adaptations applied verbatim:

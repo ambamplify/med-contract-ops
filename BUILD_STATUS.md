@@ -22,7 +22,9 @@ Owner is unavailable Wed 2026-04-23 AM. Autonomous push pulled forward D1-4, D1-
 | med-ops-controller SKILL.md | 🟢 GREEN | v1.2-updated, cross-checks content-review ledger before marking content items done |
 | med-ops-controller scheduler registration | 🟢 GREEN | Registered 2026-04-22, cron `7 */4 * * *`, next run 2026-04-23T00:11:47Z |
 | Git repo (local) | 🟢 GREEN | 3 commits on main (4653bf0, 184bb23, 3355dbd) |
-| GitHub remote | 🟢 GREEN | `ambamplify/med-contract-ops` pushed; `-content` and `-site` empty shells awaiting Day 2/3 scaffold |
+| GitHub remote | 🟢 GREEN | `ambamplify/med-contract-ops` 4 commits; `ambamplify/med-contract-content` 2 commits (IM_DATA_2026.md skeleton + calendar template); `-site` empty shell until Day 2 scaffold |
+| IM_DATA_2026.md (SSOT) | 🟡 SKELETON | Structure in place, 0/~80 cells authoritative. Perplexity Day 1 Task 13 populates. Blueprint §7. |
+| Content calendar | 🟡 TEMPLATED | 15 TikTok + 3 YouTube rows pre-seeded with hooks + dates + data_cells refs. LinkedIn/X/Threads/IG/Substack empty. Day 3 7:00 PM populates text lanes. |
 | Railway project | 🔴 NOT YET | Day 2 |
 | Cloudflare DNS | 🟡 PARTIAL | MX + SPF + DMARC live; A/AAAA wait on Railway (Day 2), DKIM wait on Google secondary-domain add (owner) |
 | Cloudflare R2 (medci-social-media) | 🟢 GREEN | Bucket live since 2026-04-22 23:32 UTC. Public domain attach deferred to Day 1 dashboard step. |
