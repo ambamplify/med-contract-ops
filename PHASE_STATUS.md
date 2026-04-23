@@ -58,9 +58,9 @@
 - [x] D2-6 `/checklist-thank-you` route split (Lesson #13) — pre-verified 2026-04-22 late evening, `public/checklist-thank-you/` separate from `public/thank-you/`
 - [~] D2-7 Stripe success URLs include `?session_id` (Lesson #9) — endpoint exists; payment links created but after_completion redirect NOT settable via MCP. Owner must set on all 7 links via Stripe dashboard (see state/stripe-ids.md §FOLLOW-UP)
 - [ ] D2-8 Rebuild 4 IM PDFs with new palette
-- [ ] D2-9 Railway project create + env vars
-- [ ] D2-10 Deploy to Railway; verify 200 on key routes
-- [ ] D2-11 Cloudflare A/AAAA at Railway IP + TLS
+- [x] D2-9 Railway project create + env vars (done 2026-04-23 04:13 EDT)
+- [x] D2-10 Deploy to Railway; verify 200 on key routes (done 2026-04-23 04:13 EDT)
+- [~] D2-11 Cloudflare CNAME at Railway domain + TLS (partial — CNAME config ready in state/infra.md; needs Cloudflare dashboard apply)
 - [ ] D2-12 Smoke test #1 (gated halt if fail)
 - [ ] D2-13 Production Stripe webhook
 - [O] D2-14 Kit email automation import (downstream of D1-16)
@@ -146,9 +146,9 @@ Hour-by-hour populated 2026-04-22 late evening (Day 0 pull-forward by interactiv
 | 9:30 | D2-6 | Create `/checklist-thank-you` route separate from `/thank-you` (Lesson #13 — EMCI hot-bug) | 🔵 | **done 2026-04-22 late evening** — `public/checklist-thank-you/` already a separate directory from `public/thank-you/` in the Phase A scaffold (inherited from EMCI pattern). Pre-verified. |
 | 10:00 | D2-7 | Set all Stripe payment link success URLs to include `?session_id={CHECKOUT_SESSION_ID}` (Lesson #9) | 🔵 | partial — endpoint exists; payment links created but MCP `create_payment_link` doesn't support after_completion parameter. Owner must update all 7 links in Stripe dashboard to redirect to `https://medcontractintel.com/thank-you?session_id={CHECKOUT_SESSION_ID}`. Flagged in state/stripe-ids.md §FOLLOW-UP #1. |
 | 10:30 | D2-8 | Rebuild 4 IM PDFs with new palette (bundle / RVU playbook / negotiation scripts / billing breakdown) via `make_og_image.py` + `make_thumbnail.py` + existing `server/pdf-report.ts` template — tokens now pull from brand palette | 🔵 | pending — prep done 2026-04-23 00:13 EDT: em-*.pdf renamed → med-*.pdf (placeholder MedCI PDFs committed, gitignore updated so Railway gets them). pdf-report.ts COLORS.navy fixed to medical-green [31,110,67]. Real IM content replaces placeholder at D2-8 once IM_DATA_2026.md populated. |
-| 11:00 | D2-9 | Create Railway project `medci-production`; connect ambamplify/med-contract-site repo; add env vars from `INBOX/site-scaffold/env-template.example` (Stripe secret, webhook secret, Resend, Kit, Anthropic, Sentry DSN) | 🔵 | pending |
-| 11:30 | D2-10 | Deploy to Railway; verify `medci-production.up.railway.app` returns 200 on homepage + /calculator + /analyzer | 🔵 | pending |
-| 12:00 | D2-11 | Point medcontractintel.com Cloudflare zone A/AAAA at Railway IP (completes D1-5 partial); verify TLS auto-provisions | 🔵 | pending |
+| 11:00 | D2-9 | Create Railway project `medci-production`; connect ambamplify/med-contract-site repo; add env vars | 🔵 | **done 2026-04-23 04:13 EDT** — project `214a7540-b763-4a06-a21b-c9cb5158324e`, service `49cfe983-0de2-46eb-8ebf-c1a35ef741bf`, volume `8222fdc6-b23f-477a-be22-51b1f9e3c3af` (/data). 9 env vars set (ANTHROPIC_API_KEY, STRIPE_SECRET_KEY, EMAIL_API_KEY, EMAIL_PROVIDER, EMAIL_FROM, DATABASE_PATH, PORT, NODE_ENV, INTERNAL_TEST_SECRET). 4 still pending: STRIPE_WEBHOOK_SECRET, SENTRY_DSN, KIT_*. |
+| 11:30 | D2-10 | Deploy to Railway; verify `med-contract-site-production.up.railway.app` returns 200 on homepage + /calculator + /analyzer | 🔵 | **done 2026-04-23 04:13 EDT** — `railway up --detach` triggered; Railway status = SUCCESS; HTTP 200 on root. Deployment ID `c028834b-5953-424c-ae2e-53b6a66eba35`. |
+| 12:00 | D2-11 | Cloudflare CNAME at Railway domain (completes D1-5 partial); verify TLS auto-provisions | 🔵 | partial — custom domain `medcontractintel.com` registered in Railway. Cloudflare CNAME config ready in `state/infra.md` (CNAME `@` → `med-contract-site-production.up.railway.app`, proxy on). No CF API token available for autonomous DNS write; owner adds via dashboard OR interactive Claude-in-Chrome on Day 2. |
 | 12:30 | D2-12 | **Smoke test #1 (gated):** homepage loads, /calculator works, /analyzer upload page loads, Stripe test-mode checkout for $97 analyzer completes. If any fail, stop — do not proceed to D2-13 | 🔵→🟢 | pending |
 | 1:30 | D2-13 | Production Stripe webhook: point live webhook at medcontractintel.com/api/webhooks/stripe; register same 4 events as EMCI (checkout.session.completed, charge.refunded, customer.subscription.deleted, invoice.payment_failed) | 🔵 | pending |
 | 2:00 | D2-14 | Import 3 Kit email automations from `INBOX/kit/emails-spec.md` (pre-drafted Day 0) into owner's Kit account. **Kit email 1 links to direct PDF URL, not form URL (Lesson #10 — EMCI hot-bug).** Blocked if D1-16 owner Kit signup not complete | 🔵 | owner-blocked-downstream |

@@ -21,10 +21,28 @@
 
 | Item | Value | Status |
 |---|---|---|
-| Project | `medci-production` (to be created D2-9) | 🔴 not yet |
-| Repo | `ambamplify/med-contract-site` main | 🟢 linked via GitHub |
-| Env template | `INBOX/site-scaffold/env-template.example` | 🟢 ready |
-| Required env vars | Stripe secret, webhook secret, Resend API, Kit API, Anthropic API, Sentry DSN | 🟢 enumerated, values pending per-source Day 2 |
+| Project | `medci-production` | 🟢 created 2026-04-23 04:13 EDT |
+| Project ID | `214a7540-b763-4a06-a21b-c9cb5158324e` | 🟢 |
+| Environment ID | `b5ced0b8-e936-4618-9d34-4a68448a4c25` | 🟢 production |
+| Service ID | `49cfe983-0de2-46eb-8ebf-c1a35ef741bf` | 🟢 med-contract-site |
+| Volume ID | `8222fdc6-b23f-477a-be22-51b1f9e3c3af` | 🟢 /data (SQLite) |
+| Railway domain | `med-contract-site-production.up.railway.app` | 🟢 HTTP 200 (first deploy SUCCESS) |
+| Custom domain registered | `medcontractintel.com` | 🟢 registered in Railway; DNS pending |
+| Railway edge IP | `151.101.2.15` (Fastly) | 🟢 confirmed |
+| Repo | `ambamplify/med-contract-site` main (commit 5d2f165) | 🟢 deployed |
+| Env vars set | NODE_ENV, PORT, DATABASE_PATH, EMAIL_PROVIDER, EMAIL_FROM, INTERNAL_TEST_SECRET, ANTHROPIC_API_KEY, EMAIL_API_KEY, STRIPE_SECRET_KEY | 🟢 9/13 vars set |
+| Env vars pending | STRIPE_WEBHOOK_SECRET (after D2-13), SENTRY_DSN (owner D1-18), KIT_FORM_ID, KIT_API_KEY, KIT_CHECKLIST_FORM_ID (owner D1-16) | ⏳ owner-blocked |
+
+### Cloudflare DNS needed to complete D2-11
+
+Add this CNAME record in Cloudflare dashboard (dash.cloudflare.com → medcontractintel.com → DNS):
+- Type: CNAME
+- Name: `@` (apex/root)
+- Target: `med-contract-site-production.up.railway.app`
+- Proxy: ✅ Enabled (orange cloud)
+
+Cloudflare CNAME flattening handles the apex domain. This replaces the A/AAAA approach.
+After adding: TLS auto-provisions via Cloudflare → Railway in ~2 minutes.
 
 ## Cloudflare R2
 

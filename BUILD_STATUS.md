@@ -5,7 +5,11 @@
 ---
 
 ## Current phase
-**Day 0 → Day 1 bridge** (2026-04-22 late evening autonomous push complete — extended pull-forward 20:15–20:52 EDT)
+**Day 1 — 2026-04-23 04:13 EDT** (owner away; autonomous ops-controller running)
+
+04:07 run completed D2-5 (Stripe catalog) + D2-2 (site product wiring). Both pulled forward from Day 2.
+Owner unavailable Wed AM — returning later today. All 10 owner-blocked Day 1 items await in ESCALATED/day1-owner.md.
+New item #11 added: Stripe dashboard follow-ups (after_completion redirect on 7 payment links + coupon wiring).
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 
@@ -32,7 +36,7 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | Content calendar | 🟡 TEMPLATED | 15 TikTok + 3 YouTube rows pre-seeded with hooks + dates + data_cells refs. LinkedIn/X/Threads/IG/Substack empty. Day 3 7:00 PM populates text lanes. |
 | med-contract-site repo | 🟡 SCAFFOLDED + REBRANDED | Commit `0e52218` (2026-04-23 00:13 EDT) — em-*.pdf renamed → med-*.pdf (placeholder), gitignore updated, pdf-report.ts palette fixed, EMCI residual refs cleaned. Railway deploy + Stripe product IDs + real PDF content still pending Day 2. |
 | Brand palette | 🟢 GREEN | `state/brand-palette.md` (commit `4ace972`) — source of truth, WCAG AA audited, hard rules documented (gold is display-only). |
-| Railway project | 🔴 NOT YET | Day 2 |
+| Railway project | 🟢 GREEN | `medci-production` — project 214a7540, service 49cfe983, volume 8222fdc6 (/data). HTTP 200 on `med-contract-site-production.up.railway.app`. 9/13 env vars set. |
 | Cloudflare DNS | 🟡 PARTIAL | MX + SPF + DMARC **FULLY PROPAGATED** 2026-04-23 00:13 EDT; A/AAAA wait on Railway (Day 2), DKIM wait on Google secondary-domain add (owner) |
 | Cloudflare R2 (medci-social-media) | 🟢 GREEN | Bucket live since 2026-04-22 23:32 UTC. Public domain attach deferred to Day 1 dashboard step. |
 | Google Workspace secondary domain | 🟡 OWNER-BLOCKED | admin.google.com password reauth — ESCALATED #1 |

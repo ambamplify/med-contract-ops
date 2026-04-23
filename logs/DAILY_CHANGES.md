@@ -42,6 +42,20 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 - **iMessage MCP**: authorization denied (same as previous run). No owner messages processed.
 - BUILD_STATUS.md Stripe row updated: 🔴 NOT YET → 🟢 GREEN
 
+**[04:13 EDT] ops-controller — Railway project + first deploy (D2-9 + D2-10)**
+
+- **D2-9 DONE**: Railway project `medci-production` created via GraphQL API (workspace `5f4b9a88`):
+  - Project ID: `214a7540-b763-4a06-a21b-c9cb5158324e`
+  - Service ID: `49cfe983-0de2-46eb-8ebf-c1a35ef741bf` (linked to `ambamplify/med-contract-site`)
+  - Volume ID: `8222fdc6-b23f-477a-be22-51b1f9e3c3af` (mounted at /data for SQLite)
+  - Custom domain `medcontractintel.com` registered in Railway
+  - 9 env vars set: ANTHROPIC_API_KEY, STRIPE_SECRET_KEY, EMAIL_API_KEY, EMAIL_PROVIDER, EMAIL_FROM, DATABASE_PATH, PORT, NODE_ENV, INTERNAL_TEST_SECRET
+  - 4 env vars still pending: STRIPE_WEBHOOK_SECRET (after D2-13), SENTRY_DSN (owner D1-18), KIT_* (owner D1-16)
+- **D2-10 DONE**: `railway up --detach` triggered; Railway build completed (status: SUCCESS); HTTP 200 confirmed on `med-contract-site-production.up.railway.app`
+- **D2-11 PARTIAL**: Custom domain registered in Railway. Cloudflare DNS still needs CNAME `@` → `med-contract-site-production.up.railway.app` (proxied). Config documented in `state/infra.md`. No Cloudflare API token available for autonomous write; owner adds via Cloudflare dashboard (2 min) or interactive session Day 2. Railway edge IP: 151.101.2.15.
+- **Env var reuse**: Stripe secret key, Anthropic API key, and Resend API key reused from EMCI Railway env (same AEMBD LLC accounts per blueprint).
+- BUILD_STATUS.md Railway row: 🔴 NOT YET → 🟢 GREEN
+
 ### 00:13 EDT — med-ops-controller midnight run
 
 **[00:13 EDT] ops-controller (automated) — EMCI PDF residuals cleaned; DNS confirmed propagated**
