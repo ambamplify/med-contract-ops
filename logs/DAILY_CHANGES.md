@@ -499,3 +499,46 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **PHASE_STATUS.md**: D4-5 marked [x] done.
 - **BUILD_STATUS.md updated**.
 - **All current autonomous items now blocked**: D3-6/D3-13/D3-17 on IM_DATA_2026.md; D4-3 on owner fresh session; D4-6 on D1-17 Buffer + Make.com UI. D4-7 through D4-15 are all downstream of owner unblocks.
+
+---
+
+## 2026-04-24 (Thursday) — Day 2: Stripe + Site Deploy
+
+### 00:30 EDT — ops-controller 00:07 run — D3-6 pull-forward: 15 TikTok scripts written
+
+**[00:30 EDT 2026-04-24] ops-controller (automated) — D3-6 DONE (pull-forward): 15 TikTok scripts drafted**
+
+- **15 TikTok script files created** in `med-contract-content/content/tiktok/`:
+  - tt-001-panel-size.md — panel size economics ($X unpaid work vs MGMA median)
+  - tt-002-hospitalist-shift-math.md — $310K looks the same; shift math says otherwise
+  - tt-003-hedis-bonus-mechanics.md — HEDIS cap; employer keeps the gap
+  - tt-004-cpt-economics.md — 99214: you get $X, system collects $Y
+  - tt-005-tail-coverage.md — tail clause worth $X or zero; read the comma
+  - tt-006-nocturnist-differential.md — X% standard vs below-market = $Y/year
+  - tt-007-dollars-per-wrvu.md — MGMA $X/wRVU vs contract $Y = $Z gap
+  - tt-008-hedis-targets-fail.md — quality bonus structurally written to fail
+  - tt-009-panel-attribution.md — attribution clause, $X over 3 years
+  - tt-010-capitation-mechanics.md — MA PMPM $X vs $Y spread = policy risk
+  - tt-011-locum-vs-employed.md — locum $X/shift vs employed $Y/shift; net math
+  - tt-012-seven-on-seven-off.md — 7-on/7-off; admissions front-loaded
+  - tt-013-non-compete-state-law.md — state enforceability; NJ/CA/TX breakdown
+  - tt-014-call-coverage.md — paid or unpaid? ambiguous clause = blank check
+  - tt-015-conversion-factor.md — CMS 2026 CF $X.XX; employer's internal CF is arbitrary
+- **Format per script**: hook + voiceover (~150-200 words) + visual notes + data cells required + CTA
+- **Data cells**: all numeric claims marked `[DATA::cell-name]` pending IM_DATA_2026.md population by Perplexity. Gate 1 (Perplexity fact-check) blocked until cells populated. Gate 2 (claude-chat-opus) can begin structural review.
+- **content-review-day3.md**: all 15 TikTok rows updated with file paths and data cell lists.
+- **PHASE_STATUS.md**: D3-6 marked [x] done.
+- **iMessage check**: DB auth denied (no Messages app access) — owner messages not retrievable this run.
+- **brand-palette.md**: modified locally (v1→v2 update) — committing with this entry.
+- **Next**: D3-13 (3 YouTube scripts, same data-gate pattern). All else blocked on IM_DATA_2026.md or owner gates.
+
+### 00:50 EDT — ops-controller 00:07 run — D3-13 pull-forward: 3 YouTube scripts written
+
+**[00:50 EDT 2026-04-24] ops-controller (automated) — D3-13 DONE (pull-forward): 3 YouTube scripts drafted**
+
+- **yt-m1**: `content/youtube/yt-m1-compensation-stack.md` — "The 2026 IM Compensation Stack — Every Dollar, Explained" (~15min). 7-layer stack: base, productivity, quality/HEDIS, call stipends, benefits, sign-on, tail/exit. Full voiceover + chapter markers + visual notes.
+- **yt-m2**: `content/youtube/yt-m2-panel-size-math.md` — "Panel Size Math: How Your Employer Values Your Time" (~12min). Panel attribution problem, fee-for-service math, productivity model interaction, renewal leverage.
+- **yt-m3**: `content/youtube/yt-m3-hospitalist-shift-economics.md` — "Hospitalist Shift Economics" (~18min). 7-on/7-off asymmetry, nocturnist differential, admit fees, locum benchmarking. Title "$47K gap" = [DATA::hospitalist-comp-gap-median-vs-structured] — Perplexity verifies at Gate 1.
+- **content-review-day3.md**: YouTube rows updated with file paths and data cell lists.
+- **PHASE_STATUS.md**: D3-13 marked [x] done.
+- **All content scripts now complete**: D3-6 (15 TikTok), D3-13 (3 YouTube). D3-17 (30 LI + 30 X posts body text) still pending IM_DATA_2026.md. This run has exhausted all autonomous content work possible before Perplexity data population.

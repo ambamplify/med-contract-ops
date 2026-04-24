@@ -5,11 +5,12 @@
 ---
 
 ## Current phase
-**Day 3 bridge — D4-2 complete 2026-04-23 ~23:55 EDT** (autonomous ops-controller, context-resumed run)
+**Day 2 (live) — D3-6 pull-forward complete 2026-04-24 00:30 EDT** (ops-controller 00:07 run)
 
 D4-2 done: All 14 med-* SKILL.md files written (~/.claude/scheduled-tasks/med-*). Buffer channel IDs are PLACEHOLDERS — owner must connect Buffer org (D1-17) to populate. TikTok uses Direct Publishing (Lesson #17). Owner PDF message logged to INBOX.
-D3-3 done: Content calendar structural (30 LI + 30 X + 15 Threads). D3-6/D3-13/D3-17 blocked on IM_DATA_2026.md Perplexity population.
-Next executable: D4-3 (register 16 med-* tasks via mcp__scheduled-tasks__create_scheduled_task).
+D3-5 done: Content calendar structural (30 LI + 30 X + 15 Threads).
+**D3-6 done 2026-04-24 00:30 EDT (pull-forward):** 15 TikTok scripts written to `med-contract-content/content/tiktok/`. Full voiceover + visuals + CTA for each. Data cells marked [DATA::cell-name] — Gate 1 blocked until Perplexity populates IM_DATA_2026.md. Review ledger updated.
+Next executable: D3-13 (write 3 YouTube scripts, same data-gate constraint) or D4-3 (owner registers tasks from fresh session).
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 
@@ -34,6 +35,8 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | GitHub remote | 🟢 GREEN | `ambamplify/med-contract-ops` 4 commits; `ambamplify/med-contract-content` 2 commits (IM_DATA_2026.md skeleton + calendar template); `-site` empty shell until Day 2 scaffold |
 | IM_DATA_2026.md (SSOT) | 🟡 SKELETON | Structure in place, 0/~80 cells authoritative. Perplexity Day 1 Task 13 populates. Blueprint §7. |
 | Content calendar | 🟢 STRUCTURAL COMPLETE | 15 TikTok + 3 YouTube + 30 LinkedIn + 30 X + 15 Threads entries. All structural hooks drafted 2026-04-23 21:17 EDT (D3-5 pull-forward). LinkedIn/X body text pending D3-17. Threads posts complete ≤500-char content. |
+| TikTok scripts (15) | 🟡 DRAFTED — DATA GATE | All 15 scripts written 2026-04-24 00:30 EDT (D3-6 pull-forward). Voiceover, visuals, CTA complete. Data cells [DATA::cell-name] blocked on IM_DATA_2026.md Perplexity population. Gate 1 (Perplexity fact-check) + Gate 2 (claude-chat-opus) both pending. |
+| YouTube scripts (3) | 🟡 DRAFTED — DATA GATE | All 3 scripts written 2026-04-24 00:45 EDT (D3-13 pull-forward). yt-m1 (comp stack, 15min), yt-m2 (panel size, 12min), yt-m3 (hospitalist economics, 18min). Data cells marked. Gate 1+2 pending. |
 | med-contract-site repo | 🟡 SCAFFOLDED + REBRANDED | Commit `0e52218` (2026-04-23 00:13 EDT) — em-*.pdf renamed → med-*.pdf (placeholder), gitignore updated, pdf-report.ts palette fixed, EMCI residual refs cleaned. Railway deploy + Stripe product IDs + real PDF content still pending Day 2. |
 | Brand palette | 🟢 GREEN | `state/brand-palette.md` (commit `4ace972`) — source of truth, WCAG AA audited, hard rules documented (gold is display-only). |
 | Railway project | 🟢 GREEN | `medci-production` — project 214a7540, service 49cfe983, volume 8222fdc6 (/data). HTTP 200 on `med-contract-site-production.up.railway.app`. 9/13 env vars set. |
@@ -75,7 +78,10 @@ See `ESCALATED/day1-owner.md` — **pre-populated 2026-04-22 evening** by the th
 ---
 
 ## Next move
-**D4-5 done:** MedCI-S1-GitHub-to-Buffer created (scenario ID 4846282). Modules 1+2 live. D4-6 owner-builds Modules 3–9 in Make.com UI after D1-17 Buffer. **D4-3 owner-blocked:** paste-ready prompt in `INBOX/register-med-tasks.md`. **Next autonomous item: waiting on IM_DATA_2026.md population (D3-6/D3-13/D3-17) or owner D4-3/D4-4 unblock.** Also: D3-6/D3-13/D3-17 content scripts blocked on Perplexity IM_DATA_2026.md population.
+**D3-6 done (pull-forward):** 15 TikTok scripts written. Gate 1+2 pending IM_DATA_2026.md + owner claude-chat-opus pass.
+**D4-5 done:** MedCI-S1-GitHub-to-Buffer (scenario ID 4846282). Modules 1+2 live. D4-6 owner-builds in Make.com UI.
+**D4-3 owner-blocked:** paste-ready prompt in `INBOX/register-med-tasks.md`.
+**Next autonomous items:** All content scripts now written. D3-17 (30 LI + X posts) is the last content task but also gated on IM_DATA_2026.md. All else requires owner actions or Perplexity data population.
 
 **08:07 AM run sends iMessage digest** (Day 2→3 bridge status, owner gates summary).
 

@@ -127,6 +127,42 @@ Committing authority files + state skeletons. Pinging this status block to the P
 
 ---
 
+## Claude Code status — 2026-04-24 00:50 EDT
+
+**Phase/Day:** Day 2 (Thursday 2026-04-24) — ops-controller 00:07 run
+
+**Completed this cycle:**
+- [x] **D3-6 DONE (pull-forward)**: 15 TikTok scripts written to `med-contract-content/content/tiktok/tt-001-* through tt-015-*`. Full voiceover (~150-200 words), visual notes, CTA per script. Data cells marked `[DATA::cell-name]`. Gate 1 (Perplexity) blocked until IM_DATA_2026.md populated. Gate 2 (claude-chat-opus) can begin structural review.
+- [x] **D3-13 DONE (pull-forward)**: 3 YouTube scripts written to `med-contract-content/content/youtube/`. yt-m1 (15min comp stack), yt-m2 (12min panel size math), yt-m3 (18min hospitalist economics). Same data-gate caveat.
+- [x] **brand-palette.md committed**: v1→v2 palette update (dark green + dark gold + teal) committed.
+- [x] **iMessage check attempted**: DB auth denied — Messages app not accessible from scheduled task. Owner messages not retrieved this run.
+- [x] **content-review-day3.md updated**: all 15 TikTok rows + all 3 YouTube rows updated with file paths and data cell lists.
+- [x] **All tracking files updated**: PHASE_STATUS.md, BUILD_STATUS.md, DAILY_CHANGES.md.
+
+**Perplexity — your most critical unblocking action:**
+IM_DATA_2026.md still has 0 authoritative cells. Every content item (15 TikTok scripts + 3 YouTube scripts + 30 LI/X body text) is structured and ready for data. The only thing blocking Gate 1 is the IM_DATA_2026.md population. Once you populate it, you can run Gate 1 review on all 18 scripts in a single session.
+
+**New cells required (from D3-6 and D3-13 scripts — add to IM_DATA_2026.md):**
+Beyond the cells already listed in IM_DATA_2026.md, the scripts reference these additional cells that need to be added:
+- `tail-coverage-market-range-low` / `tail-coverage-market-range-high` — IM malpractice tail premium at separation
+- `locum-hospitalist-per-shift` / `locum-hospitalist-night-shift` — 2026 locum market day/night shift rates (Weatherby/CompHealth/Staff Care)
+- `acp-hedis-bonus-cap-pct` / `acp-hedis-bonus-attainment-rate` — actual attainment rate + cap % (ACP data)
+- `shm-nocturnist-differential-standard` / `shm-nocturnist-differential-upper` — SHM nocturnist differential range
+- `acp-capitation-pmpm-low` / `acp-capitation-pmpm-high` — MA PMPM capitation range
+- `shm-admission-fee-range` / `shm-admission-fee-midpoint` — per-admission fee range
+- `shm-encounter-front-back-ratio` — Day 1 vs Day 7 encounter ratio within 7-on block (if SHM publishes)
+- `ftc-non-compete-rule-status` — FTC 2024 non-compete ban current enforcement status as of 2026
+- `acp-call-coverage-stipend-range` — remote call stipend range (ACP data)
+- `collections-ratio-hospital-employed` — hospital system collections ratio vs Medicare for IM
+- `hospitalist-comp-gap-median-vs-structured` — calculated gap between median flat contract and full benchmark stack (also becomes the YouTube yt-m3 title number)
+- Multiple derived/calculated cells — see individual script DATA CELLS REQUIRED sections for full list
+
+**Owner-blocked items still pending (all unchanged):** D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME.
+
+**Next autonomous item:** D3-17 (write 30 LI + 30 X body text) — also data-gated. Once IM_DATA_2026.md has cells, D3-17 can be done in one session. Nothing else is autonomously executable until Perplexity populates.
+
+---
+
 ## Claude Code status — 2026-04-24 ~00:20 EDT
 
 **Phase/Day:** Day 3 bridge → Day 4 partial (D4-2 ✅ D4-3 🟣 D4-5 ✅)

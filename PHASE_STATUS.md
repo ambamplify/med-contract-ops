@@ -78,14 +78,14 @@
 - [O] D3-3 YouTube Data API v3 + OAuth Desktop client enabled
 - [O] D3-4 OAuth flow run → token saved to 1Password `MedCI — OAuth Tokens`
 - [x] D3-5 Generate 30-day content calendar (IM hooks mapped to EMCI formats)
-- [ ] D3-6 Write 15 TikTok scripts (IM hooks per blueprint §11)
+- [x] D3-6 Write 15 TikTok scripts (IM hooks per blueprint §11)
 - [O] D3-7 Review Gate 1 (Lesson #19): Perplexity fact-checks 15 TikTok scripts → content-review-day3.md
 - [O] D3-8 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 15 TikTok scripts → appends notes
 - [ ] D3-9 Consolidate edits; mark approved in YAML (only after both gates green)
 - [O] D3-10 Owner says "Production approved for MedCI videos, please execute." (Lesson #7)
 - [ ] D3-11 Produce 15 TikTok videos (ElevenLabs + FFmpeg, 1080×1920, no face, Ryan voice)
 - [ ] D3-12 Upload 15 TikTok videos to R2 bucket; update content YAML with r2_video_url
-- [ ] D3-13 Write 3 YouTube scripts (M1: IM comp overview, M2: panel-size math, M3: hospitalist shift math)
+- [x] D3-13 Write 3 YouTube scripts (M1: IM comp overview, M2: panel-size math, M3: hospitalist shift math)
 - [O] D3-14 Review Gate 1 (Lesson #19): Perplexity fact-checks 3 YouTube scripts → appends to content-review-day3.md
 - [O] D3-15 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 3 YouTube scripts → appends notes
 - [ ] D3-16 Produce 3 YouTube videos via Remotion + ElevenLabs (only after both gates green)
@@ -104,14 +104,14 @@
 | 7:30 | D3-3 | Enable YouTube Data API v3 for project; create "MedCI YouTube Upload" OAuth Desktop client | 🟣 | owner-blocked |
 | 8:00 | D3-4 | Run OAuth flow → save token to 1Password `MedCI — OAuth Tokens` | 🟣→🔵 | owner-blocked |
 | 7:30 | D3-5 | Generate 30-day content calendar (IM hooks mapped to EMCI-proven formats) | 🟢 | **done 2026-04-23 21:17 EDT** — 30 LinkedIn + 30 X + 15 Threads structural entries added to calendar-template.yaml; meta updated; content-review ledger expanded from 27→102 artifacts (75 text posts added). Threads posts are complete ≤500-char content; LI/X body text pending D3-17. |
-| 8:30 | D3-6 | Write 15 TikTok scripts (IM hooks: panel size, HEDIS, hospitalist shifts, locum rates — per blueprint §11 first-15 list) | 🟢 | pending |
+| 8:30 | D3-6 | Write 15 TikTok scripts (IM hooks: panel size, HEDIS, hospitalist shifts, locum rates — per blueprint §11 first-15 list) | 🟢 | **done 2026-04-24 00:30 EDT (D3-6 pull-forward by ops-controller 00:07 run)** — All 15 scripts written to `med-contract-content/content/tiktok/tt-001-* through tt-015-*.md` with full voiceover narrative, visual notes, and CTA. Data cells marked [DATA::cell-name] throughout — Gate 1 (Perplexity) blocked until IM_DATA_2026.md populated. Gate 2 (claude-chat-opus) can begin structurally once owner has scripts. content-review-day3.md updated with file paths. |
 | 9:45 | D3-7 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity fact-checks all 15 TikTok scripts against IM_DATA_2026.md + source links; writes pass/fail + notes to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
 | 10:15 | D3-8 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner pastes 15 scripts into claude.ai (opus mode); owner captures output and appends to `state/content-review-day3.md`. Scripts cannot advance without both gates green. | 🟣 | owner-blocked |
 | 10:30 | D3-9 | Consolidate edits from both reviews; mark scripts `approved` in content YAML only after Perplexity + Claude-chat-opus both signed off | 🟢 | pending (gated on D3-7+D3-8) |
 | 10:35 | D3-10 | **Owner says explicitly in live Claude Code session: "Production approved for MedCI videos, please execute." (Lesson #7)** | 🟣 | owner-blocked |
 | 10:40 | D3-11 | Produce 15 TikTok videos via ElevenLabs + FFmpeg pipeline (1080×1920, no face, Ryan voice, teal accents) | 🔵 | pending (gated on D3-10) |
 | 2:00 | D3-12 | Upload 15 TikTok videos to R2 bucket `medci-social-media`; update content YAML with `r2_video_url` field | 🔵 | pending (gated on D3-11) |
-| 4:00 | D3-13 | Write 3 YouTube long-form scripts (M1: 2026 IM Comp Stack, M2: Panel Size Math, M3: Hospitalist Shift Economics) | 🟢 | pending |
+| 4:00 | D3-13 | Write 3 YouTube long-form scripts (M1: 2026 IM Comp Stack, M2: Panel Size Math, M3: Hospitalist Shift Economics) | 🟢 | **done 2026-04-24 00:45 EDT (D3-13 pull-forward)** — All 3 scripts written to `med-contract-content/content/youtube/`. yt-m1: 7-layer comp stack (~15min). yt-m2: panel size math + attribution (~12min). yt-m3: hospitalist shift economics, nocturnist diff, admit fees, locum benchmarking (~18min). Data cells marked [DATA::cell-name]. Gate 1 (Perplexity) + Gate 2 (opus) both pending. |
 | 4:45 | D3-14 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity fact-checks all 3 YouTube scripts; appends to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
 | 5:15 | D3-15 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner runs opus-mode review on 3 YouTube scripts; appends notes | 🟣 | owner-blocked |
 | 5:30 | D3-16 | Consolidate edits; produce 3 YouTube videos via Remotion + ElevenLabs (only after both gates green) | 🔵 | pending (gated on D3-15) |
