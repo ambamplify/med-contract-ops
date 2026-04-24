@@ -75,7 +75,7 @@ See `ESCALATED/day1-owner.md` — **pre-populated 2026-04-22 evening** by the th
 ---
 
 ## Next move
-**Next autonomous run:** D4-3 — register all 16 med-* scheduled tasks via `mcp__scheduled-tasks__create_scheduled_task` with staggered cron offsets (:40–:05 to avoid EMCI :10–:35 collision). Does not require owner action. Also: D3-6/D3-13/D3-17 content scripts blocked on Perplexity IM_DATA_2026.md population.
+**D4-3 owner-blocked:** `create_scheduled_task` blocked from within scheduled task session (same as D0-3b). Paste-ready prompt in `INBOX/register-med-tasks.md` — owner runs in fresh Claude Code session, ~3 min. **Next autonomous item: D4-5** (scaffold Make.com M1 via API — Modules 1+2 only). Also: D3-6/D3-13/D3-17 content scripts blocked on Perplexity IM_DATA_2026.md population.
 
 **08:07 AM run sends iMessage digest** (Day 2→3 bridge status, owner gates summary).
 

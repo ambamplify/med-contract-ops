@@ -127,7 +127,7 @@
 ### Day 4 fast checkbox view
 - [O] D4-1 Daily sync — owner opens Claude Code + Perplexity
 - [x] D4-2 Fork 16 EMCI scheduled-task SKILL.md files → med-* equivalents (Lesson #11 full op path)
-- [ ] D4-3 Register 16 med-* scheduled tasks via mcp__scheduled-tasks (staggered :40–:05 to avoid EMCI :10–:35 collision)
+- [O] D4-3 Register 14 med-* scheduled tasks via mcp__scheduled-tasks (staggered :40–:05 to avoid EMCI :10–:35 collision) — owner-blocked: create_scheduled_task blocked from within scheduled task session (same as D0-3b). Paste-ready prompt in INBOX/register-med-tasks.md
 - [O] D4-4 Owner Run-Now on all 16 med-* tasks to pre-approve Chrome MCP + Bash permissions (Lesson #18)
 - [ ] D4-5 Scaffold Make.com M1 scenario via API (Modules 1+2 only: GitHub GraphQL + Iterator)
 - [ ] D4-6 Build Make.com UI Modules 3–9 (Parser, Router, Filter, Buffer-per-platform) — never API after Module 2 (Lesson #6)
@@ -145,7 +145,7 @@
 |---|---|---|---|---|
 | 7:00 | D4-1 | Daily sync — owner opens Claude Code + Perplexity | 🟣 | owner-blocked |
 | 7:30 | D4-2 | Fork 16 EMCI scheduled-task SKILL.md files → `med-*` equivalents. Full path `/opt/homebrew/bin/op` (Lesson #11). Stagger crons: EMCI `:10–:35` → MedCI `:40–:05` | 🟢 | **done 2026-04-23 23:55 EDT** — All 14 SKILL.md files written (med-daily-digest, med-stripe-daily-monitor, med-social-listener, med-weekly-reporter, med-content-ideator, med-gmail-triager-morning/afternoon/evening, med-linkedin-poster, med-x-poster, med-threads-poster, med-tiktok-poster, med-instagram-poster, med-youtube-poster). Buffer channel IDs are PLACEHOLDERS pending owner D1-17. TikTok uses `schedulingType: "direct"` per Lesson #17. Owner PDF message logged to INBOX. |
-| 9:00 | D4-3 | Register 16 `med-*` scheduled tasks via `mcp__scheduled-tasks__create_scheduled_task`; verify each shows nextRunAt | 🟢 | pending |
+| 9:00 | D4-3 | Register 14 `med-*` scheduled tasks via `mcp__scheduled-tasks__create_scheduled_task`; verify each shows nextRunAt | 🟣 | **owner-blocked** — `create_scheduled_task` blocked from within scheduled task session (same constraint as D0-3b). Paste-ready prompt written to `INBOX/register-med-tasks.md`. Owner pastes into fresh Claude Code session — ~3 min. |
 | 9:30 | D4-4 | **Owner Run-Now on all 16 med-* tasks** — one click each in Claude Code UI to pre-approve Chrome MCP + Bash. ~5 min. Without this, first cron run stalls on permission prompt (Lesson #18) | 🟣 | owner-blocked |
 | 10:00 | D4-5 | Scaffold Make.com M1 via API: Modules 1 (GitHub GraphQL) + 2 (Iterator). Record scenario ID in `state/automation.md`. Stop at Module 2 | 🟢 | pending |
 | 10:30 | D4-6 | **In Make.com UI only**: build Modules 3–9 (Parser, Router, Filter, Buffer ×5 platforms). Capture scenario ID + canonical "UI-only after Module 2" note in `state/automation.md`. Lesson #6: API after Module 2 clobbers UI values | 🔵 | pending (gated on D4-5) |

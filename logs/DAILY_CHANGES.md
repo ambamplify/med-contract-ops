@@ -469,3 +469,20 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **PHASE_STATUS.md**: D4-2 checkbox marked `[x]`, table row updated to done 2026-04-23 23:55 EDT.
 - **BUILD_STATUS.md**: Current phase updated. Next move set to D4-3 (register 16 med-* tasks).
 - **Next non-blocked item**: D4-3 — register all 16 med-* tasks via `mcp__scheduled-tasks__create_scheduled_task`. Does not require owner action. (Note: task count is 14 SKILL.md files across 14 directories; EMCI task registry has 14 tasks not 16 — count follows actual tasks created.)
+
+### ~00:10 EDT (2026-04-24) — ops-controller — D4-3 attempted, owner-blocked; registration prompt written to INBOX
+
+**[~00:10 EDT 2026-04-24] ops-controller — D4-3 OWNER-BLOCKED: create_scheduled_task blocked from scheduled task session**
+
+- Attempted to register 14 med-* scheduled tasks via `mcp__scheduled-tasks__create_scheduled_task`.
+- Error: "Cannot create scheduled tasks from within a scheduled task session." — same constraint as D0-3b.
+- **Resolution**: Wrote paste-ready prompt to `INBOX/register-med-tasks.md`. Owner runs from a fresh Claude Code session (~3 min).
+- Task cron schedule planned (all LOCAL time, :40–:05 to avoid EMCI :10–:35 collision):
+  - med-daily-digest: 7:42am daily
+  - med-linkedin-poster: 7:40am | med-x-poster: 7:45am | med-instagram-poster: 7:50am | med-threads-poster: 7:55am
+  - med-tiktok-poster: 8:00am | med-youtube-poster: 8:05am | med-gmail-triager-morning: 8:40am
+  - med-stripe-daily-monitor: 9:40am | med-content-ideator: Monday 9:10am
+  - med-social-listener: 11:40am | med-gmail-triager-afternoon: 1:40pm | med-gmail-triager-evening: 6:40pm
+  - med-weekly-reporter: Sunday 7:10pm
+- **PHASE_STATUS.md**: D4-3 marked [O] owner-blocked.
+- **Next autonomous item**: D4-5 (scaffold Make.com M1 Modules 1+2 via API).
