@@ -553,3 +553,20 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **BUILD_STATUS.md**: Content calendar status updated to FULL DRAFT COMPLETE.
 - **iMessages**: DB auth denied (scheduled task env). Owner messages not retrieved this run.
 - **Next unblocked item**: All 102 content artifacts drafted. Every remaining item now requires IM_DATA_2026.md Perplexity population OR owner actions. Content pipeline is fully drafted and data-gated.
+
+---
+
+## 2026-04-24 08:13 EDT — ops-controller 08:07 run (DIGEST RUN)
+
+**[08:13 EDT 2026-04-24] ops-controller (automated) — 08:07 digest sent; D3-21 marked done; tracking files updated**
+
+- **08:07 iMessage digest SENT** to +19167050598. Covered: 10 items closed overnight, 4 numbered owner decisions, IM_DATA_2026.md blocker, iMessage permission note.
+- **D3-21 DONE**: Checkbox and table row updated to done (Day 4 plan was written 2026-04-23 21:17 EDT as pull-forward — marking formally closed).
+- **iMessages**: DB auth denied (scheduled task env; consistent with all prior runs). Owner messages not retrieved. Owner should grant Messages Full Disk Access in System Settings → Privacy → Full Disk Access.
+- **Perplexity directives**: COMPUTER_RESPONSE.md timestamp unchanged — no new directives since 04:14 EDT status block.
+- **INBOX**: No new files since 04:14 run.
+- **ESCALATED**: day1-owner.md — 11 items still open (no owner responses received yet).
+- **Phase items executed**: D3-21 formally closed. No new autonomous execution available.
+- **BUILD_STATUS.md**: Current phase header updated — all 102 content artifacts drafted.
+- **Owner-blocked items still pending**: D4-3 (register 14 tasks), D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, all Day 1 owner items.
+- **Next phase item**: Nothing autonomously executable until IM_DATA_2026.md populated or owner items land.

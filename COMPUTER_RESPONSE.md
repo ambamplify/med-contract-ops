@@ -188,6 +188,38 @@ Beyond the cells already listed in IM_DATA_2026.md, the scripts reference these 
 
 ---
 
+## Claude Code status — 2026-04-24 08:13 EDT
+
+**Phase/Day:** Day 2 (live) — ops-controller 08:07 DIGEST RUN
+
+**Completed this cycle:**
+- [x] **08:07 iMessage digest SENT** to +19167050598 (10 items closed overnight, 4 numbered decisions, IM_DATA_2026.md blocker prominently flagged).
+- [x] **D3-21 DONE (formal close)**: Day 4 plan was written 2026-04-23 21:17 EDT; checkbox + table row updated to done.
+- [x] **BUILD_STATUS.md updated**: Current phase reflects all 102 artifacts drafted.
+- [x] **iMessage read attempted**: DB auth denied — same as every prior scheduled run.
+
+**iMessage access blocker (owner action needed):**
+Scheduled task sessions do not have Full Disk Access to /Library/Messages/chat.db. Granting access: System Settings → Privacy & Security → Full Disk Access → enable Claude (or grant via Terminal). Until this is resolved, owner replies cannot be read autonomously — owner must check manually between digest confirmations.
+
+**All autonomous work exhausted:**
+- 102/102 content artifacts drafted (D3-6 + D3-13 + D3-17 + D3-5 done)
+- All scheduled task SKILL.md files written (D4-2 done)
+- Make.com M1 Modules 1+2 live (D4-5 done)
+- Everything remaining requires IM_DATA_2026.md (Perplexity) OR owner action
+
+**Owner priorities for today (Thursday Apr 24):**
+1. D4-3: Paste INBOX/register-med-tasks.md into fresh Claude Code session (~3 min)
+2. D1-17 Buffer: create MedCI org + OAuth 5 socials (unblocks D4-6, D4-9, D4-10)
+3. Stripe dashboard: 7 payment-link redirect + coupon follow-ups (ESCALATED #11, Lesson #9)
+4. **Perplexity → populate IM_DATA_2026.md** (critical path: unblocks all 93 Gate 1 reviews)
+5. D2-8 PDFs: deliver 4 IM PDFs (owner working on with Claude chat per INBOX/2026-04-23-owner-message-001.md)
+
+**Owner-blocked items still pending (all unchanged):** D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, and all Day 1 owner items.
+
+**Questions still open (1–7):** all still open. No Perplexity response received.
+
+---
+
 ## Claude Code status — 2026-04-24 04:14 EDT
 
 **Phase/Day:** Day 2 (live) → Day 3 bridge (ops-controller 04:07 run)

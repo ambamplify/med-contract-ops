@@ -93,7 +93,7 @@
 - [O] D3-18 Review Gate 1 (Lesson #19): Perplexity batch-reviews 75 text posts → appends to content-review-day3.md
 - [O] D3-19 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 75 text posts → appends notes
 - [ ] D3-20 Apply edits; mark posts approved in YAML (only after both gates green)
-- [ ] D3-21 Day 3 EOD retro + Day 4 plan write
+- [x] D3-21 Day 3 EOD retro + Day 4 plan write (done 2026-04-23 21:17 EDT pull-forward)
 
 **Day 3 launch gate:** 15 TikTok videos on R2 with URLs; 3 YouTube videos rendered; 75 text posts written AND `content-review-day3.md` shows dual review green for every artifact (Lesson #19).
 
@@ -119,7 +119,7 @@
 | 7:45 | D3-18 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity batch-reviews all 75 text posts; appends to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
 | 8:15 | D3-19 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner runs opus-mode review on 75 text posts; appends notes | 🟣 | owner-blocked |
 | 8:30 | D3-20 | Apply edits; mark posts `approved` in YAML only after both gates green (unapproved posts cannot schedule Day 4) | 🟢 | pending (gated on D3-19) |
-| — | D3-21 | Day 3 EOD retro + Day 4 plan write into PHASE_STATUS.md | 🔵 | pending |
+| — | D3-21 | Day 3 EOD retro + Day 4 plan write into PHASE_STATUS.md | 🔵 | **done 2026-04-23 21:17 EDT (pull-forward by 20:07 run)** — Day 4 hour-by-hour (D4-1 through D4-15) written into PHASE_STATUS.md. |
 
 ### Day 4 — Saturday 2026-04-26 (AUTOMATION + DRY RUN)
 *Populated by ops-controller 2026-04-23 21:17 EDT (D3-21 pull-forward by 20:07 run). Pulls from blueprint §10 Day 4.*
