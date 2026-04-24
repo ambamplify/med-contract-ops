@@ -5,11 +5,11 @@
 ---
 
 ## Current phase
-**Day 2 → Day 3 bridge — 2026-04-23 21:17 EDT** (autonomous ops-controller 20:07 run)
+**Day 3 bridge — D4-2 complete 2026-04-23 ~23:55 EDT** (autonomous ops-controller, context-resumed run)
 
-20:07 run completed D3-5 (30-day content calendar: 30 LI + 30 X + 15 Threads entries added, Day 4 plan written as D3-21 pull-forward).
-Owner-blocked Day 2 remainders: D2-11 CNAME, D2-15 Kit bridge, D2-16 smoke test #2. Day 3 content writing (D3-6 TikTok, D3-13 YT, D3-17 text bodies) blocked on IM_DATA_2026.md population by Perplexity.
-Railway running on subdomain (HTTP 200). Custom domain needs owner Cloudflare CNAME step.
+D4-2 done: All 14 med-* SKILL.md files written (~/.claude/scheduled-tasks/med-*). Buffer channel IDs are PLACEHOLDERS — owner must connect Buffer org (D1-17) to populate. TikTok uses Direct Publishing (Lesson #17). Owner PDF message logged to INBOX.
+D3-3 done: Content calendar structural (30 LI + 30 X + 15 Threads). D3-6/D3-13/D3-17 blocked on IM_DATA_2026.md Perplexity population.
+Next executable: D4-3 (register 16 med-* tasks via mcp__scheduled-tasks__create_scheduled_task).
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 
@@ -75,7 +75,7 @@ See `ESCALATED/day1-owner.md` — **pre-populated 2026-04-22 evening** by the th
 ---
 
 ## Next move
-**Overnight autonomous (remaining runs tonight):** 00:07 and 04:07 EDT runs. Next executable Claude Code items: D4-2 (fork 16 EMCI scheduled tasks → med-* equivalents) — does not require IM data. Also: D3-6/D3-13/D3-17 content scripts blocked on Perplexity IM_DATA_2026.md population.
+**Next autonomous run:** D4-3 — register all 16 med-* scheduled tasks via `mcp__scheduled-tasks__create_scheduled_task` with staggered cron offsets (:40–:05 to avoid EMCI :10–:35 collision). Does not require owner action. Also: D3-6/D3-13/D3-17 content scripts blocked on Perplexity IM_DATA_2026.md population.
 
 **08:07 AM run sends iMessage digest** (Day 2→3 bridge status, owner gates summary).
 

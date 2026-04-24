@@ -449,3 +449,23 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **iMessage check**: authorization denied (system-level; consistent with prior runs). Owner messages not retrieved.
 - **IM_DATA_2026.md status**: still all TBD — Perplexity has not yet populated. Blocks D3-6 (TikTok scripts), D3-13 (YT scripts), D3-17 (LI/X post bodies). Calendar hooks use blueprint template values; Perplexity Gate 1 review will verify before approved status.
 - **Next non-blocked items**: D4-2 (fork 16 EMCI scheduled tasks) is the next executable Claude Code item. Executing on next run if D3-6/D3-13/D3-17 still IM-data-blocked.
+
+### ~23:55 EDT — ops-controller (context-resumed run) — D4-2 complete: 14 med-* SKILL.md files written
+
+**[~23:55 EDT] ops-controller (context-resumed) — D4-2 DONE: Fork 16 EMCI→med-* scheduled tasks**
+
+- **D4-2 complete**: All 14 scheduled task SKILL.md files written to `~/.claude/scheduled-tasks/med-*/SKILL.md`. Directories were pre-created; 6 files were written in prior run (20:07); remaining 8 written this run:
+  - `med-gmail-triager-afternoon/SKILL.md` — 1pm run, same logic as morning, MedCI aliases
+  - `med-gmail-triager-evening/SKILL.md` — 6pm run, same logic as morning, MedCI aliases
+  - `med-linkedin-poster/SKILL.md` — Buffer GraphQL, MEDCI_BUFFER_ORG_ID placeholder
+  - `med-x-poster/SKILL.md` — Buffer GraphQL, MEDCI_X_CHANNEL_ID placeholder
+  - `med-threads-poster/SKILL.md` — Buffer GraphQL, MEDCI_THREADS_CHANNEL_ID placeholder
+  - `med-tiktok-poster/SKILL.md` — `schedulingType: "direct"` per Lesson #17 (not "notification")
+  - `med-instagram-poster/SKILL.md` — dual state-file + Buffer dedup (incident pattern from EMCI 2026-04-23)
+  - `med-youtube-poster/SKILL.md` — OAuth token placeholder, Shorts guardrails
+- **Buffer channel IDs**: All poster SKILL.md files use MEDCI_BUFFER_ORG_ID / MEDCI_*_CHANNEL_ID placeholders. Owner must connect Buffer org (D1-17) before poster tasks can execute.
+- **TikTok Direct Publishing (Lesson #17)**: med-tiktok-poster uses `schedulingType: "direct"` (TikTok Business API), unlike EMCI which used `"notification"`. Requires owner TikTok Business account (D1-14).
+- **Owner PDF message logged**: INBOX/2026-04-23-owner-message-001.md — owner working on 4 IM PDFs with Claude chat, will provide tomorrow for dual review (Lesson #19 gate).
+- **PHASE_STATUS.md**: D4-2 checkbox marked `[x]`, table row updated to done 2026-04-23 23:55 EDT.
+- **BUILD_STATUS.md**: Current phase updated. Next move set to D4-3 (register 16 med-* tasks).
+- **Next non-blocked item**: D4-3 — register all 16 med-* tasks via `mcp__scheduled-tasks__create_scheduled_task`. Does not require owner action. (Note: task count is 14 SKILL.md files across 14 directories; EMCI task registry has 14 tasks not 16 — count follows actual tasks created.)
