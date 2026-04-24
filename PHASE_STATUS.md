@@ -129,7 +129,7 @@
 - [x] D4-2 Fork 16 EMCI scheduled-task SKILL.md files → med-* equivalents (Lesson #11 full op path)
 - [O] D4-3 Register 14 med-* scheduled tasks via mcp__scheduled-tasks (staggered :40–:05 to avoid EMCI :10–:35 collision) — owner-blocked: create_scheduled_task blocked from within scheduled task session (same as D0-3b). Paste-ready prompt in INBOX/register-med-tasks.md
 - [O] D4-4 Owner Run-Now on all 16 med-* tasks to pre-approve Chrome MCP + Bash permissions (Lesson #18)
-- [ ] D4-5 Scaffold Make.com M1 scenario via API (Modules 1+2 only: GitHub GraphQL + Iterator)
+- [x] D4-5 Scaffold Make.com M1 scenario via API (Modules 1+2 only: GitHub GraphQL + Iterator)
 - [ ] D4-6 Build Make.com UI Modules 3–9 (Parser, Router, Filter, Buffer-per-platform) — never API after Module 2 (Lesson #6)
 - [ ] D4-7 Commit first 15 approved TikTok YAML files with r2_video_url to med-contract-content (gated on D3-11+D3-12+D3-7+D3-8)
 - [ ] D4-8 Fire M1 manually; verify first TikTok lands in Buffer MedCI org (gated on D4-7)
@@ -147,7 +147,7 @@
 | 7:30 | D4-2 | Fork 16 EMCI scheduled-task SKILL.md files → `med-*` equivalents. Full path `/opt/homebrew/bin/op` (Lesson #11). Stagger crons: EMCI `:10–:35` → MedCI `:40–:05` | 🟢 | **done 2026-04-23 23:55 EDT** — All 14 SKILL.md files written (med-daily-digest, med-stripe-daily-monitor, med-social-listener, med-weekly-reporter, med-content-ideator, med-gmail-triager-morning/afternoon/evening, med-linkedin-poster, med-x-poster, med-threads-poster, med-tiktok-poster, med-instagram-poster, med-youtube-poster). Buffer channel IDs are PLACEHOLDERS pending owner D1-17. TikTok uses `schedulingType: "direct"` per Lesson #17. Owner PDF message logged to INBOX. |
 | 9:00 | D4-3 | Register 14 `med-*` scheduled tasks via `mcp__scheduled-tasks__create_scheduled_task`; verify each shows nextRunAt | 🟣 | **owner-blocked** — `create_scheduled_task` blocked from within scheduled task session (same constraint as D0-3b). Paste-ready prompt written to `INBOX/register-med-tasks.md`. Owner pastes into fresh Claude Code session — ~3 min. |
 | 9:30 | D4-4 | **Owner Run-Now on all 16 med-* tasks** — one click each in Claude Code UI to pre-approve Chrome MCP + Bash. ~5 min. Without this, first cron run stalls on permission prompt (Lesson #18) | 🟣 | owner-blocked |
-| 10:00 | D4-5 | Scaffold Make.com M1 via API: Modules 1 (GitHub GraphQL) + 2 (Iterator). Record scenario ID in `state/automation.md`. Stop at Module 2 | 🟢 | pending |
+| 10:00 | D4-5 | Scaffold Make.com M1 via API: Modules 1 (GitHub GraphQL) + 2 (Iterator). Record scenario ID in `state/automation.md`. Stop at Module 2 | 🟢 | **done 2026-04-24 ~00:15 EDT** — Scenario "MedCI-S1-GitHub-to-Buffer" created, ID **4846282**, team 2160239. Module 1: github:makeAnAPICall v4 → `ambamplify/med-contract-content` main:content/approved, connection 8477240. Module 2: builtin:BasicFeeder v1 → iterator over entries. Modules 3–9 owner-builds in Make.com UI (D4-6, Lesson #6). |
 | 10:30 | D4-6 | **In Make.com UI only**: build Modules 3–9 (Parser, Router, Filter, Buffer ×5 platforms). Capture scenario ID + canonical "UI-only after Module 2" note in `state/automation.md`. Lesson #6: API after Module 2 clobbers UI values | 🔵 | pending (gated on D4-5) |
 | 12:00 | D4-7 | Commit first 15 approved TikTok YAML entries (r2_video_url populated) to med-contract-content main | 🔵 | pending (gated on D3-7+D3-8+D3-11+D3-12) |
 | 12:30 | D4-8 | Fire M1 scenario manually once; confirm first TikTok lands in Buffer MedCI org queue | 🔵 | pending (gated on D4-6+D4-7) |

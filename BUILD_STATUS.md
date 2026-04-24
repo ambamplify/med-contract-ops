@@ -75,7 +75,7 @@ See `ESCALATED/day1-owner.md` — **pre-populated 2026-04-22 evening** by the th
 ---
 
 ## Next move
-**D4-3 owner-blocked:** `create_scheduled_task` blocked from within scheduled task session (same as D0-3b). Paste-ready prompt in `INBOX/register-med-tasks.md` — owner runs in fresh Claude Code session, ~3 min. **Next autonomous item: D4-5** (scaffold Make.com M1 via API — Modules 1+2 only). Also: D3-6/D3-13/D3-17 content scripts blocked on Perplexity IM_DATA_2026.md population.
+**D4-5 done:** MedCI-S1-GitHub-to-Buffer created (scenario ID 4846282). Modules 1+2 live. D4-6 owner-builds Modules 3–9 in Make.com UI after D1-17 Buffer. **D4-3 owner-blocked:** paste-ready prompt in `INBOX/register-med-tasks.md`. **Next autonomous item: waiting on IM_DATA_2026.md population (D3-6/D3-13/D3-17) or owner D4-3/D4-4 unblock.** Also: D3-6/D3-13/D3-17 content scripts blocked on Perplexity IM_DATA_2026.md population.
 
 **08:07 AM run sends iMessage digest** (Day 2→3 bridge status, owner gates summary).
 

@@ -486,3 +486,16 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
   - med-weekly-reporter: Sunday 7:10pm
 - **PHASE_STATUS.md**: D4-3 marked [O] owner-blocked.
 - **Next autonomous item**: D4-5 (scaffold Make.com M1 Modules 1+2 via API).
+
+### ~00:15 EDT (2026-04-24) — ops-controller — D4-5 done: MedCI-S1-GitHub-to-Buffer scaffolded
+
+**[~00:15 EDT 2026-04-24] ops-controller — D4-5 DONE: Make.com M1 Modules 1+2 scaffolded**
+
+- **Scenario created**: "MedCI-S1-GitHub-to-Buffer" — ID **4846282**, team 2160239, us2.make.com.
+- **Module 1**: `github:makeAnAPICall` v4 — GraphQL query to `ambamplify/med-contract-content` `main:content/approved`. Reusing EMCI GitHub connection ID 8477240 (same ambamplify@gmail.com account, different repo path). Query returns `name`, `type`, and file `text` for each entry.
+- **Module 2**: `builtin:BasicFeeder` v1 — Iterator over `1.Body.data.repository.object.entries`.
+- **Stopped at Module 2 per Lesson #6**: API calls after Module 2 clobber UI-built values. Modules 3–9 (Parser → Router → Filter → Buffer×5 platforms) must be built in Make.com UI by owner (D4-6), gated on D1-17 Buffer org setup.
+- **state/automation.md updated**: scenario ID, module details, connection IDs, all 14 SKILL.md status rows updated.
+- **PHASE_STATUS.md**: D4-5 marked [x] done.
+- **BUILD_STATUS.md updated**.
+- **All current autonomous items now blocked**: D3-6/D3-13/D3-17 on IM_DATA_2026.md; D4-3 on owner fresh session; D4-6 on D1-17 Buffer + Make.com UI. D4-7 through D4-15 are all downstream of owner unblocks.
