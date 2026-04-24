@@ -77,7 +77,7 @@
 - [O] D3-2 YouTube channel `@medcontractintel` created under Brand Account
 - [O] D3-3 YouTube Data API v3 + OAuth Desktop client enabled
 - [O] D3-4 OAuth flow run → token saved to 1Password `MedCI — OAuth Tokens`
-- [ ] D3-5 Generate 30-day content calendar (IM hooks mapped to EMCI formats)
+- [x] D3-5 Generate 30-day content calendar (IM hooks mapped to EMCI formats)
 - [ ] D3-6 Write 15 TikTok scripts (IM hooks per blueprint §11)
 - [O] D3-7 Review Gate 1 (Lesson #19): Perplexity fact-checks 15 TikTok scripts → content-review-day3.md
 - [O] D3-8 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 15 TikTok scripts → appends notes
@@ -103,7 +103,7 @@
 | 7:30 | D3-2 | Create YouTube channel `@medcontractintel` under ambamplify@gmail.com Brand Account | 🟣 | owner-blocked |
 | 7:30 | D3-3 | Enable YouTube Data API v3 for project; create "MedCI YouTube Upload" OAuth Desktop client | 🟣 | owner-blocked |
 | 8:00 | D3-4 | Run OAuth flow → save token to 1Password `MedCI — OAuth Tokens` | 🟣→🔵 | owner-blocked |
-| 7:30 | D3-5 | Generate 30-day content calendar (IM hooks mapped to EMCI-proven formats) | 🟢 | pending |
+| 7:30 | D3-5 | Generate 30-day content calendar (IM hooks mapped to EMCI-proven formats) | 🟢 | **done 2026-04-23 21:17 EDT** — 30 LinkedIn + 30 X + 15 Threads structural entries added to calendar-template.yaml; meta updated; content-review ledger expanded from 27→102 artifacts (75 text posts added). Threads posts are complete ≤500-char content; LI/X body text pending D3-17. |
 | 8:30 | D3-6 | Write 15 TikTok scripts (IM hooks: panel size, HEDIS, hospitalist shifts, locum rates — per blueprint §11 first-15 list) | 🟢 | pending |
 | 9:45 | D3-7 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity fact-checks all 15 TikTok scripts against IM_DATA_2026.md + source links; writes pass/fail + notes to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
 | 10:15 | D3-8 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner pastes 15 scripts into claude.ai (opus mode); owner captures output and appends to `state/content-review-day3.md`. Scripts cannot advance without both gates green. | 🟣 | owner-blocked |
@@ -122,7 +122,44 @@
 | — | D3-21 | Day 3 EOD retro + Day 4 plan write into PHASE_STATUS.md | 🔵 | pending |
 
 ### Day 4 — Saturday 2026-04-26 (AUTOMATION + DRY RUN)
-*Populated by ops-controller morning of Day 4.*
+*Populated by ops-controller 2026-04-23 21:17 EDT (D3-21 pull-forward by 20:07 run). Pulls from blueprint §10 Day 4.*
+
+### Day 4 fast checkbox view
+- [O] D4-1 Daily sync — owner opens Claude Code + Perplexity
+- [ ] D4-2 Fork 16 EMCI scheduled-task SKILL.md files → med-* equivalents (Lesson #11 full op path)
+- [ ] D4-3 Register 16 med-* scheduled tasks via mcp__scheduled-tasks (staggered :40–:05 to avoid EMCI :10–:35 collision)
+- [O] D4-4 Owner Run-Now on all 16 med-* tasks to pre-approve Chrome MCP + Bash permissions (Lesson #18)
+- [ ] D4-5 Scaffold Make.com M1 scenario via API (Modules 1+2 only: GitHub GraphQL + Iterator)
+- [ ] D4-6 Build Make.com UI Modules 3–9 (Parser, Router, Filter, Buffer-per-platform) — never API after Module 2 (Lesson #6)
+- [ ] D4-7 Commit first 15 approved TikTok YAML files with r2_video_url to med-contract-content (gated on D3-11+D3-12+D3-7+D3-8)
+- [ ] D4-8 Fire M1 manually; verify first TikTok lands in Buffer MedCI org (gated on D4-7)
+- [ ] D4-9 Schedule 15 TikTok videos via Buffer Direct Publishing (Lesson #17 — requires TikTok Business account D1-14)
+- [ ] D4-10 Schedule first 30 LinkedIn + X + Threads posts via Buffer (gated on D3-17+D3-18+D3-19+D3-20)
+- [ ] D4-11 Upload YouTube video #1 via upload_youtube.py test run (gated on D3-16+D3-2+D3-3+D3-4)
+- [O] D4-12 Owner reviews YouTube #1; Y/N reply
+- [ ] D4-13 On Y: publish YT#1 live; on N: note feedback and hold
+- [O] D4-14 Full dry-run: real $97 purchase with owner's card → verify PDF email arrives (with compliance disclaimer) → verify Q&A → issue refund
+- [ ] D4-15 Day 4 EOD review; all 18 Lesson guardrails confirmed; Day 5 plan written
+
+| Time | # | Task | Agent | Status |
+|---|---|---|---|---|
+| 7:00 | D4-1 | Daily sync — owner opens Claude Code + Perplexity | 🟣 | owner-blocked |
+| 7:30 | D4-2 | Fork 16 EMCI scheduled-task SKILL.md files → `med-*` equivalents. Full path `/opt/homebrew/bin/op` (Lesson #11). Stagger crons: EMCI `:10–:35` → MedCI `:40–:05` | 🟢 | pending |
+| 9:00 | D4-3 | Register 16 `med-*` scheduled tasks via `mcp__scheduled-tasks__create_scheduled_task`; verify each shows nextRunAt | 🟢 | pending |
+| 9:30 | D4-4 | **Owner Run-Now on all 16 med-* tasks** — one click each in Claude Code UI to pre-approve Chrome MCP + Bash. ~5 min. Without this, first cron run stalls on permission prompt (Lesson #18) | 🟣 | owner-blocked |
+| 10:00 | D4-5 | Scaffold Make.com M1 via API: Modules 1 (GitHub GraphQL) + 2 (Iterator). Record scenario ID in `state/automation.md`. Stop at Module 2 | 🟢 | pending |
+| 10:30 | D4-6 | **In Make.com UI only**: build Modules 3–9 (Parser, Router, Filter, Buffer ×5 platforms). Capture scenario ID + canonical "UI-only after Module 2" note in `state/automation.md`. Lesson #6: API after Module 2 clobbers UI values | 🔵 | pending (gated on D4-5) |
+| 12:00 | D4-7 | Commit first 15 approved TikTok YAML entries (r2_video_url populated) to med-contract-content main | 🔵 | pending (gated on D3-7+D3-8+D3-11+D3-12) |
+| 12:30 | D4-8 | Fire M1 scenario manually once; confirm first TikTok lands in Buffer MedCI org queue | 🔵 | pending (gated on D4-6+D4-7) |
+| 1:30 | D4-9 | Schedule 15 TikTok videos in Buffer via Direct Publishing, 2-day cadence starting 2026-04-27 noon. Lesson #17: requires TikTok Business account (D1-14) | 🔵 | pending (gated on D4-8 + D1-14) |
+| 2:30 | D4-10 | Schedule first 30 LinkedIn + 30 X + 15 Threads posts via Buffer GraphQL API | 🔵 | pending (gated on D3-20 dual review) |
+| 3:30 | D4-11 | Upload YouTube video #1 via `upload_youtube.py` (test upload flow; OAuth token from D3-4) | 🔵 | pending (gated on D3-16 + D3-4) |
+| 4:30 | D4-12 | Owner reviews YouTube #1 video; Y → publish, N → note feedback + hold | 🟣 | owner-blocked |
+| 5:00 | D4-13 | On Y: publish YT#1 live; on N: record feedback, hold for edits | 🔵 | pending (gated on D4-12) |
+| 5:30 | D4-14 | Full dry-run: real $97 analyzer purchase with owner's card. Verify: PDF email arrives, compliance disclaimer present, Q&A works, issue full refund | 🟣→🔵→🟢 | owner-blocked |
+| 7:00 | D4-15 | Day 4 EOD review: walk all 18 Lesson guardrails; Day 5 plan written into PHASE_STATUS.md | 🟢 | pending |
+
+**Day 4 launch gate:** 16 med-* scheduled tasks running; M1 fires end-to-end; first TikTok queued in Buffer; first YT video live (or held with feedback); real $97 purchase flow proven with refund.
 
 ### Day 5 — Sunday 2026-04-27 (LAUNCH)
 *Populated by ops-controller morning of Day 5. Gated by 18 Launch Gates (§13).*

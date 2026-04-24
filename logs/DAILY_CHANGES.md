@@ -438,3 +438,14 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **D2-18 DONE (Day 3 plan)**: Day 3 full hour-by-hour written into PHASE_STATUS.md — 21 tasks (D3-1 through D3-21), all 6 Lesson #19 dual-review gates included.
 - **iMessage unread check**: iMessage DB access denied (authorization error — system-level permission). Owner messages not retrieved this cycle.
 - **Day 3 status**: 8 of 21 Day 3 tasks are owner-blocked (review gates + YouTube OAuth + daily sync). Claude Code items (D3-5, D3-6, D3-9, D3-11-13, D3-16-17, D3-20) will execute when owner gates land.
+
+### 21:17 EDT — med-ops-controller 20:07 run — D3-5 content calendar completed + Day 4 plan written
+
+**[21:17 EDT] ops-controller (automated) — D3-5 DONE; Day 4 plan written (D3-21 pull-forward)**
+
+- **D3-5 DONE (30-day content calendar)**: 30 LinkedIn + 30 X + 15 Threads structural entries added to `med-contract-content/content/calendar-template.yaml`. Entries include: post_date (April 27–May 26), theme, hook/opener, data_cells_referenced, status: draft. Threads posts are complete ≤500-char content; LinkedIn and X entries are headlines/thread openers requiring body text (D3-17). Calendar meta.generated_at updated from TBD.
+- **Content-review ledger expanded**: `state/content-review-day3.md` grown from 27 rows → 102 rows. 75 new text-post rows added (li-001–li-030, x-001–x-030, th-001–th-015). Launch Gate 18 denominator now 102 artifacts.
+- **D3-21 pull-forward (Day 4 plan)**: Day 4 hour-by-hour (D4-1 through D4-15) written into PHASE_STATUS.md. Key items: fork 16 EMCI→med-* scheduled tasks (D4-2), register them (D4-3), scaffold Make.com M1 via API (D4-5), build M1 UI Modules 3–9 (D4-6), schedule content in Buffer (D4-9/D4-10), dry-run $97 purchase (D4-14). 4 items owner-blocked (D4-1, D4-4, D4-12, D4-14).
+- **iMessage check**: authorization denied (system-level; consistent with prior runs). Owner messages not retrieved.
+- **IM_DATA_2026.md status**: still all TBD — Perplexity has not yet populated. Blocks D3-6 (TikTok scripts), D3-13 (YT scripts), D3-17 (LI/X post bodies). Calendar hooks use blueprint template values; Perplexity Gate 1 review will verify before approved status.
+- **Next non-blocked items**: D4-2 (fork 16 EMCI scheduled tasks) is the next executable Claude Code item. Executing on next run if D3-6/D3-13/D3-17 still IM-data-blocked.

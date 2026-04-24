@@ -51,11 +51,95 @@ Rows for the 15 TikTok hooks + 3 YouTube scripts are pre-populated below (from c
 | yt-m2 | YouTube script | "Panel Size Math: How Your Employer Values Your Time" | Claude Code | pending | pending | no | ~12min; script_file content/youtube/yt-m2-panel-size-math.md |
 | yt-m3 | YouTube script | "Hospitalist Shift Economics — 7-on/7-off, Nocturnist Diff, Admit Fees, and the $47K Gap Nobody Talks About" | Claude Code | pending | pending | no | ~18min; script_file content/youtube/yt-m3-hospitalist-shift-economics.md |
 
-### LinkedIn / X / Threads / Substack (populated Day 3 7:00 PM)
+### LinkedIn (30 posts — structural hooks drafted 2026-04-23 D3-5 pull-forward; full body text pending D3-17)
 
-| Artifact ID | Type | Title / Hook | Author | perplexity | claude-chat-opus | approved YAML? | Notes |
+| Artifact ID | Type | Hook (truncated) | Author | perplexity | claude-chat-opus | approved YAML? | Notes |
 |---|---|---|---|---|---|---|---|
-| _(Day 3 7:00 PM text-lane draft adds ~75 text posts here)_ | | | | | | | |
+| li-001 | LinkedIn post | "MGMA 2025 IM benchmark: $245K median…" | Claude Code | pending | pending | no | post_date 2026-04-27; cells mgma-im-median-comp |
+| li-002 | LinkedIn post | "MGMA $/wRVU median for outpatient IM is $51…" | Claude Code | pending | pending | no | post_date 2026-04-28; cells mgma-im-median-per-wrvu |
+| li-003 | LinkedIn post | "Hospitalist math: $310K median ÷ 173 shifts…" | Claude Code | pending | pending | no | post_date 2026-04-29; cells mgma-hospitalist-median-comp |
+| li-004 | LinkedIn post | "Tail coverage ranges $15K–$80K by specialty…" | Claude Code | pending | pending | no | post_date 2026-04-30; cells tail-coverage-market-range |
+| li-005 | LinkedIn post | "HEDIS bonus range: 3–12% of base (ACP data)…" | Claude Code | pending | pending | no | post_date 2026-05-01; cells acp-hedis-bonus-range |
+| li-006 | LinkedIn post | "Nocturnist differential: 15–25% SHM standard…" | Claude Code | pending | pending | no | post_date 2026-05-02; cells shm-nocturnist-differential |
+| li-007 | LinkedIn post | "CMS 2026 CF is $33.40. If employer CF differs…" | Claude Code | pending | pending | no | post_date 2026-05-03; cells cms-2026-conversion-factor |
+| li-008 | LinkedIn post | "Panel attribution is 3 sentences in your contract…" | Claude Code | pending | pending | no | post_date 2026-05-04; cells mgma-im-panel-median |
+| li-009 | LinkedIn post | "MA PMPM capitation: $40 to $180 depending…" | Claude Code | pending | pending | no | post_date 2026-05-05; cells acp-capitation-pmpm-range |
+| li-010 | LinkedIn post | "Locum hospitalist: $2,400/shift. Employed: $1,700…" | Claude Code | pending | pending | no | post_date 2026-05-06; cells locum-hospitalist-per-shift |
+| li-011 | LinkedIn post | "7+ states restrict or ban physician non-competes…" | Claude Code | pending | pending | no | post_date 2026-05-07; state-law; Perplexity verifies multi-state |
+| li-012 | LinkedIn post | "Unpaid call burden for outpatient IM: 50–100 hrs…" | Claude Code | pending | pending | no | post_date 2026-05-08; qualitative; Perplexity verifies |
+| li-013 | LinkedIn post | "99214 vs 99215: $109 vs $148 at 2026 CMS rates…" | Claude Code | pending | pending | no | post_date 2026-05-09; cells cms-99214-non-facility |
+| li-014 | LinkedIn post | "Academic IM asst professor: AAMC median ~$195K…" | Claude Code | pending | pending | no | post_date 2026-05-10; cells aamc-asst-prof-im-outpatient |
+| li-015 | LinkedIn post | "Collections ratio: hospital-employed 55–70%…" | Claude Code | pending | pending | no | post_date 2026-05-11; cells collections-ratio-hospital-employed |
+| li-016 | LinkedIn post | "MIPS 2026: ±9% of Medicare allowable…" | Claude Code | pending | pending | no | post_date 2026-05-12; cells mips-2026-adjustment-pct |
+| li-017 | LinkedIn post | "wRVU cliffs: clause that cuts your rate at threshold…" | Claude Code | pending | pending | no | post_date 2026-05-13; cells mgma-im-median-per-wrvu |
+| li-018 | LinkedIn post | "3 productivity formula traps most IM docs miss…" | Claude Code | pending | pending | no | post_date 2026-05-14; cells mgma-im-median-comp |
+| li-019 | LinkedIn post | "Medicare Advantage penetration reshaping hospitalist…" | Claude Code | pending | pending | no | post_date 2026-05-15; cells mgma-hospitalist-median-comp |
+| li-020 | LinkedIn post | "Commercial multiplier: 1.3–1.6× Medicare for IM…" | Claude Code | pending | pending | no | post_date 2026-05-16; cells commercial-mult-primary-care-im |
+| li-021 | LinkedIn post | "MGMA $245K median doesn't include malpractice…" | Claude Code | pending | pending | no | post_date 2026-05-17; cells mgma-im-median-comp |
+| li-022 | LinkedIn post | "Signing bonus repayment: pro-rata vs cliff…" | Claude Code | pending | pending | no | post_date 2026-05-18; qualitative; Perplexity verifies clause norms |
+| li-023 | LinkedIn post | "Relocation assistance as lump sum: taxable income…" | Claude Code | pending | pending | no | post_date 2026-05-19; qualitative |
+| li-024 | LinkedIn post | "Real partnership track vs 'preferred associate'…" | Claude Code | pending | pending | no | post_date 2026-05-20; qualitative |
+| li-025 | LinkedIn post | "Hospitalist admission fees: $50–$150/admit SHM…" | Claude Code | pending | pending | no | post_date 2026-05-21; cells shm-admission-fee-range |
+| li-026 | LinkedIn post | "EMR documentation averages 2–3 hrs/day for IM…" | Claude Code | pending | pending | no | post_date 2026-05-22; cells mgma-im-median-wrvu |
+| li-027 | LinkedIn post | "99291: critical care 30–74 min, $375 facility…" | Claude Code | pending | pending | no | post_date 2026-05-23; cells cms-99291-facility |
+| li-028 | LinkedIn post | "Telehealth for IM in 2026: CMS flexibilities…" | Claude Code | pending | pending | no | post_date 2026-05-24; cells cms-2026-conversion-factor |
+| li-029 | LinkedIn post | "FTE definition trap: '0.8 FTE' + call + admin…" | Claude Code | pending | pending | no | post_date 2026-05-25; cells mgma-im-median-comp |
+| li-030 | LinkedIn post | "5 numbers every IM doc needs before signing…" | Claude Code | pending | pending | no | post_date 2026-05-26; cells mgma-im-median-per-wrvu, mgma-im-panel-median |
+
+### X / Twitter (30 posts — structural thread openers drafted 2026-04-23 D3-5 pull-forward; full threads pending D3-17)
+
+| Artifact ID | Type | Hook (truncated) | Author | perplexity | claude-chat-opus | approved YAML? | Notes |
+|---|---|---|---|---|---|---|---|
+| x-001 | X post | "MGMA 2025 IM median: $245K. 75th: $285K…" | Claude Code | pending | pending | no | post_date 2026-04-27 |
+| x-002 | X post | "MGMA $/wRVU median for outpatient IM = $51…" | Claude Code | pending | pending | no | post_date 2026-04-28 |
+| x-003 | X post | "Hospitalist pay math: $310K ÷ 173 shifts…" | Claude Code | pending | pending | no | post_date 2026-04-29 |
+| x-004 | X post | "Your tail coverage clause is worth $15K–$80K…" | Claude Code | pending | pending | no | post_date 2026-04-30 |
+| x-005 | X post | "HEDIS bonus range: 3–12% of base (ACP)…" | Claude Code | pending | pending | no | post_date 2026-05-01 |
+| x-006 | X post | "SHM nocturnist differential standard: 15–25%…" | Claude Code | pending | pending | no | post_date 2026-05-02 |
+| x-007 | X post | "CMS 2026 CF = $33.40. If group's internal CF differs…" | Claude Code | pending | pending | no | post_date 2026-05-03 |
+| x-008 | X post | "Panel attribution: 3 sentences that determine…" | Claude Code | pending | pending | no | post_date 2026-05-04 |
+| x-009 | X post | "MA capitation PMPM: $40 to $180…" | Claude Code | pending | pending | no | post_date 2026-05-05 |
+| x-010 | X post | "Locum hospitalist: $2,400/shift. Employed: ~$1,700…" | Claude Code | pending | pending | no | post_date 2026-05-06 |
+| x-011 | X post | "7+ states restrict or ban physician non-competes…" | Claude Code | pending | pending | no | post_date 2026-05-07 |
+| x-012 | X post | "Unpaid call: 50–100 hrs/year uncompensated…" | Claude Code | pending | pending | no | post_date 2026-05-08 |
+| x-013 | X post | "99214 = $109. 99215 = $148 (2026 CMS)…" | Claude Code | pending | pending | no | post_date 2026-05-09 |
+| x-014 | X post | "Academic IM asst professor median ~$195K…" | Claude Code | pending | pending | no | post_date 2026-05-10 |
+| x-015 | X post | "Collections ratio: hospital-employed 55–70%…" | Claude Code | pending | pending | no | post_date 2026-05-11 |
+| x-016 | X post | "MIPS 2026: ±9% of Medicare allowable…" | Claude Code | pending | pending | no | post_date 2026-05-12 |
+| x-017 | X post | "wRVU cliffs: clause that cuts per-RVU rate…" | Claude Code | pending | pending | no | post_date 2026-05-13 |
+| x-018 | X post | "3 productivity formula traps…" | Claude Code | pending | pending | no | post_date 2026-05-14 |
+| x-019 | X post | "High MA panel → lower CMI → downward wRVU…" | Claude Code | pending | pending | no | post_date 2026-05-15 |
+| x-020 | X post | "Commercial multiplier: 1.3–1.6× Medicare for IM…" | Claude Code | pending | pending | no | post_date 2026-05-16 |
+| x-021 | X post | "MGMA $245K median ≠ total comp…" | Claude Code | pending | pending | no | post_date 2026-05-17 |
+| x-022 | X post | "Signing bonus repayment: pro-rata vs cliff…" | Claude Code | pending | pending | no | post_date 2026-05-18 |
+| x-023 | X post | "Relocation as lump sum: taxable, $6K–8K diff…" | Claude Code | pending | pending | no | post_date 2026-05-19 |
+| x-024 | X post | "Real partnership track: buy-in, capital, governance…" | Claude Code | pending | pending | no | post_date 2026-05-20 |
+| x-025 | X post | "Hospitalist admission fee: $50–$150/admit…" | Claude Code | pending | pending | no | post_date 2026-05-21 |
+| x-026 | X post | "EMR documentation: 2–3 hrs/day, 0 wRVU…" | Claude Code | pending | pending | no | post_date 2026-05-22 |
+| x-027 | X post | "99291: 30–74 min critical care = $375 facility…" | Claude Code | pending | pending | no | post_date 2026-05-23 |
+| x-028 | X post | "Telehealth for IM: CMS extended flexibilities…" | Claude Code | pending | pending | no | post_date 2026-05-24 |
+| x-029 | X post | "'0.8 FTE' + call + admin = real FTE redefinition…" | Claude Code | pending | pending | no | post_date 2026-05-25 |
+| x-030 | X post | "5 numbers every IM doc needs before signing…" | Claude Code | pending | pending | no | post_date 2026-05-26 |
+
+### Threads (15 posts — COMPLETE content drafted 2026-04-23 D3-5 pull-forward; hooks ARE the posts ≤500 chars)
+
+| Artifact ID | Type | Hook (full — this IS the post) | Author | perplexity | claude-chat-opus | approved YAML? | Notes |
+|---|---|---|---|---|---|---|---|
+| th-001 | Threads post | "MGMA 2025: IM median $245K. 75th percentile $285K. That $40K gap is mostly a contract problem — not a productivity problem." | Claude Code | pending | pending | no | post_date 2026-04-27; complete content |
+| th-002 | Threads post | "MGMA $/wRVU median = $51 for outpatient IM. If yours is $44, that's $33K/year underpaid at 4,800 wRVU. Calculate your rate first." | Claude Code | pending | pending | no | post_date 2026-04-28 |
+| th-003 | Threads post | "$310K hospitalist median ÷ 173 shifts = $1,792/shift. Your employer bills $2,400+ for the same 12-hr slot. Know the spread." | Claude Code | pending | pending | no | post_date 2026-04-29 |
+| th-004 | Threads post | "Tail coverage for IM: $15K–$80K range. You're on the low end. Which means your employer has almost no excuse for not covering it. Most still try." | Claude Code | pending | pending | no | post_date 2026-04-30 |
+| th-005 | Threads post | "HEDIS bonus range: 3–12% of base (ACP data). Most contracts write the targets to pay at 3%. That's not an accident." | Claude Code | pending | pending | no | post_date 2026-05-01 |
+| th-006 | Threads post | "Nocturnist differential: SHM standard 15–25%. Below 12%: you're subsidizing day shift. Above 25%: you negotiated. Which category are you in?" | Claude Code | pending | pending | no | post_date 2026-05-02 |
+| th-007 | Threads post | "CMS 2026 CF = $33.40. If your group's internal CF is higher or lower and no one can explain why — that explanation is worth finding before you sign." | Claude Code | pending | pending | no | post_date 2026-05-03 |
+| th-008 | Threads post | "Panel attribution: 3 sentences that determine who owns your patients when you leave. Read them before you sign. Most IM physicians don't." | Claude Code | pending | pending | no | post_date 2026-05-04 |
+| th-009 | Threads post | "MA capitation PMPM: $40–$180. The spread is whether your employer understands risk scoring. If they can't show you the actuarial model, ask why." | Claude Code | pending | pending | no | post_date 2026-05-05 |
+| th-010 | Threads post | "Locum: $2,400/shift. Employed: ~$1,700/shift equivalent. The $700 gap has to clear benefits and call burden. Run the math for your specific situation." | Claude Code | pending | pending | no | post_date 2026-05-06 |
+| th-011 | Threads post | "7+ states restrict or ban physician non-competes. Your 15-mile / 2-year clause may already be unenforceable. Check your state before you stress about it." | Claude Code | pending | pending | no | post_date 2026-05-07 |
+| th-012 | Threads post | "50–100 uncompensated call hours per year is common in employed IM. That's real labor. Your contract should name it and price it." | Claude Code | pending | pending | no | post_date 2026-05-08 |
+| th-013 | Threads post | "99214 = $109. 99215 = $148. 2026 CMS rates. On 4,000 visits, the coding difference moves $156K in revenue. Code accurately — both under and over." | Claude Code | pending | pending | no | post_date 2026-05-09 |
+| th-014 | Threads post | "Academic IM asst professor: ~$195K AAMC median. Research FTE reduces wRVU. Some contracts penalize you for time the institution assigned to non-clinical work." | Claude Code | pending | pending | no | post_date 2026-05-10 |
+| th-015 | Threads post | "Collections ratio: hospital-employed IM 55–70%. Private practice 70–85%. The 15-point gap is your overhead rate — and partly what you negotiate." | Claude Code | pending | pending | no | post_date 2026-05-11 |
 
 ### Site user-facing copy (per RUNBOOK Section 4 — Lesson #19 gating)
 
