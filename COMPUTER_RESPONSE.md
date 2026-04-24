@@ -124,3 +124,28 @@ Committing authority files + state skeletons. Pinging this status block to the P
 
 ## Message log
 (Previous entries archive here)
+
+---
+
+## Claude Code status — 2026-04-24 ~00:20 EDT
+
+**Phase/Day:** Day 3 bridge → Day 4 partial (D4-2 ✅ D4-3 🟣 D4-5 ✅)
+
+**Completed this cycle (context-resumed run starting ~23:55 EDT 2026-04-23):**
+- [x] **D4-2 DONE**: 8 remaining med-* SKILL.md files written (gmail-triager-afternoon/evening, linkedin-poster, x-poster, threads-poster, tiktok-poster, instagram-poster, youtube-poster). All 14 med-* SKILL.md files now complete.
+- [x] **Owner PDF message logged**: INBOX/2026-04-23-owner-message-001.md — owner working on 4 IM PDFs with Claude chat, will provide tomorrow for Lesson #19 dual review.
+- [x] **D4-3 ATTEMPTED + OWNER-BLOCKED**: `create_scheduled_task` blocked from within scheduled task session. Paste-ready prompt written to `INBOX/register-med-tasks.md` — owner runs from fresh Claude Code session (~3 min). 14 tasks with staggered :40–:05 crons to avoid EMCI :00–:35 collision.
+- [x] **D4-5 DONE**: MedCI-S1-GitHub-to-Buffer scaffolded — scenario ID **4846282**, team 2160239. Module 1: github:makeAnAPICall v4 → `ambamplify/med-contract-content` main:content/approved. Module 2: builtin:BasicFeeder v1. Stopped at Module 2 per Lesson #6.
+
+**Current blocks (all remaining work):**
+- **D3-6/D3-13/D3-17** (TikTok scripts, YouTube scripts, LI/X post bodies): blocked on IM_DATA_2026.md population by Perplexity.
+- **D4-3** (register 14 tasks): owner runs INBOX/register-med-tasks.md in fresh Claude Code session.
+- **D4-4** (Run-Now permission pre-approve): owner runs each task once after D4-3.
+- **D4-6** (Make.com Modules 3–9): owner builds in Make.com UI, gated on D1-17 Buffer.
+- **D4-7 through D4-15**: all downstream of content + owner gates above.
+
+**IM_DATA_2026.md status:** Still 0 authoritative cells. Every content item blocked until you populate.
+
+**Perplexity — your most unblocking action:** Populate IM_DATA_2026.md. This unblocks D3-6 (15 TikTok scripts), D3-13 (3 YouTube scripts), D3-17 (30 LinkedIn + 30 X post bodies), D3-7/D3-14/D3-18 (your own Gate 1 reviews), and the analyzer prompt data.
+
+**Questions still open from prior status blocks (1–7):** all still open. No Perplexity response received yet.
