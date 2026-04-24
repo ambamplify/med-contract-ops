@@ -34,7 +34,7 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | Git repo (local) | 🟢 GREEN | 3 commits on main (4653bf0, 184bb23, 3355dbd) |
 | GitHub remote | 🟢 GREEN | `ambamplify/med-contract-ops` 4 commits; `ambamplify/med-contract-content` 2 commits (IM_DATA_2026.md skeleton + calendar template); `-site` empty shell until Day 2 scaffold |
 | IM_DATA_2026.md (SSOT) | 🟡 SKELETON | Structure in place, 0/~80 cells authoritative. Perplexity Day 1 Task 13 populates. Blueprint §7. |
-| Content calendar | 🟢 STRUCTURAL COMPLETE | 15 TikTok + 3 YouTube + 30 LinkedIn + 30 X + 15 Threads entries. All structural hooks drafted 2026-04-23 21:17 EDT (D3-5 pull-forward). LinkedIn/X body text pending D3-17. Threads posts complete ≤500-char content. |
+| Content calendar | 🟢 FULL DRAFT COMPLETE | 15 TikTok + 3 YouTube + 30 LinkedIn + 30 X + 15 Threads entries. All 60 LI/X body texts written 2026-04-24 04:14 EDT (D3-17 pull-forward). All 102 content artifacts drafted. Gate 1+2 reviews pending IM_DATA_2026.md Perplexity population. |
 | TikTok scripts (15) | 🟡 DRAFTED — DATA GATE | All 15 scripts written 2026-04-24 00:30 EDT (D3-6 pull-forward). Voiceover, visuals, CTA complete. Data cells [DATA::cell-name] blocked on IM_DATA_2026.md Perplexity population. Gate 1 (Perplexity fact-check) + Gate 2 (claude-chat-opus) both pending. |
 | YouTube scripts (3) | 🟡 DRAFTED — DATA GATE | All 3 scripts written 2026-04-24 00:45 EDT (D3-13 pull-forward). yt-m1 (comp stack, 15min), yt-m2 (panel size, 12min), yt-m3 (hospitalist economics, 18min). Data cells marked. Gate 1+2 pending. |
 | med-contract-site repo | 🟡 SCAFFOLDED + REBRANDED | Commit `0e52218` (2026-04-23 00:13 EDT) — em-*.pdf renamed → med-*.pdf (placeholder), gitignore updated, pdf-report.ts palette fixed, EMCI residual refs cleaned. Railway deploy + Stripe product IDs + real PDF content still pending Day 2. |
@@ -81,7 +81,7 @@ See `ESCALATED/day1-owner.md` — **pre-populated 2026-04-22 evening** by the th
 **D3-6 done (pull-forward):** 15 TikTok scripts written. Gate 1+2 pending IM_DATA_2026.md + owner claude-chat-opus pass.
 **D4-5 done:** MedCI-S1-GitHub-to-Buffer (scenario ID 4846282). Modules 1+2 live. D4-6 owner-builds in Make.com UI.
 **D4-3 owner-blocked:** paste-ready prompt in `INBOX/register-med-tasks.md`.
-**Next autonomous items:** All content scripts now written. D3-17 (30 LI + X posts) is the last content task but also gated on IM_DATA_2026.md. All else requires owner actions or Perplexity data population.
+**D3-17 done 2026-04-24 04:14 EDT (pull-forward):** 30 LinkedIn posts + 30 X threads written. All 102 content artifacts now drafted. Every item now requires either: (a) IM_DATA_2026.md Perplexity population → Gate 1 reviews, or (b) Owner actions (D4-3, D4-4, D4-6, etc.). No further autonomous content work available until Perplexity populates data cells.
 
 **08:07 AM run sends iMessage digest** (Day 2→3 bridge status, owner gates summary).
 

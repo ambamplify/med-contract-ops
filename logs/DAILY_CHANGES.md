@@ -542,3 +542,14 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **content-review-day3.md**: YouTube rows updated with file paths and data cell lists.
 - **PHASE_STATUS.md**: D3-13 marked [x] done.
 - **All content scripts now complete**: D3-6 (15 TikTok), D3-13 (3 YouTube). D3-17 (30 LI + 30 X posts body text) still pending IM_DATA_2026.md. This run has exhausted all autonomous content work possible before Perplexity data population.
+
+## 2026-04-24 04:14 EDT — ops-controller 04:07 run
+
+**D3-17 DONE (pull-forward):** 30 LinkedIn posts + 30 X threads written. All 102 MedCI content artifacts are now drafted.
+- **30 LinkedIn posts** written to `med-contract-content/content/linkedin/li-001-*.md through li-030-*.md`. Format: hook + 350–550 word analytical body + CTA. All [DATA::cell-name] placeholders throughout.
+- **30 X threads** written to `med-contract-content/content/x/x-001-*.md through x-030-*.md`. Format: 6-tweet threads (hook + 4 body + CTA). Each tweet ≤280 chars. [DATA::cell-name] placeholders where confirmed numbers pending.
+- **content-review-day3.md**: All 60 LI/X rows updated with file paths (python3 bulk update).
+- **PHASE_STATUS.md**: D3-17 marked [x] done.
+- **BUILD_STATUS.md**: Content calendar status updated to FULL DRAFT COMPLETE.
+- **iMessages**: DB auth denied (scheduled task env). Owner messages not retrieved this run.
+- **Next unblocked item**: All 102 content artifacts drafted. Every remaining item now requires IM_DATA_2026.md Perplexity population OR owner actions. Content pipeline is fully drafted and data-gated.

@@ -89,7 +89,7 @@
 - [O] D3-14 Review Gate 1 (Lesson #19): Perplexity fact-checks 3 YouTube scripts → appends to content-review-day3.md
 - [O] D3-15 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 3 YouTube scripts → appends notes
 - [ ] D3-16 Produce 3 YouTube videos via Remotion + ElevenLabs (only after both gates green)
-- [ ] D3-17 Write 30 LinkedIn + 30 X + 15 Threads posts (first 30 days queue)
+- [x] D3-17 Write 30 LinkedIn + 30 X + 15 Threads posts (first 30 days queue)
 - [O] D3-18 Review Gate 1 (Lesson #19): Perplexity batch-reviews 75 text posts → appends to content-review-day3.md
 - [O] D3-19 Review Gate 2 (Lesson #19): Owner runs claude chat opus on 75 text posts → appends notes
 - [ ] D3-20 Apply edits; mark posts approved in YAML (only after both gates green)
@@ -115,7 +115,7 @@
 | 4:45 | D3-14 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity fact-checks all 3 YouTube scripts; appends to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
 | 5:15 | D3-15 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner runs opus-mode review on 3 YouTube scripts; appends notes | 🟣 | owner-blocked |
 | 5:30 | D3-16 | Consolidate edits; produce 3 YouTube videos via Remotion + ElevenLabs (only after both gates green) | 🔵 | pending (gated on D3-15) |
-| 7:00 | D3-17 | Write 30 LinkedIn + 30 X + 15 Threads posts (first 30 days of queue) | 🟢 | pending |
+| 7:00 | D3-17 | Write 30 LinkedIn + 30 X + 15 Threads posts (first 30 days of queue) | 🟢 | **done 2026-04-24 04:14 EDT (D3-17 pull-forward by ops-controller 04:07 run)** — 30 LinkedIn posts written to `med-contract-content/content/linkedin/li-001-*.md through li-030-*.md` (350–550 word analytical body text + CTA each). 30 X threads written to `med-contract-content/content/x/x-001-*.md through x-030-*.md` (6-tweet threads, hook + 4 body + CTA). All [DATA::cell-name] placeholders throughout. Gate 1 (Perplexity) + Gate 2 (claude-chat-opus) both pending. Threads posts already complete from D3-5. |
 | 7:45 | D3-18 | **Review Gate 1 (Lesson #19 — Perplexity):** Perplexity batch-reviews all 75 text posts; appends to `state/content-review-day3.md` | 🟣 | owner-blocked (Perplexity action) |
 | 8:15 | D3-19 | **Review Gate 2 (Lesson #19 — Claude chat opus):** Owner runs opus-mode review on 75 text posts; appends notes | 🟣 | owner-blocked |
 | 8:30 | D3-20 | Apply edits; mark posts `approved` in YAML only after both gates green (unapproved posts cannot schedule Day 4) | 🟢 | pending (gated on D3-19) |

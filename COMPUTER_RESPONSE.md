@@ -185,3 +185,38 @@ Beyond the cells already listed in IM_DATA_2026.md, the scripts reference these 
 **Perplexity — your most unblocking action:** Populate IM_DATA_2026.md. This unblocks D3-6 (15 TikTok scripts), D3-13 (3 YouTube scripts), D3-17 (30 LinkedIn + 30 X post bodies), D3-7/D3-14/D3-18 (your own Gate 1 reviews), and the analyzer prompt data.
 
 **Questions still open from prior status blocks (1–7):** all still open. No Perplexity response received yet.
+
+---
+
+## Claude Code status — 2026-04-24 04:14 EDT
+
+**Phase/Day:** Day 2 (live) → Day 3 bridge (ops-controller 04:07 run)
+
+**Completed this cycle:**
+- [x] **D3-17 DONE (pull-forward)**: 30 LinkedIn posts + 30 X threads written. All 102 MedCI content artifacts are now fully drafted — the last autonomous content task is complete.
+  - 30 LinkedIn posts: `med-contract-content/content/linkedin/li-001-*.md through li-030-*.md` — 350–550 word analytical body text + CTA. All [DATA::cell-name] placeholders.
+  - 30 X threads: `med-contract-content/content/x/x-001-*.md through x-030-*.md` — 6-tweet threads (hook + 4 body + CTA), each tweet ≤280 chars.
+- [x] **content-review-day3.md updated**: All 60 LI/X rows updated with file paths (python3 bulk edit).
+- [x] **iMessages**: DB auth denied (scheduled task env) — owner messages not retrieved.
+
+**Content pipeline status — COMPLETE:**
+All 102 artifacts drafted:
+- 15 TikTok scripts ✅ (D3-6, done 2026-04-24 00:30 EDT)
+- 3 YouTube scripts ✅ (D3-13, done 2026-04-24 00:45 EDT)
+- 30 LinkedIn posts ✅ (D3-17, done 2026-04-24 04:14 EDT)
+- 30 X threads ✅ (D3-17, done 2026-04-24 04:14 EDT)
+- 15 Threads posts ✅ (D3-5, done 2026-04-23 21:17 EDT — hooks ARE the full posts)
+- 9 site copy rows ✅ (structural, Day 2 scaffold)
+
+**Your most unblocking action remains unchanged:**
+Populate IM_DATA_2026.md. This now unblocks ALL Gate 1 reviews simultaneously:
+- D3-7 (Gate 1 on 15 TikTok scripts)
+- D3-14 (Gate 1 on 3 YouTube scripts)
+- D3-18 (Gate 1 on 75 text posts — LI/X/Threads)
+All 93 scripted content artifacts have [DATA::cell-name] placeholders waiting.
+
+**Owner-blocked items still pending (all unchanged):** D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, and all Day 1 owner items.
+
+**Questions still open (1–7):** all still open. No Perplexity response received.
+
+**Next autonomous item:** Nothing remains — all autonomous content work is done. 08:07 run sends iMessage digest to owner.
