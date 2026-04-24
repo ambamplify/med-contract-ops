@@ -13,7 +13,9 @@ Overnight pull-forwards complete:
 - 08:07 digest sent to owner via iMessage ✅
 
 **All autonomous content work is exhausted.** Every remaining item needs IM_DATA_2026.md Perplexity population OR owner action.
-Owner priorities: (1) D4-3 register tasks from fresh Claude Code session, (2) D1-17 Buffer, (3) Stripe dashboard follow-ups, (4) Perplexity populate IM_DATA_2026.md.
+Owner priorities: (1) D4-3 register tasks from fresh Claude Code session, (2) D1-17 Buffer, (3) Stripe dashboard follow-ups, (4) Perplexity populate IM_DATA_2026.md, (5) PDFs 2–4 from Claude Chat Opus session.
+
+**D2-8 UPDATE 2026-04-24 12:14 EDT:** PDF #1 (Red Flag Checklist) received from owner's Claude Chat Opus session → copied to `content/pdfs/pdf-001-red-flag-checklist.md`. Gate 2 PASS logged. Gate 1 pending Perplexity.
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 

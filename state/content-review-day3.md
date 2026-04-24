@@ -141,6 +141,15 @@ Rows for the 15 TikTok hooks + 3 YouTube scripts are pre-populated below (from c
 | th-014 | Threads post | "Academic IM asst professor: ~$195K AAMC median. Research FTE reduces wRVU. Some contracts penalize you for time the institution assigned to non-clinical work." | Claude Code | pending | pending | no | post_date 2026-05-10 |
 | th-015 | Threads post | "Collections ratio: hospital-employed IM 55–70%. Private practice 70–85%. The 15-point gap is your overhead rate — and partly what you negotiate." | Claude Code | pending | pending | no | post_date 2026-05-11 |
 
+### PDFs — 4 product documents (Lesson #19 dual-review required before PDF generation)
+
+| Artifact ID | Type | Title | Author | perplexity | claude-chat-opus | approved YAML? | Notes |
+|---|---|---|---|---|---|---|---|
+| pdf-001 | Product PDF | Red Flag Checklist — 15 Provisions (free giveaway) | Claude Chat Opus | pending | **PASS (2026-04-23 — Claude Chat Opus session)** | no | **Draft received 2026-04-23 23:32 EDT** — file: `content/pdfs/pdf-001-red-flag-checklist.md`. Gate 2 PASS: content produced by Claude Chat Opus per review workflow (owner session 2026-04-23). Gate 1 (Perplexity) pending: verify Flag 10 (SHM 63–70% nocturnist diff stat), Flag 12 (locum $1,800–$2,600 — reconcile with `locum-hospitalist-per-shift` data cell), Flag 8 (IM tail $15K–$40K range), Flag 9 (CA BPC 16600 + NJ post-2024 non-compete enforcement). Discrepancy note: Flag 12 cites $1,800–$2,600; scripts use $2,200–$2,900 — Perplexity should confirm authoritative range from Weatherby/CompHealth/Staff Care 2026. |
+| pdf-002 | Product PDF | Negotiation Script Pack — 6 Scripts + 6 Email Templates + Objection Guide ($67) | Claude Chat Opus | pending | pending | no | **Not yet received** — prompts in INBOX/pdf-content-prompts.md §Prompt 2. Owner working in Claude Chat. Expected same session as pdf-001. Gate 2 will be PASS on receipt (Claude Chat produced). Gate 1 pending IM_DATA_2026.md. |
+| pdf-003 | Product PDF | wRVU Playbook — Understand Your Pay ($47) | Claude Chat Opus | pending | pending | no | **Not yet received** — prompts in INBOX/pdf-content-prompts.md §Prompt 3. Contains [VERIFY] placeholders for CMS 2026 CF + MGMA percentile data. Gate 1 critical: Appendix A wRVU values + Appendix B benchmark figures need authoritative confirmation. |
+| pdf-004 | Product PDF | Hospitalist Shift Economics Analyzer ($37) | Claude Chat Opus | pending | pending | no | **Not yet received** — prompts in INBOX/pdf-content-prompts.md §Prompt 4. Nocturnist differential SHM data + 7-on/7-off shift math + admission fee ranges all need Gate 1 verification. |
+
 ### Site user-facing copy (per RUNBOOK Section 4 — Lesson #19 gating)
 
 | Artifact ID | Type | Title | Author | perplexity | claude-chat-opus | approved YAML? | Notes |

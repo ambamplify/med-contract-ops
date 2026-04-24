@@ -570,3 +570,20 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **BUILD_STATUS.md**: Current phase header updated — all 102 content artifacts drafted.
 - **Owner-blocked items still pending**: D4-3 (register 14 tasks), D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, all Day 1 owner items.
 - **Next phase item**: Nothing autonomously executable until IM_DATA_2026.md populated or owner items land.
+
+---
+
+## 2026-04-24 12:14 EDT — ops-controller 12:07 run
+
+**[12:14 EDT 2026-04-24] ops-controller (automated) — D2-8 PDF #1 received; Gate 2 logged; content-review ledger updated**
+
+- **D2-8 partial progress**: `01_MedContractIntel_Red_Flag_Checklist.md` (Red Flag Checklist — 15 Provisions) received from owner's Claude Chat Opus session (2026-04-23 23:32 EDT). Copied to `med-contract-content/content/pdfs/pdf-001-red-flag-checklist.md`. Created `content/pdfs/` directory in med-contract-content.
+- **Gate 2 logged PASS** for pdf-001: per INBOX/pdf-content-prompts.md review workflow, Claude Chat Opus production session = Gate 2 pass. Date: 2026-04-23.
+- **Gate 1 pending** for pdf-001: 4 specific Perplexity verification items flagged in content-review-day3.md — (1) SHM 2025 nocturnist diff 63–70% statistic, (2) locum rate $1,800–$2,600 vs data cell target $2,200–$2,900 (reconcile via Weatherby/CompHealth/Staff Care), (3) IM tail coverage $15K–$40K range, (4) CA/NJ non-compete enforcement post-2024.
+- **PDFs 2–4 not yet received**: Negotiation Script Pack, wRVU Playbook, Hospitalist Shift Economics Analyzer still pending from owner's Claude Chat session.
+- **content-review-day3.md updated**: 4 PDF rows added (pdf-001 through pdf-004). Ledger now covers 106 artifacts (102 content + 4 PDFs).
+- **PHASE_STATUS.md + BUILD_STATUS.md updated**: D2-8 status updated to partial with details.
+- **iMessages**: DB auth denied (scheduled task env) — consistent with all prior runs.
+- **Perplexity directives**: COMPUTER_RESPONSE.md unchanged — no new directives.
+- **Owner-blocked items unchanged**: D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, all Day 1 owner items.
+- **Next autonomous item**: None — all remaining work requires IM_DATA_2026.md (Perplexity) or PDFs 2–4 from owner. Next PDF processing runs on receipt.
