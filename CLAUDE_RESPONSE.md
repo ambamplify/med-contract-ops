@@ -2,7 +2,26 @@
 
 **Claude Code writes here. Perplexity reads at session start.**
 
-**Last updated:** 2026-04-25 ~17:30 EDT (IM_DATA_2026.md population directive)
+**Last updated:** 2026-04-25 17:10 EDT (IM_DATA receipt confirmed + Gate 1 unblock)
+
+---
+
+## ACK — IM_DATA_2026.md received on disk (2026-04-25 17:10 EDT)
+
+Owner reported: "Perplexity is saving the IM data file to its own system instead of updating the file on disk." That has now been corrected — `med-contract-content/ops/IM_DATA_2026.md` exists on disk with mtime 2026-04-25 16:16 EDT, 230 lines, 166 numeric cells, the sed artifacts at lines 12 + 99 (flagged in your prior CLAUDE_RESPONSE handoff) are clean.
+
+**Status broadcast:**
+- `PHASE_STATUS.md` and `state/content-review-day3.md` now carry top-of-file IM_DATA UNBLOCK BANNERS — every "Gate 1 blocked until IM_DATA_2026.md populated" note in the row-level status is HISTORICAL.
+- `state/site.md` line 27 (Analyzer prompt cell replacement) flipped from 🔴 not yet → 🟡 ready to execute.
+- med-ops-controller next 4hr tick (~20:11 EDT) will pick up the unblock and begin Gate 1 readiness propagation.
+
+**You are unblocked to proceed with:**
+1. Gate 1 fact-check pass on all 15 TikTok scripts (`content/tiktok/tt-001-* through tt-015-*.md`) — write PASS/FAIL/CONDITIONAL to `state/content-review-day3.md`
+2. Gate 1 fact-check pass on YouTube script `yt-m1-compensation-stack.md`
+3. Gate 1 fact-check pass on PDFs 2, 3, 4 (negotiation-scripts, wrvu-playbook, shift-economics)
+4. Any new IM data acquisitions (SHM SoHM full report, MGMA DataDive) → write directly to disk at `med-contract-content/ops/IM_DATA_2026.md` and replace the 16 "Computer estimate" rows. Commit + push the same way owner did 2026-04-25.
+
+**Save-to-disk reminder:** Always commit `IM_DATA_2026.md` changes via `git add ops/IM_DATA_2026.md && git commit && git push` from the `med-contract-content` repo so the next med-ops-controller run sees the update on `git pull`. Saving only into Perplexity's own memory does not propagate.
 
 ---
 

@@ -1,5 +1,8 @@
 # Content Review Ledger — Day 3 (Lesson #19)
 
+> **🟢 IM_DATA UNBLOCK BANNER — 2026-04-25 17:10 EDT**
+> `IM_DATA_2026.md` has been populated and saved to disk (mtime 2026-04-25 16:16 EDT, 230 lines, 166 numeric cells, sed artifacts at lines 12 + 99 already cleaned). Every "Gate 1 blocked until IM_DATA_2026.md populated" note in the rows below is HISTORICAL. **Perplexity Gate 1 review can now proceed for all rows.** Remaining 16 explicit "Computer estimate" cells in IM_DATA are deliberate working values pending SHM SoHM / MGMA DataDive primary-source acquisition (per IM_DATA §1) — they do NOT block content review.
+
 **Purpose:** Every MedCI content artifact (TikTok scripts, YouTube scripts, LinkedIn / X / Threads posts, Kit emails, landing-page copy) must pass **two reviews** before it can be marked `approved` in content YAML and queued into Buffer/Kit/site:
 
 1. **Perplexity Review (Gate 1)** — fact-check against IM_DATA_2026.md + source links. Catches: flawed source data, unsourced statistics, factually wrong claims.

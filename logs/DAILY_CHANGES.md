@@ -697,3 +697,33 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **INBOX/**: no new files.
 - **Railway**: HTTP 200 ✅ (med-contract-site-production.up.railway.app).
 - **Phase items**: all pending items owner-blocked or gated on IM_DATA_2026.md. No autonomous work available this run.
+
+---
+
+## 2026-04-25 17:10 EDT — IM_DATA UNBLOCK BROADCAST (interactive session, owner-directed)
+
+**Trigger:** Owner directive ~17:08 EDT — "Are all routines aware that the im data is uptodate and they can proceed as needed. Perplexity is saving the im data file to its own system instead of updating the file on disk. Make sure everyone is working."
+
+**Verified state of IM_DATA_2026.md on disk:**
+- Path: `med-contract-content/ops/IM_DATA_2026.md`
+- mtime: 2026-04-25 16:16:33 EDT (~50 min before this run)
+- Size: 12,968 bytes / 230 lines
+- Numeric cells with $ values: 166
+- Remaining "Computer estimate" placeholders: 16 (deliberate, flagged for SHM SoHM / MGMA DataDive primary-source replacement post-launch — does NOT block Gate 1)
+- Sed artifacts from prior MGMA→ACP/SHM substitution (lines 12, 99): both verified CLEAN
+
+**Files updated this run:**
+1. `PHASE_STATUS.md` — top-of-file IM_DATA UNBLOCK BANNER added
+2. `state/content-review-day3.md` — top-of-file IM_DATA UNBLOCK BANNER added; row-level "Gate 1 blocked" notes left in place but flagged as HISTORICAL by the banner
+3. `state/site.md` — line 27 "Analyzer prompt IM_DATA_2026.md cell replacement" flipped 🔴 not yet → 🟡 ready to execute
+4. `CLAUDE_RESPONSE.md` — full ACK section added at top with explicit Gate 1 to-do list for Perplexity + save-to-disk reminder
+
+**Routine status broadcast:**
+- ✅ med-ops-controller registered + active. Next tick: ~20:11 EDT (00:11 UTC). Will pick up unblock automatically.
+- ❌ 14 other med-* tasks (med-daily-digest, med-stripe-daily-monitor, med-social-listener, med-gmail-triager-{morning,afternoon,evening}, med-weekly-reporter, med-content-ideator, med-{linkedin,x,instagram,threads,tiktok,youtube}-poster) STILL NOT REGISTERED with the scheduler. Attempted in this session at 17:09 EDT — `mcp__scheduled-tasks__create_scheduled_task` returned "Cannot create scheduled tasks from within a scheduled task session." perplexity-tab-poll counts as a scheduled-task session. **D4-3 stays owner-blocked.** Owner must launch a fresh interactive `claude` session from Terminal and paste the registration prompt from `INBOX/register-med-tasks.md`.
+
+**Next med-ops-controller run will:**
+- See the IM_DATA UNBLOCK BANNER on PHASE_STATUS.md / content-review-day3.md
+- Stop reporting "IM_DATA_2026.md: still 0 authoritative cells"
+- Begin reasoning about Gate 1 readiness for all drafted content artifacts
+- Continue surfacing the D4-3 task-registration block until owner does it manually

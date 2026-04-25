@@ -24,7 +24,7 @@
 | Tailwind brand tokens | 🟢 exposed | `brand.*`, `gold`, `trust`, `cream`, `ink`, `muted` |
 | CSS var legacy names (`--navy`, `--teal`, etc. still in HTML inline styles) | 🟡 non-blocking | Day 2 cleanup to rename semantically |
 | Stripe product ID wiring | 🔴 not yet | Waits on D2-5 Stripe MCP creation |
-| Analyzer prompt IM_DATA_2026.md cell replacement | 🔴 not yet | Perplexity populates IM_DATA_2026.md (Day 1 afternoon per §3) |
+| Analyzer prompt IM_DATA_2026.md cell replacement | 🟡 ready to execute | IM_DATA_2026.md populated 2026-04-25 16:16 EDT (230 lines, 166 cells, sed artifacts cleaned). Replace `[TBD::cell]` placeholders in `analysis-prompt.ts` with values from IM_DATA. |
 | 4 IM PDFs rebuilt with new palette | 🔴 not yet | D2-8 |
 | Railway deploy | 🔴 not yet | D2-9/10 |
 | Cloudflare A/AAAA bind | 🔴 not yet | D2-11 |

@@ -1,5 +1,8 @@
 # PHASE_STATUS — MedContractIntel build
 
+> **🟢 IM_DATA UNBLOCK — 2026-04-25 17:10 EDT**
+> `med-contract-content/ops/IM_DATA_2026.md` is populated and on disk (mtime 2026-04-25 16:16 EDT, 230 lines, 166 numeric cells, sed artifacts at lines 12+99 already cleaned). All "Gate 1 blocked until IM_DATA_2026.md populated" notes throughout this file and `state/content-review-day3.md` are HISTORICAL. Owner directive 2026-04-25 17:08 EDT: "all routines aware that IM data is up-to-date and they can proceed as needed." med-ops-controller is registered + active and will pick up the unblock at next 4hr tick (~20:11 UTC / 16:11 EDT already past — next is 00:11 UTC / 20:11 EDT). The other 14 med-* tasks (med-daily-digest, med-stripe-daily-monitor, med-social-listener, med-gmail-triager-{morning,afternoon,evening}, med-weekly-reporter, med-content-ideator, med-{linkedin,x,instagram,threads,tiktok,youtube}-poster) are still NOT registered with the scheduler — D4-3 remains owner-blocked because `mcp__scheduled-tasks__create_scheduled_task` is locked from scheduled-task sessions (this poll session attempted + failed at 17:09 EDT). See `INBOX/register-med-tasks.md` for the one-paste registration prompt.
+
 **Live execution tracker. Ops-controller updates every 4hr. Interactive sessions update as they work.**
 
 **Status key:** `pending` | `in-progress` | `done` | `owner-blocked` | `deferred`
