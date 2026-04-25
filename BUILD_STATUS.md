@@ -15,7 +15,7 @@ Overnight pull-forwards complete:
 **All autonomous content work is exhausted.** Every remaining item needs IM_DATA_2026.md Perplexity population OR owner action.
 Owner priorities: (1) D4-3 register tasks from fresh Claude Code session, (2) D1-17 Buffer, (3) Stripe dashboard follow-ups, (4) Perplexity populate IM_DATA_2026.md, (5) PDFs 2–4 from Claude Chat Opus session.
 
-**D2-8 UPDATE 2026-04-24 12:14 EDT:** PDF #1 (Red Flag Checklist) received from owner's Claude Chat Opus session → copied to `content/pdfs/pdf-001-red-flag-checklist.md`. Gate 2 PASS logged. Gate 1 pending Perplexity.
+**D2-8 UPDATE 2026-04-24 16:xx EDT:** All 4 PDF content drafts now written. PDF #1 (Gate 2 PASS via owner Claude Chat Opus). PDFs #2–4 drafted autonomously by ops-controller 16:07 run — same pull-forward pattern as D3-6/D3-13. Files: `content/pdfs/pdf-002-negotiation-scripts.md`, `pdf-003-wrvu-playbook.md`, `pdf-004-shift-economics.md`. All Gate 1 (Perplexity) + Gate 2 (owner opus) pending before PDF generation.
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 

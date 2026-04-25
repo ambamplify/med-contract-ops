@@ -127,36 +127,39 @@ Committing authority files + state skeletons. Pinging this status block to the P
 
 ---
 
-## Claude Code status — 2026-04-24 16:15 EDT
+## Claude Code status — 2026-04-24 16:xx EDT
 
-**Phase/Day:** Day 2 (live) — ops-controller 16:07 run (silent — no digest, no new autonomous work)
+**Phase/Day:** Day 2 (live) — ops-controller 16:07 run — D2-8 PDF drafts 2–4 written
 
 **Completed this cycle:**
 - [x] **Kill switch:** PAUSE_ALL.md empty — proceeded.
 - [x] **Git pull:** All 3 repos up to date.
 - [x] **State files read:** COMPUTER_RESPONSE.md, BUILD_STATUS.md, PHASE_STATUS.md, ESCALATED/, INBOX/ — all current.
 - [x] **iMessages:** DB auth denied (same as every prior scheduled run — Full Disk Access not granted for Claude).
-- [x] **INBOX:** No new items since 12:07 run.
-- [x] **Perplexity directives:** None new. COMPUTER_RESPONSE.md last updated 2026-04-22 (skeleton). IM_DATA_2026.md still 0 authoritative cells.
-- [x] **DNS check:** medcontractintel.com has NO A record and NO CNAME → custom domain still not pointing to Railway. D2-11 still pending owner Cloudflare dashboard action.
+- [x] **DNS check:** medcontractintel.com has NO A or CNAME — D2-11 still pending owner Cloudflare dashboard action.
 - [x] **Railway health:** HTTP 200 on med-contract-site-production.up.railway.app ✅
-- [x] **PDFs 2-4:** Not yet received. Only pdf-001-red-flag-checklist.md is in content/pdfs/. Owner said "tomorrow" (2026-04-23 message) → PDFs 2-4 expected today or tonight.
-- [x] **FFmpeg pre-flight:** FFmpeg 7.0 is installed at /Users/ambamplify/bin/ffmpeg ✅. Video production scripts (D3-11) will be written when owner triggers D3-10.
-- [x] **Phase plan execution:** No pending non-blocked items found. Every remaining item is either owner-blocked or gated on IM_DATA_2026.md Perplexity population.
+- [x] **D2-8 ADVANCED — PDFs 2–4 drafted autonomously (pull-forward):**
+  - Reviewed `INBOX/pdf-content-prompts.md` for all 4 PDF prompts.
+  - Applied autonomy directive decision test: "Can I write draft PDF content myself?" YES — same pattern as D3-6/D3-13. Proceeded.
+  - `content/pdfs/pdf-002-negotiation-scripts.md` — 6 scripts + 6 email templates + objection table + 12-item prep checklist. ~4,000 words.
+  - `content/pdfs/pdf-003-wrvu-playbook.md` — 11 chapters (Parts I–IV) + 6 appendices (CPT wRVU table, MGMA benchmark card, red flag quick ref, state non-compete law, glossary, resources). ~9,000 words.
+  - `content/pdfs/pdf-004-shift-economics.md` — Introduction + 5 parts (7-on/7-off math, nocturnist pay, revenue streams, benchmarks, top-5 terms) + closing action. ~3,800 words.
+  - All 3 drafts: Gate 1 (Perplexity) pending, Gate 2 (claude-chat-opus owner review) pending. All [VERIFY:] and [DATA::] placeholders used per Lesson #19 protocol — no fabricated figures.
+  - content-review-day3.md: PDF rows 2–4 updated.
+  - PHASE_STATUS.md, BUILD_STATUS.md, DAILY_CHANGES.md updated.
 
-**Autonomous work exhausted — same as 12:07 run:**
-All 102 content artifacts drafted. All Phase 2 site items done or owner-blocked. All Phase 3/4 items gated on data or owner actions. Nothing new became unblocked between 12:07 and 16:07.
+**D2-8 status: ALL 4 PDF drafts complete.** pdf-001 (Gate 2 PASS via owner Claude Chat), pdf-002/003/004 (Gate 1+2 pending).
 
 **Critical path (unchanged):**
-1. **Perplexity → populate IM_DATA_2026.md** (unblocks all 93 Gate 1 reviews + data-cell fill across all scripts)
-2. **Owner → D2-11 Cloudflare CNAME** (custom domain + TLS, enables Stripe test-mode checkout + webhook URL update)
-3. **Owner → PDFs 2-4** (complete D2-8; pdfs 2-4 content from Claude Chat Opus session)
+1. **Perplexity → populate IM_DATA_2026.md** (unblocks Gate 1 reviews for all 109 artifacts: 102 content + 4 PDFs + 3 site copies)
+2. **Owner → Gate 2 (claude.ai opus) on PDFs 2–4** (owner runs pdf-content-prompts.md §Prompt 2–4 through claude.ai opus; captures output; logs PASS in content-review-day3.md)
+3. **Owner → D2-11 Cloudflare CNAME** (custom domain + TLS)
 4. **Owner → D4-3 register-med-tasks.md** (paste into fresh Claude Code session — 3 min)
-5. **Owner → D1-17 Buffer org + 5 socials OAuth** (unblocks D4-6, D4-9, D4-10)
+5. **Owner → D1-17 Buffer org + 5 socials OAuth**
 
-**Owner-blocked items still pending (all unchanged):** D2-11, D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-8 PDFs 2-4, and all Day 1 owner items.
+**Owner-blocked items still pending (all unchanged):** D2-11, D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, and all Day 1 owner items.
 
-**Next 20:07 run:** Another silent run unless Perplexity populates IM_DATA_2026.md or owner delivers PDFs 2-4.
+**Next 20:07 run:** Silent unless Perplexity populates IM_DATA_2026.md or owner Gate 2 reviews land.
 
 ---
 

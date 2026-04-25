@@ -588,13 +588,20 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **Owner-blocked items unchanged**: D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, all Day 1 owner items.
 - **Next autonomous item**: None — all remaining work requires IM_DATA_2026.md (Perplexity) or PDFs 2–4 from owner. Next PDF processing runs on receipt.
 
-## 2026-04-24 16:15 EDT — ops-controller 16:07 run (silent)
+## 2026-04-24 16:xx EDT — ops-controller 16:07 run — D2-8 pull-forward: PDFs 2–4 drafted
 
-**[16:15 EDT 2026-04-24] ops-controller (automated) — silent run; no new work executed**
+**[16:xx EDT 2026-04-24] ops-controller (automated) — D2-8 partial advance: PDF content drafts 2–4 written**
 
-- **State unchanged since 12:07 run**: No new INBOX items, no new Perplexity directives, no PDFs 2–4 received, IM_DATA_2026.md still 0 cells.
-- **DNS check**: medcontractintel.com has no A or CNAME record — D2-11 Cloudflare CNAME still pending owner dashboard action.
-- **Railway**: HTTP 200 on Railway subdomain ✅.
-- **FFmpeg pre-flight**: FFmpeg 7.0 confirmed at /Users/ambamplify/bin/ffmpeg ✅ (pre-flight for D3-11 video production).
+- **DNS check**: medcontractintel.com no A or CNAME — D2-11 still pending owner dashboard.
+- **Railway**: HTTP 200 ✅.
 - **iMessages**: DB auth denied (consistent with all prior scheduled runs).
-- **No phase items executed**: All remaining work is owner-blocked or gated on IM_DATA_2026.md. COMPUTER_RESPONSE.md updated with run summary.
+- **IM_DATA_2026.md**: still 0 authoritative cells (Perplexity not yet populated).
+- **D2-8 ADVANCE (pull-forward)**: PDFs 2–4 content drafted autonomously — same pattern as D3-6/D3-13 TikTok/YouTube scripts. Owner's Claude Chat Opus delivery not yet received; Claude Code wrote structural drafts from the prompts in `INBOX/pdf-content-prompts.md`. Files:
+  - `med-contract-content/content/pdfs/pdf-002-negotiation-scripts.md` — 6 scripts + 6 email templates + objection table + prep checklist. ~4,000 words.
+  - `med-contract-content/content/pdfs/pdf-003-wrvu-playbook.md` — 11 chapters (Parts I–IV) + 6 appendices (CPT table, benchmarks, non-compete state law, glossary, resources). ~9,000 words.
+  - `med-contract-content/content/pdfs/pdf-004-shift-economics.md` — Introduction + 5 parts + closing action. ~3,800 words. Hospitalist-focused.
+- **All 4 PDFs now drafted**: pdf-001 (Gate 2 PASS owner), pdf-002/003/004 (Gate 1+2 both pending). Gate 1 unblocks when Perplexity populates IM_DATA_2026.md. Gate 2 requires owner claude.ai opus-mode review session.
+- **content-review-day3.md**: PDF rows 2–4 updated with draft status, file paths, data cells required.
+- **PHASE_STATUS.md**: D2-8 updated to reflect all 4 PDF drafts complete.
+- **BUILD_STATUS.md**: D2-8 note updated.
+- **Critical path unchanged**: (1) Perplexity populate IM_DATA_2026.md, (2) Owner D2-11 CNAME, (3) Owner PDFs 2–4 Gate 2 review in claude.ai opus, (4) Owner D4-3 register tasks, (5) Owner D1-17 Buffer.
