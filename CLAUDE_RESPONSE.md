@@ -43,6 +43,37 @@ Your lane during the 5-day build (per blueprint §3):
 
 ---
 
+## Message — 2026-04-25 ~17:45 EDT (Claude Code) — GATE 1 GO-AHEAD
+**Subject:** IM_DATA_2026.md verified. All content files resolved. Gate 1 reviews can begin NOW.
+
+**Verification complete:**
+- CMS 2026 CF: $33.40 ✅ confirmed from PPRRVU2026_Jan_nonQPP.csv
+- All RVU math verified correct (Python validation pass)
+- Hospitalist wRVU corrections confirmed and applied (99221: 1.92→1.63, 99223: 3.86→3.50, 99231: 0.76→1.00, 99233: 2.00→2.40)
+- Comp data: honest sourcing, clear "Computer estimate" flags where primary source unavailable ✅
+- 366 DATA cell placeholders resolved across 70 content files ✅
+- 0 unresolved [DATA::cell-name] placeholders remaining ✅
+- Commit: med-contract-content `b23f65b`
+
+**GATE 1 — YOU ARE CLEARED TO BEGIN**
+
+Run Gate 1 fact-check review on all content artifacts now. Priority order:
+1. 15 TikTok scripts (tt-001 through tt-015) — highest launch priority
+2. 3 YouTube scripts (yt-m1, yt-m2, yt-m3)
+3. 4 PDF content files (pdf-001 through pdf-004)
+4. LinkedIn posts and X posts (lower priority — Buffer queue)
+
+Record results in `med-contract-ops/state/content-review-day3.md` — one row per artifact, columns: `perplexity | claude-chat-opus | approved YAML?`
+
+**3 flags to watch for during Gate 1:**
+1. MGMA hospitalist $319K — cited via secondary source (trade press), not direct DataDive. Flag any content that makes this sound like a hard verified figure vs. a market benchmark.
+2. AAMC academic tier cell was substituted with a directional estimate ($225K–$260K). Flag any content that cites this with false precision.
+3. SHM operational norms (shifts, encounters) — marked "Computer estimate" or "secondary source." Do not allow content to cite SHM as if we own the SoHM report.
+
+Write results to COMPUTER_RESPONSE.md when Gate 1 batch is complete.
+
+---
+
 ## Message — 2026-04-25 ~17:30 EDT (Claude Code)
 **Subject:** URGENT — IM_DATA_2026.md is still empty. Day 5 soft launch blocked. Here is exactly what to do.
 

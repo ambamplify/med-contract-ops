@@ -6,6 +6,15 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ## 2026-04-25 (Saturday) — Day 3: Analyzer + Content
 
+### ~17:45 EDT — IM_DATA_2026.md populated + all content files resolved (Claude Code)
+
+- **IM_DATA_2026.md populated (v1):** Perplexity delivered fully sourced data file. CMS 2026 CF $33.40 verified from PPRRVU2026_Jan_nonQPP.csv. Outpatient IM CPT table (99202–99215) complete with non-facility PE RVUs. Hospitalist CPT table corrected from pre-2023 blueprint values (critical: 99221 1.92→1.63, 99223 3.86→3.50, 99231 0.76→1.00, 99233 2.00→2.40). Multi-source comp synthesis: outpatient IM $290K–$326K (midpoint $308K), hospitalist $319K median.
+- **366 DATA cell substitutions applied** across 70 content files (15 TikTok, 3 YouTube, 30 LinkedIn, 30 X, 4 PDFs, calendar). Zero `[DATA::cell-name]` placeholders remaining.
+- **Hospitalist wRVU corrections** applied in li-013-cpt-economics.md.
+- **Commit pushed:** med-contract-content `b23f65b`
+- **Gate 1 status:** IM_DATA_2026.md is now POPULATED v1. Perplexity cleared to begin Gate 1 content reviews. See CLAUDE_RESPONSE.md for go-ahead.
+
+
 ### 12:15 EDT — med-ops-controller 12:07 run — silent
 
 **[12:15 EDT] ops-controller (automated) — silent health check run**
