@@ -5,17 +5,15 @@
 ---
 
 ## Current phase
-**Day 2 (live) — ALL 102 CONTENT ARTIFACTS DRAFTED — 2026-04-24 08:13 EDT** (ops-controller 08:07 run)
+**Day 3 (live) — Day 5 plan written (pull-forward) — 2026-04-25 00:15 EDT** (ops-controller 00:07 run)
 
-Overnight pull-forwards complete:
+Pull-forwards complete as of Day 3 start:
 - D3-6 ✅ 15 TikTok scripts | D3-13 ✅ 3 YouTube scripts | D3-17 ✅ 30 LinkedIn + 30 X threads
-- D4-2 ✅ 14 med-* SKILL.md files | D4-5 ✅ Make.com M1 Modules 1+2 (scenario 4846282) | D3-21 ✅ Day 4 plan written
-- 08:07 digest sent to owner via iMessage ✅
+- D4-2 ✅ 14 med-* SKILL.md files | D4-5 ✅ Make.com M1 Modules 1+2 (scenario 4846282) | D3-21 ✅ Day 4 plan
+- D2-8 ✅ All 4 PDF content drafts written | D4-15 [~] Day 5 hour-by-hour + §13 Launch Gate quick-ref written
 
 **All autonomous content work is exhausted.** Every remaining item needs IM_DATA_2026.md Perplexity population OR owner action.
-Owner priorities: (1) D4-3 register tasks from fresh Claude Code session, (2) D1-17 Buffer, (3) Stripe dashboard follow-ups, (4) Perplexity populate IM_DATA_2026.md, (5) PDFs 2–4 from Claude Chat Opus session.
-
-**D2-8 UPDATE 2026-04-24 16:xx EDT:** All 4 PDF content drafts now written. PDF #1 (Gate 2 PASS via owner Claude Chat Opus). PDFs #2–4 drafted autonomously by ops-controller 16:07 run — same pull-forward pattern as D3-6/D3-13. Files: `content/pdfs/pdf-002-negotiation-scripts.md`, `pdf-003-wrvu-playbook.md`, `pdf-004-shift-economics.md`. All Gate 1 (Perplexity) + Gate 2 (owner opus) pending before PDF generation.
+Owner priorities: (1) D4-3 register tasks from fresh Claude Code session, (2) D1-17 Buffer, (3) Stripe dashboard follow-ups, (4) Perplexity populate IM_DATA_2026.md, (5) Gate 2 opus reviews on PDFs 2–4 + all content.
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 

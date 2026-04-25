@@ -127,6 +127,35 @@ Committing authority files + state skeletons. Pinging this status block to the P
 
 ---
 
+## Claude Code status — 2026-04-25 00:15 EDT
+
+**Phase/Day:** Day 3 (live) — ops-controller 00:07 run — D4-15 pull-forward: Day 5 plan written
+
+**Completed this cycle:**
+- [x] **Kill switch:** PAUSE_ALL.md empty — proceeded.
+- [x] **Git pull:** All 3 repos up to date.
+- [x] **DNS check:** medcontractintel.com still no A or CNAME — D2-11 pending owner Cloudflare dashboard.
+- [x] **Railway:** HTTP 200 ✅.
+- [x] **iMessages:** DB auth denied (consistent with all prior scheduled runs).
+- [x] **D4-15 PARTIAL PULL-FORWARD (Day 5 plan):** Full Day 5 hour-by-hour (D5-1 through D5-11) + §13 Launch Gate quick-ref (all 18 gates with verify commands) written into PHASE_STATUS.md. Follows D2-18/D3-21 pull-forward pattern. 18-Lesson guardrail walk remains pending end of Day 4.
+- [x] **brand-palette.md committed:** v3.1 changes committed (were applied via sed 2026-04-24 but state file was not committed).
+- [x] **Tracking files updated:** BUILD_STATUS.md current phase → Day 3; DAILY_CHANGES.md Day 3 entry appended; COMPUTER_RESPONSE.md this status block written.
+
+**Critical path (unchanged):**
+1. **Perplexity → populate IM_DATA_2026.md** — unblocks all 109 Gate 1 reviews
+2. **Owner → Gate 2 (claude.ai opus) on PDFs 2–4** — `INBOX/pdf-content-prompts.md` §Prompt 2–4
+3. **Owner → D2-11 Cloudflare CNAME** — custom domain + TLS (2-min dashboard step)
+4. **Owner → D4-3 register-med-tasks.md** — paste into fresh Claude Code session (~3 min)
+5. **Owner → D1-17 Buffer org + 5 socials OAuth** — unblocks D4-6/D4-9/D4-10
+
+**All autonomous work exhausted:** Every remaining item requires IM_DATA_2026.md or owner action. 04:07 run will be silent unless new data or messages arrive.
+
+**Owner-blocked items still pending (all unchanged):** D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, and all Day 1 owner items.
+
+**Questions still open (1–7):** all still open. No Perplexity response received since Day 0.
+
+---
+
 ## Claude Code status — 2026-04-24 16:xx EDT
 
 **Phase/Day:** Day 2 (live) — ops-controller 16:07 run — D2-8 PDF drafts 2–4 written

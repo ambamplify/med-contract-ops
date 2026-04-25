@@ -139,7 +139,7 @@
 - [O] D4-12 Owner reviews YouTube #1; Y/N reply
 - [ ] D4-13 On Y: publish YT#1 live; on N: note feedback and hold
 - [O] D4-14 Full dry-run: real $97 purchase with owner's card → verify PDF email arrives (with compliance disclaimer) → verify Q&A → issue refund
-- [ ] D4-15 Day 4 EOD review; all 18 Lesson guardrails confirmed; Day 5 plan written
+- [~] D4-15 Day 5 plan written 2026-04-25 00:15 EDT (pull-forward); 18-Lesson guardrail walk pending Day 4 end
 
 | Time | # | Task | Agent | Status |
 |---|---|---|---|---|
@@ -157,12 +157,66 @@
 | 4:30 | D4-12 | Owner reviews YouTube #1 video; Y → publish, N → note feedback + hold | 🟣 | owner-blocked |
 | 5:00 | D4-13 | On Y: publish YT#1 live; on N: record feedback, hold for edits | 🔵 | pending (gated on D4-12) |
 | 5:30 | D4-14 | Full dry-run: real $97 analyzer purchase with owner's card. Verify: PDF email arrives, compliance disclaimer present, Q&A works, issue full refund | 🟣→🔵→🟢 | owner-blocked |
-| 7:00 | D4-15 | Day 4 EOD review: walk all 18 Lesson guardrails; Day 5 plan written into PHASE_STATUS.md | 🟢 | pending |
+| 7:00 | D4-15 | Day 4 EOD review: walk all 18 Lesson guardrails; Day 5 plan written into PHASE_STATUS.md | 🟢 | **[~] Day 5 plan written 2026-04-25 00:15 EDT (D4-15 pull-forward by ops-controller Day 3 00:07 run)** — full hour-by-hour + §13 Launch Gate quick-ref written into PHASE_STATUS.md Day 5 section. 18-Lesson guardrail walk remains pending end of Day 4. |
 
 **Day 4 launch gate:** 16 med-* scheduled tasks running; M1 fires end-to-end; first TikTok queued in Buffer; first YT video live (or held with feedback); real $97 purchase flow proven with refund.
 
 ### Day 5 — Sunday 2026-04-27 (LAUNCH)
-*Populated by ops-controller morning of Day 5. Gated by 18 Launch Gates (§13).*
+*Populated by ops-controller 2026-04-25 00:15 EDT (D4-15 pull-forward by ops-controller 00:07 Day 3 run). Pulls from blueprint §10 Day 5 + §13 Launch Gates.*
+
+**Soft launch. Small announcement. Monitor. Iterate.**
+
+### Day 5 fast checkbox view
+- [O] D5-1 Daily sync — owner opens Claude Code + Perplexity
+- [ ] D5-2 Final smoke tests (homepage, /calculator, /analyzer, /thank-you, /checklist-thank-you)
+- [ ] D5-3 Walk §13 Launch Gate checklist — all 18 gates GREEN before any announcement
+- [ ] D5-4 Publish YouTube yt-m1 live (if held Day 4)
+- [ ] D5-5 Kick off TikTok #1 → IG Reel cross-post via R2 URL
+- [ ] D5-6 Verify first LinkedIn + X + Threads posts fire from Buffer (scheduled Day 4)
+- [ ] D5-7 Final gate re-check before noon post
+- [O] D5-8 Soft-launch announcement on LinkedIn — fires ONLY if all 18 gates GREEN
+- [O] D5-9 First Reddit personal-account comment (r/InternalMedicine or r/PhysicianFinance)
+- [ ] D5-10 Monitor: Stripe, Sentry, Kit open rates, Buffer engagement
+- [ ] D5-11 Day 5 retrospective + Day 6+ priorities
+
+### §13 Launch Gate quick-ref (Day 5 morning)
+
+| # | Gate | Verify |
+|---|---|---|
+| 1 | DNS A + AAAA + MX resolves | `dig +short A medcontractintel.com` → Railway IP |
+| 2 | SPF + DKIM + DMARC live | mail-tester.com ≥9/10 |
+| 3 | All 6 email aliases deliver | Send test email across aliases |
+| 4 | Site loads with TLS | medcontractintel.com → 200 + valid cert |
+| 5 | Calculator → email capture → Kit | Real email → Kit dashboard shows subscriber |
+| 6 | Kit email 1 arrives with direct PDF link | Click link → PDF downloads (Lesson #10) |
+| 7 | Analyzer upload + analysis + PDF email | Real contract + real $97 purchase |
+| 8 | Stripe webhook + bundle credit | Test-mode bundle → 1 analyzer credit added (Lesson #1) |
+| 9 | Thank-you page has session_id | Redirect URL contains `session_id=` (Lesson #9) |
+| 10 | /checklist-thank-you ≠ /thank-you | Both URLs return different copy (Lesson #13) |
+| 11 | Sentry captures test error | Throw test error → Sentry dashboard (Lesson #12) |
+| 12 | med-* tasks run + PAUSE_ALL.md respected | Create PAUSE_ALL.md → next cron halts |
+| 13 | IM_DATA_2026.md zero TBD cells | `grep -c TBD IM_DATA_2026.md` → 0 |
+| 14 | Perplexity 1P service account works | From Perplexity Computer: `op://MedCI — Secrets/...` returns value |
+| 15 | Legal pages live + footer links | /privacy /terms /dmca /disclaimer /refund-policy each 200; footer links on every page |
+| 16 | Compliance disclaimer on every revenue surface | Grep live site + analyzer PDF + Kit email footer — 0 misses |
+| 17 | TikTok Business + Buffer Direct Publishing | Buffer → MedCI → TikTok channel → "Direct Publishing" enabled |
+| 18 | All launch content dual-review PASS | content-review-day3.md — every row: perplexity PASS + claude-chat-opus PASS |
+
+| Time | # | Task | Agent | Status |
+|---|---|---|---|---|
+| 7:00 | D5-1 | Daily sync — owner opens Claude Code + Perplexity | 🟣 | pending |
+| 8:00 | D5-2 | Final smoke tests: homepage ✓ /calculator ✓ /analyzer ✓ /thank-you ✓ /checklist-thank-you ✓ | 🟢 | pending |
+| 8:30 | D5-3 | **Walk §13 Launch Gate checklist end-to-end (all 18 gates). Any RED = D5-8 does NOT fire. Fix and re-check first.** | 🟢+🔵 | pending |
+| 9:00 | D5-4 | Publish YouTube yt-m1 ("2026 IM Comp Stack") live, if held from Day 4 | 🔵 | pending (gated on D4-13) |
+| 10:00 | D5-5 | Kick off TikTok #1 → IG Reel cross-post: R2 URL reused, 48hr IG offset | 🔵 | pending (gated on D4-9) |
+| 11:00 | D5-6 | Verify first LinkedIn + X + Threads posts fire from Buffer (scheduled Day 4 via D4-10) | automatic | pending (gated on D4-10) |
+| 11:45 | D5-7 | **Final gate re-check:** refresh 18-gate checklist; any amber = hold noon post | 🟢 | pending |
+| 12:00 | D5-8 | **Soft-launch announcement — LinkedIn owner personal + MedCI Company Page.** Fires ONLY if all 18 gates GREEN. Slip to afternoon or Monday if RED — do NOT ship broken. | 🟣→🟢 | pending (conditional) |
+| 1:00 | D5-9 | First Reddit personal-account comment in r/InternalMedicine or r/PhysicianFinance — value-add, no brand mention, no brand account | 🟣 | pending |
+| 2:00 | D5-10 | Monitor: Stripe dashboard, Sentry, Kit open rates, Buffer engagement | 🟢 | pending |
+| 6:00 | D5-11 | Day 5 retrospective: what worked, what didn't, Day 6+ priorities (content cadence, next specialty scope) | 🟢 | pending |
+
+**Day 5 launch gate (= LAUNCH):** All 18 §13 Launch Gates GREEN. The 12:00 PM soft-launch post is a **conditional trigger** — NOT time-based. Miss noon if anything is RED; launch same-day later or slip to Monday morning. Gate 18 = Lesson #19 dual content review PASS for every launch artifact.
 
 ---
 
