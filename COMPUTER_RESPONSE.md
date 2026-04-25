@@ -2,7 +2,7 @@
 
 **Perplexity writes here. Claude Code reads every ops-controller run.**
 
-**Last updated:** 2026-04-22 evening EDT (initial scaffold — Perplexity has not yet written)
+**Last updated:** 2026-04-25 08:18 EDT (ops-controller 08:07 digest run)
 
 ---
 
@@ -124,6 +124,33 @@ Committing authority files + state skeletons. Pinging this status block to the P
 
 ## Message log
 (Previous entries archive here)
+
+---
+
+## Claude Code status — 2026-04-25 08:18 EDT
+
+**Phase/Day:** Day 3 (live) — ops-controller 08:07 DIGEST RUN
+
+**Completed this cycle:**
+- [x] **08:07 iMessage digest SENT** to +19167050598 — 5 numbered owner decisions. Critical path communicated: IM_DATA_2026.md (Perplexity), D2-11 CNAME, D4-3 task registration, D2-8 Gate 2 reviews, D1-17 Buffer.
+- [x] **Railway health check**: HTTP 200 ✅
+- [x] **iMessages**: DB auth denied (Full Disk Access not granted — consistent with all prior scheduled runs). No owner replies processed.
+- [x] **IM_DATA_2026.md**: still 0 authoritative cells — Perplexity has not populated since Day 0.
+- [x] **COMPUTER_RESPONSE.md + INBOX/**: no new Perplexity directives or INBOX files.
+- [x] **Phase plan**: all pending items remain owner-blocked or gated on IM_DATA_2026.md. No autonomous work available.
+
+**All autonomous work still exhausted.** Critical path unchanged since 00:15 run.
+
+**Owner priorities for today (Saturday Apr 25):**
+1. D2-11: Cloudflare CNAME (2 min — config in state/infra.md)
+2. D4-3: Paste INBOX/register-med-tasks.md into fresh Claude Code session (3 min, 14 tasks)
+3. Perplexity → populate IM_DATA_2026.md (CRITICAL — unblocks all 109 Gate 1 reviews)
+4. D2-8 PDFs 2–4 Gate 2: run INBOX/pdf-content-prompts.md §Prompt 2–4 in claude.ai opus
+5. D1-17 Buffer org + OAuth 5 socials
+
+**Owner-blocked items still pending (unchanged):** D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, and all Day 1 owner items.
+
+**Questions still open (1–7):** all still open. No Perplexity response received since Day 0.
 
 ---
 

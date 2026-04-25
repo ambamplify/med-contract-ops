@@ -642,3 +642,17 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **INBOX/**: no new files since last run.
 - **Phase items**: all pending items remain owner-blocked or gated on IM_DATA_2026.md population. No autonomous work available.
 - **No material changes this run.**
+
+---
+
+## 2026-04-25 08:18 EDT — ops-controller 08:07 DIGEST RUN
+
+**[08:18 EDT 2026-04-25] ops-controller (automated) — Day 3 iMessage digest sent**
+
+- **08:07 iMessage digest SENT** to +19167050598. 5 numbered owner decisions (1–5). Closed-overnight: 4 items (PDFs 2–4 drafted, D3-17 LI/X done, D4-15 Day 5 plan written, palette committed). All autonomous work exhausted — critical path communicated.
+- **iMessages**: DB auth denied — Full Disk Access not granted (consistent with all prior runs). No owner replies processed.
+- **IM_DATA_2026.md**: still 0 authoritative cells — Perplexity has not populated since Day 0.
+- **COMPUTER_RESPONSE.md**: no new Perplexity directives.
+- **INBOX/**: no new files.
+- **Railway**: HTTP 200 ✅ (med-contract-site-production.up.railway.app).
+- **Phase items**: all pending items owner-blocked or gated on IM_DATA_2026.md. No autonomous work available this run.
