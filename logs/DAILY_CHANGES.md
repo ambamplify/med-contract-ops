@@ -645,20 +645,35 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 
 ---
 
-## 2026-04-25 16:07 EDT — ops-controller 16:07 run — silent (no new work)
+## 2026-04-25 16:12 EDT — ops-controller 16:07 run — MGMA-audit handoff acknowledged
 
-**[16:07 EDT 2026-04-25] ops-controller (automated) — health checks only**
+**[16:12 EDT 2026-04-25] ops-controller (automated) — health checks + interactive-session reconciliation**
 
 - **Kill switch**: PAUSE_ALL.md exists but empty — proceeded.
-- **Git pull**: All 3 repos already up to date.
-- **DNS**: medcontractintel.com still no A or CNAME record — D2-11 pending owner Cloudflare dashboard (unchanged since 00:15 EDT).
-- **Railway**: HTTP 200 ✅ (med-contract-site-production.up.railway.app).
-- **iMessages**: DB auth denied — Full Disk Access not granted for scheduled task env (consistent with all prior runs).
-- **IM_DATA_2026.md**: still 0 authoritative cells — Perplexity has not populated since Day 0 skeleton.
-- **COMPUTER_RESPONSE.md**: no new Perplexity directives.
-- **INBOX/**: no new files since last run.
-- **Phase items**: all pending items remain owner-blocked or gated on IM_DATA_2026.md population. No autonomous work available.
-- **No material changes this run.**
+- **Git pull**: All 3 repos already up to date with origin (no remote commits since last run).
+- **DNS**: medcontractintel.com still no A or CNAME — D2-11 pending owner Cloudflare dashboard.
+- **Railway**: HTTP 200 ✅.
+- **iMessages**: DB auth denied (consistent with all prior runs).
+- **IM_DATA_2026.md**: still 0 authoritative cells.
+- **Interactive Claude session work detected (since 12:07):**
+  - `CLAUDE_RESPONSE.md` (ops repo) — owner/Claude wrote a deliberate Perplexity-facing message: "MGMA Data Audit Complete — Action Required on IM_DATA_2026.md". Root cause: MGMA DataDive paywalled; prior 3rd-party aggregator citations were unverified. EMCI fully fixed + pushed (em-contract-site `5a67b26`, em-contract-content `c04b071`). MCI file edits applied but uncommitted. **ops-controller committed CLAUDE_RESPONSE.md** so Perplexity reads the directive on next sync.
+  - **NOT committed by ops-controller (belongs to owner's interactive session):**
+    - med-contract-content: 49 files modified — MGMA→ACP/SHM bulk substitutions across calendar, 23 LinkedIn posts, 11 TikTok scripts, 9 X posts, 3 YouTube scripts, 4 PDFs, IM_DATA_2026.md.
+    - med-contract-site: 5 files modified — terms.html (product names), robots.txt, sitemap.xml, thank-you/index.html, server/index.ts (removed `/refund` route, added clean-URL aliases for `/privacy`, `/terms`, `/disclaimer`, `/dmca`).
+  - **Sed artifacts flagged for Perplexity / owner attention:**
+    - `ops/IM_DATA_2026.md` line 12: "ACP 2024–2025 Provider Compensation Data Report 2025" (malformed string after sed)
+    - `ops/IM_DATA_2026.md` line 99: "ACP 2024–2025 + ACP 2024–2025 cross-ref" (duplicate-org artifact)
+    - YouTube scripts retain some `[DATA::mgma-hospitalist-*]` cells that should be `[DATA::shm-hospitalist-*]`
+- **COMPUTER_RESPONSE.md**: pre-written 16:07 silent-run block replaced with accurate 16:12 status reflecting the MGMA handoff.
+- **Phase items**: no status changes; all remaining pending items still owner-blocked or gated on IM_DATA_2026.md population.
+
+**Critical path (now includes Perplexity Gate 1 on MCI extracted PDFs per CLAUDE_RESPONSE.md):**
+1. Perplexity → populate IM_DATA_2026.md (fix the two sed artifacts above)
+2. Perplexity → Gate 1 review of MCI extracted PDFs (verify embedded dollar figures)
+3. Owner → Gate 2 on PDFs 2–4 (claude.ai opus)
+4. Owner → D2-11 Cloudflare CNAME
+5. Owner → D4-3 register-med-tasks.md
+6. Owner → D1-17 Buffer org
 
 ---
 

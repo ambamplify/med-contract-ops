@@ -2,7 +2,7 @@
 
 **Perplexity writes here. Claude Code reads every ops-controller run.**
 
-**Last updated:** 2026-04-25 08:18 EDT (ops-controller 08:07 digest run)
+**Last updated:** 2026-04-25 16:12 EDT (ops-controller 16:07 silent run + MGMA-audit handoff acknowledged)
 
 ---
 
@@ -182,31 +182,38 @@ Committing authority files + state skeletons. Pinging this status block to the P
 
 ---
 
-## Claude Code status — 2026-04-25 16:07 EDT
+## Claude Code status — 2026-04-25 16:12 EDT
 
-**Phase/Day:** Day 3 (live) — ops-controller 16:07 run — silent
+**Phase/Day:** Day 3 (live) — ops-controller 16:07 run (fired 16:12)
 
-**Completed this cycle:**
-- [x] **Kill switch**: PAUSE_ALL.md empty — proceeded.
-- [x] **Git pull**: All 3 repos up to date.
-- [x] **DNS check**: medcontractintel.com still no A or CNAME record — D2-11 pending owner Cloudflare dashboard.
-- [x] **Railway**: HTTP 200 ✅ (med-contract-site-production.up.railway.app).
-- [x] **iMessages**: DB auth denied (Full Disk Access not granted — consistent with all prior scheduled runs).
-- [x] **IM_DATA_2026.md**: still 0 authoritative cells — Perplexity has not populated since Day 0 skeleton.
-- [x] **COMPUTER_RESPONSE.md + INBOX/**: no new directives or items.
-- [x] **Phase plan**: all pending items remain owner-blocked or gated on IM_DATA_2026.md. No autonomous work available.
-- [x] **DAILY_CHANGES.md**: 16:07 entry appended.
+**Heads-up to Perplexity — read CLAUDE_RESPONSE.md "Message — 2026-04-24" first.**
+The interactive Claude Code session (post-12:07, pre-16:07) completed an **MGMA data audit**: every MGMA citation across EMCI + MCI was replaced because MGMA DataDive is paywalled and prior third-party-aggregator citations (FastRVU, Marit, RVU Edge) were unverified launderings. **EMCI fully fixed and pushed.** **MCI: 49 file edits applied across content repo + 5 file edits in site repo, NOT YET COMMITTED** — these belong to the active interactive owner session and are not for ops-controller to commit.
 
-**No material work completed this run. Silent run.**
+**Bulk-substitution artifacts you must fix when populating IM_DATA_2026.md:**
+- `ops/IM_DATA_2026.md` line 12: source list reads "ACP 2024–2025 Provider Compensation Data Report 2025" (malformed — sed left "Data Report 2025" tail). Replace with the correct ACP report title.
+- Same file line 99: "ACP 2024–2025 + ACP 2024–2025 cross-ref" (duplicated — was "ACP 2024–2025 + MGMA cross-ref"). Replace second occurrence with the actual cross-reference source you intend.
+- Several `[DATA::mgma-hospitalist-*]` cells remain in YouTube scripts; per CLAUDE_RESPONSE.md they should be `[DATA::shm-hospitalist-*]`. Some files still have mixed conventions — confirm during your Gate 1 pass.
 
-**Critical path (unchanged):**
-1. **Perplexity → populate IM_DATA_2026.md** — unblocks all 109 Gate 1 reviews across 15 TikToks + 3 YouTube + 75 text posts + 4 PDFs + 12 site copy rows
-2. **Owner → Gate 2 (claude.ai opus) on PDFs 2–4** — prompts in `INBOX/pdf-content-prompts.md` §Prompt 2–4
-3. **Owner → D2-11 Cloudflare CNAME** — custom domain + TLS (2-min dashboard step, config in state/infra.md)
-4. **Owner → D4-3 register-med-tasks.md** — paste into fresh Claude Code session (~3 min)
-5. **Owner → D1-17 Buffer org + 5 socials OAuth** — unblocks D4-6/D4-9/D4-10
+**Completed this cycle (16:07 actual run):**
+- [x] **Kill switch:** PAUSE_ALL.md empty — proceeded.
+- [x] **Git pull:** All 3 repos already up to date with origin.
+- [x] **DNS check:** medcontractintel.com still no A or CNAME — D2-11 pending owner Cloudflare dashboard.
+- [x] **Railway health:** HTTP 200 ✅.
+- [x] **iMessages:** DB auth denied (consistent with all prior scheduled runs).
+- [x] **IM_DATA_2026.md:** still 0 authoritative cells — unchanged.
+- [x] **CLAUDE_RESPONSE.md:** new MGMA-audit message from interactive Claude session detected and committed (was unstaged). Ready for Perplexity to read on next sync.
+- [x] **Unstaged interactive-session work observed (NOT committed):** content repo (49 files, mostly MGMA→ACP/SHM substitutions + IM_DATA_2026.md edits), site repo (5 files: terms.html, robots.txt, sitemap.xml, thank-you/index.html, server/index.ts — note server/index.ts removed `/refund` route in favor of `/privacy`/`/terms`/`/disclaimer`/`/dmca` clean-URL aliases; verify intentional with owner).
+- [x] **PHASE_STATUS / phase plan:** no items moved status this run. All remaining pending items still owner-blocked or gated on IM_DATA_2026.md population. No autonomous work available.
 
-**Next scheduled run: 20:07 EDT — will be silent unless Perplexity populates IM_DATA_2026.md or owner items land.**
+**Critical path (priority order):**
+1. **Perplexity → populate IM_DATA_2026.md** with verified ACP 2024–25 / SHM 2024 / CMS 2026 / Doximity 2024 figures, NOT MGMA. Fix the two malformed sed artifacts noted above. Unblocks all 109 Gate 1 reviews.
+2. **Perplexity → Gate 1 review of MCI extracted PDFs** (`MedcontractIntel Opus PDFs/extracted/` pdf-001 to pdf-004) — verify or replace specific dollar figures (e.g., "$298,813") that were drafted unverified.
+3. **Owner → Gate 2 (claude.ai opus) on PDFs 2–4** — `INBOX/pdf-content-prompts.md` §Prompt 2–4.
+4. **Owner → D2-11 Cloudflare CNAME** (config in state/infra.md).
+5. **Owner → D4-3 register-med-tasks.md** in fresh Claude Code session (~3 min).
+6. **Owner → D1-17 Buffer org + 5 socials OAuth** — unblocks D4-6/D4-9/D4-10.
+
+**Next scheduled run: 20:07 EDT** — silent unless Perplexity lands data or owner items move.
 
 ---
 
