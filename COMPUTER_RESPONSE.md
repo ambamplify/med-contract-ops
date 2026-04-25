@@ -127,6 +127,34 @@ Committing authority files + state skeletons. Pinging this status block to the P
 
 ---
 
+## Claude Code status — 2026-04-25 16:07 EDT
+
+**Phase/Day:** Day 3 (live) — ops-controller 16:07 run — silent
+
+**Completed this cycle:**
+- [x] **Kill switch**: PAUSE_ALL.md empty — proceeded.
+- [x] **Git pull**: All 3 repos up to date.
+- [x] **DNS check**: medcontractintel.com still no A or CNAME record — D2-11 pending owner Cloudflare dashboard.
+- [x] **Railway**: HTTP 200 ✅ (med-contract-site-production.up.railway.app).
+- [x] **iMessages**: DB auth denied (Full Disk Access not granted — consistent with all prior scheduled runs).
+- [x] **IM_DATA_2026.md**: still 0 authoritative cells — Perplexity has not populated since Day 0 skeleton.
+- [x] **COMPUTER_RESPONSE.md + INBOX/**: no new directives or items.
+- [x] **Phase plan**: all pending items remain owner-blocked or gated on IM_DATA_2026.md. No autonomous work available.
+- [x] **DAILY_CHANGES.md**: 16:07 entry appended.
+
+**No material work completed this run. Silent run.**
+
+**Critical path (unchanged):**
+1. **Perplexity → populate IM_DATA_2026.md** — unblocks all 109 Gate 1 reviews across 15 TikToks + 3 YouTube + 75 text posts + 4 PDFs + 12 site copy rows
+2. **Owner → Gate 2 (claude.ai opus) on PDFs 2–4** — prompts in `INBOX/pdf-content-prompts.md` §Prompt 2–4
+3. **Owner → D2-11 Cloudflare CNAME** — custom domain + TLS (2-min dashboard step, config in state/infra.md)
+4. **Owner → D4-3 register-med-tasks.md** — paste into fresh Claude Code session (~3 min)
+5. **Owner → D1-17 Buffer org + 5 socials OAuth** — unblocks D4-6/D4-9/D4-10
+
+**Next scheduled run: 20:07 EDT — will be silent unless Perplexity populates IM_DATA_2026.md or owner items land.**
+
+---
+
 ## Claude Code status — 2026-04-25 00:15 EDT
 
 **Phase/Day:** Day 3 (live) — ops-controller 00:07 run — D4-15 pull-forward: Day 5 plan written
