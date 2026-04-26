@@ -761,3 +761,9 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - Critical path unchanged from 20:07 run: (1) Perplexity Gate 1 on 102 artifacts now that IM_DATA is populated, (2) Owner Gate 2 on PDFs 2–4 + content, (3) Owner D2-11 Cloudflare CNAME, (4) Owner D4-3 register 14 med-* tasks, (5) Owner D1-17 Buffer org + 5 OAuth, (6) Owner Stripe dashboard follow-ups
 - Decision-test applied to every gated item: cannot be done by controller (Perplexity-owned, owner-OAuth-required, UI-only per Lesson #6, or external-account-creation)
 - Next scheduled run: 04:11 EDT — silent unless work lands. 08:11 EDT run will send the daily iMessage digest.
+
+## 2026-04-26 00:35 EDT — Subscriptions reference file created (Claude Code)
+- New `state/subscriptions.md` — single reference for all paid services, free-tier accounts, and recurring memberships tied to MCI. Sections: (1) MCI-exclusive subs (most still 🟣 owner-gated for Day 1), (2) shared subs split by what's shared vs separated per business, (3) free-tier accounts (Stripe webhook id, social handles), (4) monthly burn rollup, (5) renewal watchlist (domain auto-renew, Make.com ops budget shared with EMCI, ElevenLabs quota shared).
+- Companion file created in EMCI repo: `~/Desktop/em-contract-ops/state/subscriptions.md` (mirror structure, EMCI viewpoint).
+- Several plan tiers / prices flagged `[verify]` for owner to confirm next pass.
+- Triggered by owner request: "we need a reference file for all subscriptions/memberships etc for each business".
