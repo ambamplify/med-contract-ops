@@ -5,11 +5,15 @@
 ---
 
 ## Current phase
-**Day 1 → Day 2 bridge — 2026-04-23 08:14 EDT** (autonomous ops-controller 08:07 run)
+**Day 3 (live) — IM_DATA_2026.md POPULATED + Gate 1 unblocked — 2026-04-25 20:15 EDT** (ops-controller 20:07 run)
 
-08:07 run completed D2-12 (smoke test #1 PASS), D2-13 (Stripe webhook live), D2-17 (PDF verify), D2-18 (Day 3 plan written).
-Owner away Wed AM. Day 2 autonomous items now ~80% done. Remaining Day 2 items all owner-gated (CNAME, Kit, smoke test #2, Stripe dashboard follow-ups).
-Railway redeploying with STRIPE_WEBHOOK_SECRET (deployment `29a54ab4`).
+Pull-forwards complete as of Day 3 start:
+- D3-6 ✅ 15 TikTok scripts | D3-13 ✅ 3 YouTube scripts | D3-17 ✅ 30 LinkedIn + 30 X threads
+- D4-2 ✅ 14 med-* SKILL.md files | D4-5 ✅ Make.com M1 Modules 1+2 (scenario 4846282) | D3-21 ✅ Day 4 plan
+- D2-8 ✅ All 4 PDF content drafts written | D4-15 [~] Day 5 hour-by-hour + §13 Launch Gate quick-ref written
+
+**All autonomous content work is exhausted.** Every remaining item needs IM_DATA_2026.md Perplexity population OR owner action.
+Owner priorities: (1) D4-3 register tasks from fresh Claude Code session, (2) D1-17 Buffer, (3) Stripe dashboard follow-ups, (4) Perplexity populate IM_DATA_2026.md, (5) Gate 2 opus reviews on PDFs 2–4 + all content.
 
 5-day build window: **Day 1 Wed 2026-04-23 → Day 5 Sun 2026-04-27 (soft launch)**
 
@@ -32,8 +36,10 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | med-ops-controller scheduler registration | 🟢 GREEN | Registered 2026-04-22, cron `7 */4 * * *`, next run 2026-04-23T00:11:47Z |
 | Git repo (local) | 🟢 GREEN | 3 commits on main (4653bf0, 184bb23, 3355dbd) |
 | GitHub remote | 🟢 GREEN | `ambamplify/med-contract-ops` 4 commits; `ambamplify/med-contract-content` 2 commits (IM_DATA_2026.md skeleton + calendar template); `-site` empty shell until Day 2 scaffold |
-| IM_DATA_2026.md (SSOT) | 🟡 SKELETON | Structure in place, 0/~80 cells authoritative. Perplexity Day 1 Task 13 populates. Blueprint §7. |
-| Content calendar | 🟡 TEMPLATED | 15 TikTok + 3 YouTube rows pre-seeded with hooks + dates + data_cells refs. LinkedIn/X/Threads/IG/Substack empty. Day 3 7:00 PM populates text lanes. |
+| IM_DATA_2026.md (SSOT) | 🟢 POPULATED v1 | 230 lines, 0 TBD cells, 51 numeric cells. Populated 2026-04-25 ~16:16 EDT, owner unblock directive 17:08, broadcast commit `f84c3a0` 17:10. CMS 2026 CF $33.40 verified. Gate 1 reviews unblocked for all 102 content artifacts. 16 explicit "Computer estimate" rows pending SHM SoHM / MGMA DataDive primary-source acquisition (do not block content review). |
+| Content calendar | 🟢 FULL DRAFT COMPLETE | 15 TikTok + 3 YouTube + 30 LinkedIn + 30 X + 15 Threads entries. All 60 LI/X body texts written 2026-04-24 04:14 EDT (D3-17 pull-forward). All 102 content artifacts drafted. Gate 1+2 reviews pending IM_DATA_2026.md Perplexity population. |
+| TikTok scripts (15) | 🟡 DRAFTED — DATA GATE | All 15 scripts written 2026-04-24 00:30 EDT (D3-6 pull-forward). Voiceover, visuals, CTA complete. Data cells [DATA::cell-name] blocked on IM_DATA_2026.md Perplexity population. Gate 1 (Perplexity fact-check) + Gate 2 (claude-chat-opus) both pending. |
+| YouTube scripts (3) | 🟡 DRAFTED — DATA GATE | All 3 scripts written 2026-04-24 00:45 EDT (D3-13 pull-forward). yt-m1 (comp stack, 15min), yt-m2 (panel size, 12min), yt-m3 (hospitalist economics, 18min). Data cells marked. Gate 1+2 pending. |
 | med-contract-site repo | 🟡 SCAFFOLDED + REBRANDED | Commit `0e52218` (2026-04-23 00:13 EDT) — em-*.pdf renamed → med-*.pdf (placeholder), gitignore updated, pdf-report.ts palette fixed, EMCI residual refs cleaned. Railway deploy + Stripe product IDs + real PDF content still pending Day 2. |
 | Brand palette | 🟢 GREEN | `state/brand-palette.md` (commit `4ace972`) — source of truth, WCAG AA audited, hard rules documented (gold is display-only). |
 | Railway project | 🟢 GREEN | `medci-production` — project 214a7540, service 49cfe983, volume 8222fdc6 (/data). HTTP 200 on `med-contract-site-production.up.railway.app`. 9/13 env vars set. |
@@ -47,7 +53,7 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | Legal pages (privacy/terms/refund/disclaimer/dmca) | 🟢 DRAFTED | `INBOX/legal-pages-draft.md` (draft) + `INBOX/legal-pages/*.html` (5 drop-in files with README + cp script) — Day 2 site scaffold copies straight into `public/` |
 | Stripe products/prices spec (Day 2 pull-forward) | 🟢 EXECUTED | `INBOX/stripe/products-prices-spec.json` — executed 2026-04-23 04:13 EDT (Day 1 autonomous run). IDs in state/stripe-ids.md. |
 | Site scaffold runbook (Day 2 pull-forward) | 🟢 SPECCED | `INBOX/site-scaffold/RUNBOOK.md` (9-section plan) + `env-template.example` + `analysis-prompt-spec.md` (13-section IM rewrite). Day 2 runner executes against these; ~3hr of planning work pre-done. |
-| Content-review ledger (Lesson #19) | 🟢 PRE-POPULATED | `state/content-review-day3.md` — 27 tracked artifacts (15 TikTok + 3 YouTube + 1 text-lane placeholder + 8 site-copy rows). Launch Gate 18 denominator set. |
+| Content-review ledger (Lesson #19) | 🟢 EXPANDED | `state/content-review-day3.md` — 102 tracked artifacts (15 TikTok + 3 YouTube + 30 LinkedIn + 30 X + 15 Threads + 9 site-copy rows). Launch Gate 18 denominator updated 2026-04-23 21:17 EDT. |
 | Kit email automations (Day 3 pull-forward) | 🟢 DRAFTED | `INBOX/kit/emails-spec.md` — 3 full HTML email drafts + automation wiring spec + Stripe→Kit tag bridge. Rides on owner Kit account creation Day 3 AM. |
 | Stripe products | 🟢 GREEN | 5 products + 5 prices + coupon XlzbFyUR + 7 payment links — acct_1TEuuDRS3QYs0eSM — IDs in state/stripe-ids.md. ⚠ 3 Stripe dashboard follow-ups (redirect URLs, coupon on links 6+7, coupon expiry) flagged for owner Day 2 |
 | Stripe webhook | 🟢 GREEN | `we_1TPM9sRS3QYs0eSMtH7Z6Dtt` — live mode, 4 events, Railway URL (temp). Update URL → medcontractintel.com when CNAME resolves. STRIPE_WEBHOOK_SECRET in Railway env. |
@@ -75,7 +81,12 @@ See `ESCALATED/day1-owner.md` — **pre-populated 2026-04-22 evening** by the th
 ---
 
 ## Next move
-**Overnight autonomous:** med-ops-controller fires at 20:11, 00:11, 04:11, 08:07 EDT. The 08:07 run sends the daily iMessage digest referencing `ESCALATED/day1-owner.md`. Every intermediate run verifies no state drift and does whatever is still autonomous (DNS propagation check, Resend domain verify if Google unblocked, etc.).
+**D3-6 done (pull-forward):** 15 TikTok scripts written. Gate 1+2 pending IM_DATA_2026.md + owner claude-chat-opus pass.
+**D4-5 done:** MedCI-S1-GitHub-to-Buffer (scenario ID 4846282). Modules 1+2 live. D4-6 owner-builds in Make.com UI.
+**D4-3 owner-blocked:** paste-ready prompt in `INBOX/register-med-tasks.md`.
+**D3-17 done 2026-04-24 04:14 EDT (pull-forward):** 30 LinkedIn posts + 30 X threads written. All 102 content artifacts now drafted. Every item now requires either: (a) IM_DATA_2026.md Perplexity population → Gate 1 reviews, or (b) Owner actions (D4-3, D4-4, D4-6, etc.). No further autonomous content work available until Perplexity populates data cells.
+
+**08:07 AM run sends iMessage digest** (Day 2→3 bridge status, owner gates summary).
 
 **Day 1 morning (owner returns):** Open fresh Claude Code window in `/Users/ambamplify/MedContractIntel/med-contract-ops/` and say:
 > Execute MedCI Day 1 per `/Users/ambamplify/MedContractIntel/MEDCONTRACTINTEL_BLUEPRINT.md` §10. Read BUILD_STATUS.md + PHASE_STATUS.md first — several Day 1 items were pulled forward to Day 0 evening. Address ESCALATED/day1-owner.md items. Stop at any owner gate.

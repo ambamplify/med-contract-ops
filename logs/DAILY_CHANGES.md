@@ -4,6 +4,45 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ---
 
+## 2026-04-25 (Saturday) — Day 3: Analyzer + Content
+
+### 20:15 EDT — med-ops-controller 20:07 run — first scheduled tick after IM_DATA unblock
+
+**[20:15 EDT] ops-controller (automated) — silent health check + tracking-file refresh**
+- Kill switch: PAUSE_ALL.md empty — proceeded.
+- Git pull: all 3 repos already up to date with origin.
+- DNS: medcontractintel.com still no A or CNAME (D2-11 owner Cloudflare dashboard pending).
+- Railway: HTTP 200 ✅.
+- iMessages: 0 unread (MCP working; no owner replies pending).
+- IM_DATA_2026.md verified on disk: mtime 2026-04-25 16:16 EDT, 230 lines, 0 TBD cells, 51 numeric cells. Owner unblock directive 17:08 EDT acknowledged.
+- BUILD_STATUS.md health row for IM_DATA flipped 🟡 SKELETON → 🟢 POPULATED v1; current-phase header updated.
+- Site repo: 5 files unstaged from interactive owner session (terms.html, robots.txt, sitemap.xml, thank-you/index.html, server/index.ts) — preserved per controller policy (owner's work to commit).
+- Phase plan: no items moved this run. All Gate 1 reviews now belong to Perplexity (unblocked); Gate 2 reviews require owner + claude.ai opus; D4-3/D4-4/D2-11/D1-17 still owner-only. No autonomous controller work available this tick.
+
+### ~17:45 EDT — IM_DATA_2026.md populated + all content files resolved (Claude Code)
+
+- **IM_DATA_2026.md populated (v1):** Perplexity delivered fully sourced data file. CMS 2026 CF $33.40 verified from PPRRVU2026_Jan_nonQPP.csv. Outpatient IM CPT table (99202–99215) complete with non-facility PE RVUs. Hospitalist CPT table corrected from pre-2023 blueprint values (critical: 99221 1.92→1.63, 99223 3.86→3.50, 99231 0.76→1.00, 99233 2.00→2.40). Multi-source comp synthesis: outpatient IM $290K–$326K (midpoint $308K), hospitalist $319K median.
+- **366 DATA cell substitutions applied** across 70 content files (15 TikTok, 3 YouTube, 30 LinkedIn, 30 X, 4 PDFs, calendar). Zero `[DATA::cell-name]` placeholders remaining.
+- **Hospitalist wRVU corrections** applied in li-013-cpt-economics.md.
+- **Commit pushed:** med-contract-content `b23f65b`
+- **Gate 1 status:** IM_DATA_2026.md is now POPULATED v1. Perplexity cleared to begin Gate 1 content reviews. See CLAUDE_RESPONSE.md for go-ahead.
+
+
+### 12:15 EDT — med-ops-controller 12:07 run — silent
+
+**[12:15 EDT] ops-controller (automated) — silent health check run**
+- Kill switch: PAUSE_ALL.md empty — proceeded.
+- Git pull: all 3 repos up to date.
+- DNS: medcontractintel.com still no A or CNAME — D2-11 pending owner Cloudflare dashboard.
+- Railway: HTTP 200 ✅ on med-contract-site-production.up.railway.app.
+- iMessages: DB auth denied (Full Disk Access not granted — consistent with all prior runs).
+- IM_DATA_2026.md: 0 authoritative cells — Perplexity has not populated since Day 0 skeleton.
+- COMPUTER_RESPONSE.md + INBOX/: no new Perplexity directives or INBOX files.
+- Phase plan: all pending items owner-blocked or gated on IM_DATA_2026.md. No autonomous work available.
+- **No material work completed. Silent run.**
+
+---
+
 ## 2026-04-23 (Wednesday) — Day 1: Legal + DNS + Infra Skeleton
 
 ### 04:13 EDT — med-ops-controller 04:07 run — D2-5 Stripe products pulled forward
@@ -438,3 +477,287 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - **D2-18 DONE (Day 3 plan)**: Day 3 full hour-by-hour written into PHASE_STATUS.md — 21 tasks (D3-1 through D3-21), all 6 Lesson #19 dual-review gates included.
 - **iMessage unread check**: iMessage DB access denied (authorization error — system-level permission). Owner messages not retrieved this cycle.
 - **Day 3 status**: 8 of 21 Day 3 tasks are owner-blocked (review gates + YouTube OAuth + daily sync). Claude Code items (D3-5, D3-6, D3-9, D3-11-13, D3-16-17, D3-20) will execute when owner gates land.
+
+### 21:17 EDT — med-ops-controller 20:07 run — D3-5 content calendar completed + Day 4 plan written
+
+**[21:17 EDT] ops-controller (automated) — D3-5 DONE; Day 4 plan written (D3-21 pull-forward)**
+
+- **D3-5 DONE (30-day content calendar)**: 30 LinkedIn + 30 X + 15 Threads structural entries added to `med-contract-content/content/calendar-template.yaml`. Entries include: post_date (April 27–May 26), theme, hook/opener, data_cells_referenced, status: draft. Threads posts are complete ≤500-char content; LinkedIn and X entries are headlines/thread openers requiring body text (D3-17). Calendar meta.generated_at updated from TBD.
+- **Content-review ledger expanded**: `state/content-review-day3.md` grown from 27 rows → 102 rows. 75 new text-post rows added (li-001–li-030, x-001–x-030, th-001–th-015). Launch Gate 18 denominator now 102 artifacts.
+- **D3-21 pull-forward (Day 4 plan)**: Day 4 hour-by-hour (D4-1 through D4-15) written into PHASE_STATUS.md. Key items: fork 16 EMCI→med-* scheduled tasks (D4-2), register them (D4-3), scaffold Make.com M1 via API (D4-5), build M1 UI Modules 3–9 (D4-6), schedule content in Buffer (D4-9/D4-10), dry-run $97 purchase (D4-14). 4 items owner-blocked (D4-1, D4-4, D4-12, D4-14).
+- **iMessage check**: authorization denied (system-level; consistent with prior runs). Owner messages not retrieved.
+- **IM_DATA_2026.md status**: still all TBD — Perplexity has not yet populated. Blocks D3-6 (TikTok scripts), D3-13 (YT scripts), D3-17 (LI/X post bodies). Calendar hooks use blueprint template values; Perplexity Gate 1 review will verify before approved status.
+- **Next non-blocked items**: D4-2 (fork 16 EMCI scheduled tasks) is the next executable Claude Code item. Executing on next run if D3-6/D3-13/D3-17 still IM-data-blocked.
+
+### ~23:55 EDT — ops-controller (context-resumed run) — D4-2 complete: 14 med-* SKILL.md files written
+
+**[~23:55 EDT] ops-controller (context-resumed) — D4-2 DONE: Fork 16 EMCI→med-* scheduled tasks**
+
+- **D4-2 complete**: All 14 scheduled task SKILL.md files written to `~/.claude/scheduled-tasks/med-*/SKILL.md`. Directories were pre-created; 6 files were written in prior run (20:07); remaining 8 written this run:
+  - `med-gmail-triager-afternoon/SKILL.md` — 1pm run, same logic as morning, MedCI aliases
+  - `med-gmail-triager-evening/SKILL.md` — 6pm run, same logic as morning, MedCI aliases
+  - `med-linkedin-poster/SKILL.md` — Buffer GraphQL, MEDCI_BUFFER_ORG_ID placeholder
+  - `med-x-poster/SKILL.md` — Buffer GraphQL, MEDCI_X_CHANNEL_ID placeholder
+  - `med-threads-poster/SKILL.md` — Buffer GraphQL, MEDCI_THREADS_CHANNEL_ID placeholder
+  - `med-tiktok-poster/SKILL.md` — `schedulingType: "direct"` per Lesson #17 (not "notification")
+  - `med-instagram-poster/SKILL.md` — dual state-file + Buffer dedup (incident pattern from EMCI 2026-04-23)
+  - `med-youtube-poster/SKILL.md` — OAuth token placeholder, Shorts guardrails
+- **Buffer channel IDs**: All poster SKILL.md files use MEDCI_BUFFER_ORG_ID / MEDCI_*_CHANNEL_ID placeholders. Owner must connect Buffer org (D1-17) before poster tasks can execute.
+- **TikTok Direct Publishing (Lesson #17)**: med-tiktok-poster uses `schedulingType: "direct"` (TikTok Business API), unlike EMCI which used `"notification"`. Requires owner TikTok Business account (D1-14).
+- **Owner PDF message logged**: INBOX/2026-04-23-owner-message-001.md — owner working on 4 IM PDFs with Claude chat, will provide tomorrow for dual review (Lesson #19 gate).
+- **PHASE_STATUS.md**: D4-2 checkbox marked `[x]`, table row updated to done 2026-04-23 23:55 EDT.
+- **BUILD_STATUS.md**: Current phase updated. Next move set to D4-3 (register 16 med-* tasks).
+- **Next non-blocked item**: D4-3 — register all 16 med-* tasks via `mcp__scheduled-tasks__create_scheduled_task`. Does not require owner action. (Note: task count is 14 SKILL.md files across 14 directories; EMCI task registry has 14 tasks not 16 — count follows actual tasks created.)
+
+### ~00:10 EDT (2026-04-24) — ops-controller — D4-3 attempted, owner-blocked; registration prompt written to INBOX
+
+**[~00:10 EDT 2026-04-24] ops-controller — D4-3 OWNER-BLOCKED: create_scheduled_task blocked from scheduled task session**
+
+- Attempted to register 14 med-* scheduled tasks via `mcp__scheduled-tasks__create_scheduled_task`.
+- Error: "Cannot create scheduled tasks from within a scheduled task session." — same constraint as D0-3b.
+- **Resolution**: Wrote paste-ready prompt to `INBOX/register-med-tasks.md`. Owner runs from a fresh Claude Code session (~3 min).
+- Task cron schedule planned (all LOCAL time, :40–:05 to avoid EMCI :10–:35 collision):
+  - med-daily-digest: 7:42am daily
+  - med-linkedin-poster: 7:40am | med-x-poster: 7:45am | med-instagram-poster: 7:50am | med-threads-poster: 7:55am
+  - med-tiktok-poster: 8:00am | med-youtube-poster: 8:05am | med-gmail-triager-morning: 8:40am
+  - med-stripe-daily-monitor: 9:40am | med-content-ideator: Monday 9:10am
+  - med-social-listener: 11:40am | med-gmail-triager-afternoon: 1:40pm | med-gmail-triager-evening: 6:40pm
+  - med-weekly-reporter: Sunday 7:10pm
+- **PHASE_STATUS.md**: D4-3 marked [O] owner-blocked.
+- **Next autonomous item**: D4-5 (scaffold Make.com M1 Modules 1+2 via API).
+
+### ~00:15 EDT (2026-04-24) — ops-controller — D4-5 done: MedCI-S1-GitHub-to-Buffer scaffolded
+
+**[~00:15 EDT 2026-04-24] ops-controller — D4-5 DONE: Make.com M1 Modules 1+2 scaffolded**
+
+- **Scenario created**: "MedCI-S1-GitHub-to-Buffer" — ID **4846282**, team 2160239, us2.make.com.
+- **Module 1**: `github:makeAnAPICall` v4 — GraphQL query to `ambamplify/med-contract-content` `main:content/approved`. Reusing EMCI GitHub connection ID 8477240 (same ambamplify@gmail.com account, different repo path). Query returns `name`, `type`, and file `text` for each entry.
+- **Module 2**: `builtin:BasicFeeder` v1 — Iterator over `1.Body.data.repository.object.entries`.
+- **Stopped at Module 2 per Lesson #6**: API calls after Module 2 clobber UI-built values. Modules 3–9 (Parser → Router → Filter → Buffer×5 platforms) must be built in Make.com UI by owner (D4-6), gated on D1-17 Buffer org setup.
+- **state/automation.md updated**: scenario ID, module details, connection IDs, all 14 SKILL.md status rows updated.
+- **PHASE_STATUS.md**: D4-5 marked [x] done.
+- **BUILD_STATUS.md updated**.
+- **All current autonomous items now blocked**: D3-6/D3-13/D3-17 on IM_DATA_2026.md; D4-3 on owner fresh session; D4-6 on D1-17 Buffer + Make.com UI. D4-7 through D4-15 are all downstream of owner unblocks.
+
+---
+
+## 2026-04-24 (Thursday) — Day 2: Stripe + Site Deploy
+
+### 00:30 EDT — ops-controller 00:07 run — D3-6 pull-forward: 15 TikTok scripts written
+
+**[00:30 EDT 2026-04-24] ops-controller (automated) — D3-6 DONE (pull-forward): 15 TikTok scripts drafted**
+
+- **15 TikTok script files created** in `med-contract-content/content/tiktok/`:
+  - tt-001-panel-size.md — panel size economics ($X unpaid work vs MGMA median)
+  - tt-002-hospitalist-shift-math.md — $310K looks the same; shift math says otherwise
+  - tt-003-hedis-bonus-mechanics.md — HEDIS cap; employer keeps the gap
+  - tt-004-cpt-economics.md — 99214: you get $X, system collects $Y
+  - tt-005-tail-coverage.md — tail clause worth $X or zero; read the comma
+  - tt-006-nocturnist-differential.md — X% standard vs below-market = $Y/year
+  - tt-007-dollars-per-wrvu.md — MGMA $X/wRVU vs contract $Y = $Z gap
+  - tt-008-hedis-targets-fail.md — quality bonus structurally written to fail
+  - tt-009-panel-attribution.md — attribution clause, $X over 3 years
+  - tt-010-capitation-mechanics.md — MA PMPM $X vs $Y spread = policy risk
+  - tt-011-locum-vs-employed.md — locum $X/shift vs employed $Y/shift; net math
+  - tt-012-seven-on-seven-off.md — 7-on/7-off; admissions front-loaded
+  - tt-013-non-compete-state-law.md — state enforceability; NJ/CA/TX breakdown
+  - tt-014-call-coverage.md — paid or unpaid? ambiguous clause = blank check
+  - tt-015-conversion-factor.md — CMS 2026 CF $X.XX; employer's internal CF is arbitrary
+- **Format per script**: hook + voiceover (~150-200 words) + visual notes + data cells required + CTA
+- **Data cells**: all numeric claims marked `[DATA::cell-name]` pending IM_DATA_2026.md population by Perplexity. Gate 1 (Perplexity fact-check) blocked until cells populated. Gate 2 (claude-chat-opus) can begin structural review.
+- **content-review-day3.md**: all 15 TikTok rows updated with file paths and data cell lists.
+- **PHASE_STATUS.md**: D3-6 marked [x] done.
+- **iMessage check**: DB auth denied (no Messages app access) — owner messages not retrievable this run.
+- **brand-palette.md**: modified locally (v1→v2 update) — committing with this entry.
+- **Next**: D3-13 (3 YouTube scripts, same data-gate pattern). All else blocked on IM_DATA_2026.md or owner gates.
+
+### 00:50 EDT — ops-controller 00:07 run — D3-13 pull-forward: 3 YouTube scripts written
+
+**[00:50 EDT 2026-04-24] ops-controller (automated) — D3-13 DONE (pull-forward): 3 YouTube scripts drafted**
+
+- **yt-m1**: `content/youtube/yt-m1-compensation-stack.md` — "The 2026 IM Compensation Stack — Every Dollar, Explained" (~15min). 7-layer stack: base, productivity, quality/HEDIS, call stipends, benefits, sign-on, tail/exit. Full voiceover + chapter markers + visual notes.
+- **yt-m2**: `content/youtube/yt-m2-panel-size-math.md` — "Panel Size Math: How Your Employer Values Your Time" (~12min). Panel attribution problem, fee-for-service math, productivity model interaction, renewal leverage.
+- **yt-m3**: `content/youtube/yt-m3-hospitalist-shift-economics.md` — "Hospitalist Shift Economics" (~18min). 7-on/7-off asymmetry, nocturnist differential, admit fees, locum benchmarking. Title "$47K gap" = [DATA::hospitalist-comp-gap-median-vs-structured] — Perplexity verifies at Gate 1.
+- **content-review-day3.md**: YouTube rows updated with file paths and data cell lists.
+- **PHASE_STATUS.md**: D3-13 marked [x] done.
+- **All content scripts now complete**: D3-6 (15 TikTok), D3-13 (3 YouTube). D3-17 (30 LI + 30 X posts body text) still pending IM_DATA_2026.md. This run has exhausted all autonomous content work possible before Perplexity data population.
+
+## 2026-04-24 04:14 EDT — ops-controller 04:07 run
+
+**D3-17 DONE (pull-forward):** 30 LinkedIn posts + 30 X threads written. All 102 MedCI content artifacts are now drafted.
+- **30 LinkedIn posts** written to `med-contract-content/content/linkedin/li-001-*.md through li-030-*.md`. Format: hook + 350–550 word analytical body + CTA. All [DATA::cell-name] placeholders throughout.
+- **30 X threads** written to `med-contract-content/content/x/x-001-*.md through x-030-*.md`. Format: 6-tweet threads (hook + 4 body + CTA). Each tweet ≤280 chars. [DATA::cell-name] placeholders where confirmed numbers pending.
+- **content-review-day3.md**: All 60 LI/X rows updated with file paths (python3 bulk update).
+- **PHASE_STATUS.md**: D3-17 marked [x] done.
+- **BUILD_STATUS.md**: Content calendar status updated to FULL DRAFT COMPLETE.
+- **iMessages**: DB auth denied (scheduled task env). Owner messages not retrieved this run.
+- **Next unblocked item**: All 102 content artifacts drafted. Every remaining item now requires IM_DATA_2026.md Perplexity population OR owner actions. Content pipeline is fully drafted and data-gated.
+
+---
+
+## 2026-04-24 08:13 EDT — ops-controller 08:07 run (DIGEST RUN)
+
+**[08:13 EDT 2026-04-24] ops-controller (automated) — 08:07 digest sent; D3-21 marked done; tracking files updated**
+
+- **08:07 iMessage digest SENT** to +19167050598. Covered: 10 items closed overnight, 4 numbered owner decisions, IM_DATA_2026.md blocker, iMessage permission note.
+- **D3-21 DONE**: Checkbox and table row updated to done (Day 4 plan was written 2026-04-23 21:17 EDT as pull-forward — marking formally closed).
+- **iMessages**: DB auth denied (scheduled task env; consistent with all prior runs). Owner messages not retrieved. Owner should grant Messages Full Disk Access in System Settings → Privacy → Full Disk Access.
+- **Perplexity directives**: COMPUTER_RESPONSE.md timestamp unchanged — no new directives since 04:14 EDT status block.
+- **INBOX**: No new files since 04:14 run.
+- **ESCALATED**: day1-owner.md — 11 items still open (no owner responses received yet).
+- **Phase items executed**: D3-21 formally closed. No new autonomous execution available.
+- **BUILD_STATUS.md**: Current phase header updated — all 102 content artifacts drafted.
+- **Owner-blocked items still pending**: D4-3 (register 14 tasks), D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, all Day 1 owner items.
+- **Next phase item**: Nothing autonomously executable until IM_DATA_2026.md populated or owner items land.
+
+---
+
+## 2026-04-24 12:14 EDT — ops-controller 12:07 run
+
+**[12:14 EDT 2026-04-24] ops-controller (automated) — D2-8 PDF #1 received; Gate 2 logged; content-review ledger updated**
+
+- **D2-8 partial progress**: `01_MedContractIntel_Red_Flag_Checklist.md` (Red Flag Checklist — 15 Provisions) received from owner's Claude Chat Opus session (2026-04-23 23:32 EDT). Copied to `med-contract-content/content/pdfs/pdf-001-red-flag-checklist.md`. Created `content/pdfs/` directory in med-contract-content.
+- **Gate 2 logged PASS** for pdf-001: per INBOX/pdf-content-prompts.md review workflow, Claude Chat Opus production session = Gate 2 pass. Date: 2026-04-23.
+- **Gate 1 pending** for pdf-001: 4 specific Perplexity verification items flagged in content-review-day3.md — (1) SHM 2025 nocturnist diff 63–70% statistic, (2) locum rate $1,800–$2,600 vs data cell target $2,200–$2,900 (reconcile via Weatherby/CompHealth/Staff Care), (3) IM tail coverage $15K–$40K range, (4) CA/NJ non-compete enforcement post-2024.
+- **PDFs 2–4 not yet received**: Negotiation Script Pack, wRVU Playbook, Hospitalist Shift Economics Analyzer still pending from owner's Claude Chat session.
+- **content-review-day3.md updated**: 4 PDF rows added (pdf-001 through pdf-004). Ledger now covers 106 artifacts (102 content + 4 PDFs).
+- **PHASE_STATUS.md + BUILD_STATUS.md updated**: D2-8 status updated to partial with details.
+- **iMessages**: DB auth denied (scheduled task env) — consistent with all prior runs.
+- **Perplexity directives**: COMPUTER_RESPONSE.md unchanged — no new directives.
+- **Owner-blocked items unchanged**: D4-3, D4-4, D4-6, D2-14, D1-14, D1-16, D1-17, D2-7 Stripe dashboard, D2-11 CNAME, all Day 1 owner items.
+- **Next autonomous item**: None — all remaining work requires IM_DATA_2026.md (Perplexity) or PDFs 2–4 from owner. Next PDF processing runs on receipt.
+
+## 2026-04-24 16:xx EDT — ops-controller 16:07 run — D2-8 pull-forward: PDFs 2–4 drafted
+
+**[16:xx EDT 2026-04-24] ops-controller (automated) — D2-8 partial advance: PDF content drafts 2–4 written**
+
+- **DNS check**: medcontractintel.com no A or CNAME — D2-11 still pending owner dashboard.
+- **Railway**: HTTP 200 ✅.
+- **iMessages**: DB auth denied (consistent with all prior scheduled runs).
+- **IM_DATA_2026.md**: still 0 authoritative cells (Perplexity not yet populated).
+- **D2-8 ADVANCE (pull-forward)**: PDFs 2–4 content drafted autonomously — same pattern as D3-6/D3-13 TikTok/YouTube scripts. Owner's Claude Chat Opus delivery not yet received; Claude Code wrote structural drafts from the prompts in `INBOX/pdf-content-prompts.md`. Files:
+  - `med-contract-content/content/pdfs/pdf-002-negotiation-scripts.md` — 6 scripts + 6 email templates + objection table + prep checklist. ~4,000 words.
+  - `med-contract-content/content/pdfs/pdf-003-wrvu-playbook.md` — 11 chapters (Parts I–IV) + 6 appendices (CPT table, benchmarks, non-compete state law, glossary, resources). ~9,000 words.
+  - `med-contract-content/content/pdfs/pdf-004-shift-economics.md` — Introduction + 5 parts + closing action. ~3,800 words. Hospitalist-focused.
+- **All 4 PDFs now drafted**: pdf-001 (Gate 2 PASS owner), pdf-002/003/004 (Gate 1+2 both pending). Gate 1 unblocks when Perplexity populates IM_DATA_2026.md. Gate 2 requires owner claude.ai opus-mode review session.
+- **content-review-day3.md**: PDF rows 2–4 updated with draft status, file paths, data cells required.
+- **PHASE_STATUS.md**: D2-8 updated to reflect all 4 PDF drafts complete.
+- **BUILD_STATUS.md**: D2-8 note updated.
+- **Critical path unchanged**: (1) Perplexity populate IM_DATA_2026.md, (2) Owner D2-11 CNAME, (3) Owner PDFs 2–4 Gate 2 review in claude.ai opus, (4) Owner D4-3 register tasks, (5) Owner D1-17 Buffer.
+
+---
+
+## 2026-04-25 (Friday) — Day 3: Analyzer + Content
+
+## 2026-04-25 00:15 EDT — ops-controller 00:07 run — D4-15 pull-forward: Day 5 plan written
+
+**[00:15 EDT 2026-04-25] ops-controller (automated) — Day 5 hour-by-hour + §13 Launch Gate quick-ref written (D4-15 partial pull-forward)**
+
+- **Kill switch**: PAUSE_ALL.md empty — proceeded.
+- **Git pull**: All 3 repos already up to date.
+- **DNS check**: medcontractintel.com still no A or CNAME — D2-11 still pending owner Cloudflare dashboard.
+- **Railway**: HTTP 200 ✅ (med-contract-site-production.up.railway.app).
+- **iMessages**: DB auth denied (consistent with all prior scheduled runs).
+- **IM_DATA_2026.md**: still 0 authoritative cells (Perplexity not yet populated).
+- **COMPUTER_RESPONSE.md**: no new Perplexity directives since Day 0 scaffold.
+- **D4-15 PARTIAL PULL-FORWARD (Day 5 plan written)**: Full Day 5 hour-by-hour (D5-1 through D5-11) + §13 Launch Gate quick-ref (all 18 gates with verify commands) written into PHASE_STATUS.md Day 5 section. Follows established pull-forward pattern (D2-18 pulled D3, D3-21 pulled D4). 18-Lesson guardrail walk portion of D4-15 remains pending end of Day 4.
+- **brand-palette.md**: v3.1 uncommitted changes committed alongside this run (v3.1 was applied 2026-04-24 via sed across 23 files but state/brand-palette.md was not committed).
+- **BUILD_STATUS.md**: Current phase updated to Day 3 / pull-forward summary.
+- **All autonomous work still exhausted**: Every remaining item requires IM_DATA_2026.md Perplexity population OR owner action. No further pull-forward content work available.
+
+---
+
+## 2026-04-25 16:12 EDT — ops-controller 16:07 run — MGMA-audit handoff acknowledged
+
+**[16:12 EDT 2026-04-25] ops-controller (automated) — health checks + interactive-session reconciliation**
+
+- **Kill switch**: PAUSE_ALL.md exists but empty — proceeded.
+- **Git pull**: All 3 repos already up to date with origin (no remote commits since last run).
+- **DNS**: medcontractintel.com still no A or CNAME — D2-11 pending owner Cloudflare dashboard.
+- **Railway**: HTTP 200 ✅.
+- **iMessages**: DB auth denied (consistent with all prior runs).
+- **IM_DATA_2026.md**: still 0 authoritative cells.
+- **Interactive Claude session work detected (since 12:07):**
+  - `CLAUDE_RESPONSE.md` (ops repo) — owner/Claude wrote a deliberate Perplexity-facing message: "MGMA Data Audit Complete — Action Required on IM_DATA_2026.md". Root cause: MGMA DataDive paywalled; prior 3rd-party aggregator citations were unverified. EMCI fully fixed + pushed (em-contract-site `5a67b26`, em-contract-content `c04b071`). MCI file edits applied but uncommitted. **ops-controller committed CLAUDE_RESPONSE.md** so Perplexity reads the directive on next sync.
+  - **NOT committed by ops-controller (belongs to owner's interactive session):**
+    - med-contract-content: 49 files modified — MGMA→ACP/SHM bulk substitutions across calendar, 23 LinkedIn posts, 11 TikTok scripts, 9 X posts, 3 YouTube scripts, 4 PDFs, IM_DATA_2026.md.
+    - med-contract-site: 5 files modified — terms.html (product names), robots.txt, sitemap.xml, thank-you/index.html, server/index.ts (removed `/refund` route, added clean-URL aliases for `/privacy`, `/terms`, `/disclaimer`, `/dmca`).
+  - **Sed artifacts flagged for Perplexity / owner attention:**
+    - `ops/IM_DATA_2026.md` line 12: "ACP 2024–2025 Provider Compensation Data Report 2025" (malformed string after sed)
+    - `ops/IM_DATA_2026.md` line 99: "ACP 2024–2025 + ACP 2024–2025 cross-ref" (duplicate-org artifact)
+    - YouTube scripts retain some `[DATA::mgma-hospitalist-*]` cells that should be `[DATA::shm-hospitalist-*]`
+- **COMPUTER_RESPONSE.md**: pre-written 16:07 silent-run block replaced with accurate 16:12 status reflecting the MGMA handoff.
+- **Phase items**: no status changes; all remaining pending items still owner-blocked or gated on IM_DATA_2026.md population.
+
+**Critical path (now includes Perplexity Gate 1 on MCI extracted PDFs per CLAUDE_RESPONSE.md):**
+1. Perplexity → populate IM_DATA_2026.md (fix the two sed artifacts above)
+2. Perplexity → Gate 1 review of MCI extracted PDFs (verify embedded dollar figures)
+3. Owner → Gate 2 on PDFs 2–4 (claude.ai opus)
+4. Owner → D2-11 Cloudflare CNAME
+5. Owner → D4-3 register-med-tasks.md
+6. Owner → D1-17 Buffer org
+
+---
+
+## 2026-04-25 08:18 EDT — ops-controller 08:07 DIGEST RUN
+
+**[08:18 EDT 2026-04-25] ops-controller (automated) — Day 3 iMessage digest sent**
+
+- **08:07 iMessage digest SENT** to +19167050598. 5 numbered owner decisions (1–5). Closed-overnight: 4 items (PDFs 2–4 drafted, D3-17 LI/X done, D4-15 Day 5 plan written, palette committed). All autonomous work exhausted — critical path communicated.
+- **iMessages**: DB auth denied — Full Disk Access not granted (consistent with all prior runs). No owner replies processed.
+- **IM_DATA_2026.md**: still 0 authoritative cells — Perplexity has not populated since Day 0.
+- **COMPUTER_RESPONSE.md**: no new Perplexity directives.
+- **INBOX/**: no new files.
+- **Railway**: HTTP 200 ✅ (med-contract-site-production.up.railway.app).
+- **Phase items**: all pending items owner-blocked or gated on IM_DATA_2026.md. No autonomous work available this run.
+
+---
+
+## 2026-04-25 17:10 EDT — IM_DATA UNBLOCK BROADCAST (interactive session, owner-directed)
+
+**Trigger:** Owner directive ~17:08 EDT — "Are all routines aware that the im data is uptodate and they can proceed as needed. Perplexity is saving the im data file to its own system instead of updating the file on disk. Make sure everyone is working."
+
+**Verified state of IM_DATA_2026.md on disk:**
+- Path: `med-contract-content/ops/IM_DATA_2026.md`
+- mtime: 2026-04-25 16:16:33 EDT (~50 min before this run)
+- Size: 12,968 bytes / 230 lines
+- Numeric cells with $ values: 166
+- Remaining "Computer estimate" placeholders: 16 (deliberate, flagged for SHM SoHM / MGMA DataDive primary-source replacement post-launch — does NOT block Gate 1)
+- Sed artifacts from prior MGMA→ACP/SHM substitution (lines 12, 99): both verified CLEAN
+
+**Files updated this run:**
+1. `PHASE_STATUS.md` — top-of-file IM_DATA UNBLOCK BANNER added
+2. `state/content-review-day3.md` — top-of-file IM_DATA UNBLOCK BANNER added; row-level "Gate 1 blocked" notes left in place but flagged as HISTORICAL by the banner
+3. `state/site.md` — line 27 "Analyzer prompt IM_DATA_2026.md cell replacement" flipped 🔴 not yet → 🟡 ready to execute
+4. `CLAUDE_RESPONSE.md` — full ACK section added at top with explicit Gate 1 to-do list for Perplexity + save-to-disk reminder
+
+**Routine status broadcast:**
+- ✅ med-ops-controller registered + active. Next tick: ~20:11 EDT (00:11 UTC). Will pick up unblock automatically.
+- ❌ 14 other med-* tasks (med-daily-digest, med-stripe-daily-monitor, med-social-listener, med-gmail-triager-{morning,afternoon,evening}, med-weekly-reporter, med-content-ideator, med-{linkedin,x,instagram,threads,tiktok,youtube}-poster) STILL NOT REGISTERED with the scheduler. Attempted in this session at 17:09 EDT — `mcp__scheduled-tasks__create_scheduled_task` returned "Cannot create scheduled tasks from within a scheduled task session." perplexity-tab-poll counts as a scheduled-task session. **D4-3 stays owner-blocked.** Owner must launch a fresh interactive `claude` session from Terminal and paste the registration prompt from `INBOX/register-med-tasks.md`.
+
+**Next med-ops-controller run will:**
+- See the IM_DATA UNBLOCK BANNER on PHASE_STATUS.md / content-review-day3.md
+- Stop reporting "IM_DATA_2026.md: still 0 authoritative cells"
+- Begin reasoning about Gate 1 readiness for all drafted content artifacts
+- Continue surfacing the D4-3 task-registration block until owner does it manually
+
+## 2026-04-25 20:30 EDT — Cross-project bridge + INBOX README (Claude Code, from EMCI session)
+- Created `CROSS_PROJECT_EMCI_CONTEXT.md` — read-only digest of EMCI state for MCI Perplexity Space (refreshed every routine)
+- Created `INBOX/README.md` — documents owner+Claude-Code-only INBOX convention (Perplexity is read-only); also notes MCI Perplexity Gate 1 responsibility per Lesson #19
+- Mirror files created in EMCI repo (`em-contract-ops`)
+- Architecture: Perplexity Spaces clone repos read-only → draft in chat → owner reviews → owner instructs Claude Code to apply
+
+## 2026-04-26 00:12 EDT — Day 4 Saturday — ops-controller 00:07 run (silent)
+- Kill switch: `PAUSE_ALL.md` empty → proceeded
+- Git pull: med-contract-ops + content + site all current with origin
+- DNS: medcontractintel.com still no A/CNAME → D2-11 pending owner Cloudflare dashboard
+- Railway health: HTTP 200 ✅ on `med-contract-site-production.up.railway.app`
+- iMessages: 0 unread (MCP working — no owner replies pending)
+- IM_DATA verification: 0 TBD cells, 43 numeric `$`-prefixed values, 230 lines, populated since 2026-04-25 16:16 EDT
+- Scheduler: only `med-ops-controller` registered for MedCI; the other 14 med-* tasks STILL not registered → D4-3 still owner-blocked (paste prompt ready in `INBOX/register-med-tasks.md`)
+- Interactive owner session work observed (preserved per controller policy, NOT committed by ops-controller): `.gitignore` modified, `CLAUDE_RESPONSE.md` modified (owner added Path C 4-Veo-shot generation request to Perplexity for yt-m1, dated 2026-04-25 23:30 EDT), `.claude/` untracked dir
+- Phase plan: NO autonomous items advanced this run. All Day 4 morning items (D4-1, D4-3, D4-4, D4-6, D4-12, D4-14) and Day 3 Gate 1/2 review items remain owner-blocked or gated on Perplexity action
+- Gate 1 reviews: ALL still `pending` in `state/content-review-day3.md` — Perplexity has not yet processed the unblock signal sent 2026-04-25 17:10 EDT (commit `f84c3a0`)
+- Critical path unchanged from 20:07 run: (1) Perplexity Gate 1 on 102 artifacts now that IM_DATA is populated, (2) Owner Gate 2 on PDFs 2–4 + content, (3) Owner D2-11 Cloudflare CNAME, (4) Owner D4-3 register 14 med-* tasks, (5) Owner D1-17 Buffer org + 5 OAuth, (6) Owner Stripe dashboard follow-ups
+- Decision-test applied to every gated item: cannot be done by controller (Perplexity-owned, owner-OAuth-required, UI-only per Lesson #6, or external-account-creation)
+- Next scheduled run: 04:11 EDT — silent unless work lands. 08:11 EDT run will send the daily iMessage digest.
