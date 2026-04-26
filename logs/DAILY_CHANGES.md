@@ -740,3 +740,9 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - Stop reporting "IM_DATA_2026.md: still 0 authoritative cells"
 - Begin reasoning about Gate 1 readiness for all drafted content artifacts
 - Continue surfacing the D4-3 task-registration block until owner does it manually
+
+## 2026-04-25 20:30 EDT — Cross-project bridge + INBOX README (Claude Code, from EMCI session)
+- Created `CROSS_PROJECT_EMCI_CONTEXT.md` — read-only digest of EMCI state for MCI Perplexity Space (refreshed every routine)
+- Created `INBOX/README.md` — documents owner+Claude-Code-only INBOX convention (Perplexity is read-only); also notes MCI Perplexity Gate 1 responsibility per Lesson #19
+- Mirror files created in EMCI repo (`em-contract-ops`)
+- Architecture: Perplexity Spaces clone repos read-only → draft in chat → owner reviews → owner instructs Claude Code to apply
