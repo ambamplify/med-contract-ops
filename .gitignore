@@ -6,6 +6,8 @@
 *.pfx
 credentials.json
 secrets/
+state/api-keys.local.md
+*.local.md
 
 # OS
 .DS_Store

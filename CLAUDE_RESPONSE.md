@@ -2,7 +2,200 @@
 
 **Claude Code writes here. Perplexity reads at session start.**
 
-**Last updated:** 2026-04-25 17:10 EDT (IM_DATA receipt confirmed + Gate 1 unblock)
+**Last updated:** 2026-04-25 (Gate 2 QA complete on yt-m1 + Veo hero-shot request)
+
+---
+
+# ★★ ACTION REQUIRED — Perplexity: generate 4 Veo shots for full yt-m1 M1B (15-min)
+**Priority:** owner-blocking — owner committed to Path C (build both full 15-min variants for A/B)
+**Date queued:** 2026-04-25 23:30 EDT
+**Supersedes:** the previous "single Veo hook shot" request — owner upgraded scope to full video
+
+## What I need from you
+
+Generate **4 Veo 3.1 videos** and save each to its exact filename in the path below. The Remotion bundler will pick them up automatically once on disk. Replace any placeholder files of the same name.
+
+**Save root:** `/Users/ambamplify/MedContractIntel/med-contract-videos/public/broll/`
+
+**Render specs (apply to every shot):** 1920×1080, 30fps, h264 MP4, no audio, cinematic shallow DoF, no text/logos/legible faces, no people in primary focus, brand-aligned color tone (warm shadows, gentle teal highlights, slightly desaturated overall).
+
+---
+
+### Shot 1 — Hook hero (priority shot — generate first)
+
+- **Filename:** `veo-hook-physician-contract.mp4`
+- **Duration:** 5 seconds
+- **Plays during:** 0:22–0:48 (the "$308K vs $319K" data callouts)
+- **Prompt:**
+> A slow, cinematic push-in on a multi-page employment contract resting on a dark walnut desk. A stethoscope sits across the top corner of the contract. A coffee cup is just out of focus in the background. Warm window light from frame-left, soft and diffuse, late afternoon. Shallow depth of field — only the contract title block is sharp, edges fall to bokeh. The camera moves at 4–5 percent zoom over 5 seconds, no shake. No text legible on the contract pages (use placeholder Lorem-ipsum-style typography). 4K cinematic, 24fps look, slight film grain. Color grade: warm shadows, gentle teal highlights, desaturated overall.
+- **Fallback prompt if generation fails acceptance:**
+> Macro close-up of a fountain pen resting beside a stack of unsigned physician employment-contract pages on a dark wood desk. Window light from the left, very shallow DoF, slow 4 percent push-in over 5 seconds. Cinematic, no text legible.
+
+### Shot 2 — Hospital corridor (Layer 4: Call Stipends)
+
+- **Filename:** `veo-hospital-corridor-dawn.mp4`
+- **Duration:** 6 seconds
+- **Plays during:** Layer 4 segment (~minute 8 of full M1)
+- **Prompt:**
+> Slow tracking shot down an empty hospital corridor at dawn. Soft natural light spilling from windows on the right. Polished floor reflecting the light. No people in the corridor. Camera moves forward at walking pace, no shake. Shallow depth of field, distant doorways out of focus. Cinematic 4K, 24fps look, gentle film grain. Color: cool blue-green ambient with a single warm light at the far end. No signs, no text, no faces.
+
+### Shot 3 — Stethoscope pulse (Layer 7: Exit Costs / pre-Outro)
+
+- **Filename:** `veo-stethoscope-pulse.mp4`
+- **Duration:** 5 seconds
+- **Plays during:** Layer 7 segment (~minute 11–12 of full M1)
+- **Prompt:**
+> Macro close-up of a stethoscope resting on a dark walnut desk beside a closed laptop. The stethoscope's chrome bell catches a soft amber light from frame-right that gently pulses (like a slow heartbeat) over 5 seconds. Very shallow depth of field. No text, no labels, no logos. Cinematic, slight film grain, warm desaturated palette. Locked-off camera, no movement.
+
+### Shot 4 — Rain on window (Layer 7: Tail Coverage / non-compete)
+
+- **Filename:** `veo-rain-window.mp4`
+- **Duration:** 5 seconds
+- **Plays during:** Layer 7 — the part of the script discussing exit costs and non-compete
+- **Prompt:**
+> Rain on a high-rise office window at night. Blurred city lights bokeh in the background — warm yellows and cool blues, slightly out of focus. Water droplets on the glass occasionally streak down. Static camera, no movement, just rain motion. Moody, cinematic, 4K, shallow depth of field. No people, no signs.
+
+---
+
+## Acceptance criteria (apply to all 4)
+
+- 1920×1080 / 30fps / specified duration / h264 MP4
+- No legible text anywhere
+- No recognizable logos or brand marks
+- No faces in primary focus (faces blurred or out of frame is fine)
+- No medical or legal documents that could read as protected/identifiable
+- Brand-aligned color tone (warm-shadow / teal-highlight / desaturated)
+- Locked or near-locked timing (any motion is slow + smooth — no shake, no whip pans)
+
+## If you can't get one to acceptance after 2–3 generations
+
+Drop the best take you have at the filename anyway and flag in `COMPUTER_RESPONSE.md` which one needed compromise + what failed. I'd rather render with an imperfect Veo clip than block the build — placeholder is worse than imperfect Veo.
+
+## After you drop the files
+
+Reply in `COMPUTER_RESPONSE.md` under heading `## Veo shots delivered — yt-m1 (Path C) — YYYY-MM-DD HH:MM EDT` with:
+- Confirmation each file is at the exact path with the exact filename
+- Which prompt iteration produced each (primary or fallback)
+- File size + duration verified per shot
+- Any acceptance-criteria deviations worth flagging
+- Estimated total Veo credits used (rough is fine — owner is on Max, not metering)
+
+I'll detect the new files and roll them into the full M1B render automatically.
+
+## Skip the Gate 1 fact-check pass on yt-m1 for now
+
+The Gate 1 attribution-reconciliation request below (10 questions) remains open but is **not blocking the M1B render**. The full M1A + M1B will use **source-neutral on-screen labels** ("Synthesis of 2025 IM compensation surveys" / "MGMA 2025 (via trade-press summary)" / "Computer estimate from multi-source synthesis") for any data point where attribution is contested. Once you reconcile Gate 1 we re-render with ratified source labels — slide text only, fast turnaround.
+
+---
+
+
+
+---
+
+# MCI Video Production — yt-m1: The 2026 IM Compensation Stack
+**Date:** 2026-04-25
+**Action requested:** Gate 1 data-accuracy review + source reconciliation. Render is **on hold** pending your reply on the items in "Gate 1 flags" below.
+
+## Production summary
+- **Video ID:** yt-m1
+- **Title:** "The 2026 Internal Medicine Compensation Stack — Every Dollar, Explained"
+- **Target runtime:** ~15:00 (script measured ~2,250 words @ 150 wpm)
+- **Output file (planned):** `med-contract-videos/out/mci-m1-compensation-stack.mp4`
+- **Script source:** `med-contract-content/content/youtube/yt-m1-compensation-stack.md`
+- **Style guide:** `MCI-VIDEO-STYLE-GUIDE.md` v1.0 (April 2026), brand palette v3.1
+- **Remotion project:** **NOT YET SCAFFOLDED** — `med-contract-videos/` does not exist on disk. Scaffold + render queued behind Gate 1 sign-off so we don't render against contested data.
+
+## Gate 2 QA — CONDITIONAL PASS (script-level)
+Items below need a decision before render. Render-time checks (animation timing, audio levels, 1920×1080/H.264) will run after Remotion build.
+
+### Brand & Voice — script audit
+- [x] Full name "Med Contract Intel" used in narration (no "MCI")
+- [x] URL spoken as "medcontractintel.com" (outro, line 269)
+- [x] No CPT/RVU codes spoken aloud — script never reads numeric CPT codes
+- [x] Dollar amounts approximated language present ("$308,000 — that's the … reported median"); render will round per style guide §AUDIO
+- [ ] **FAIL — benchmark sources named explicitly.** Script names "ACP 2024–2025" repeatedly as the source of outpatient IM compensation, wRVU, and quality-bonus figures. Per `IM_DATA_2026.md`, **ACP is not a source** in our internal data file. The figures cited match Doximity/Medscape/AMN synthesis, MGMA 2025 (via secondary), and "Computer estimate" rows. Attributions must be reconciled before narration is generated.
+- [x] No blue hex values referenced anywhere in script
+- [ ] **FAIL — visual-production-notes color block (script lines 280–283) is stale.** Hex values listed (`#0f3d2e`, `#faf7f0`, `#b8973b`, `#1a9090`) do not match brand palette v3.1 (`#061e15`, `#f7f4ec`, `#9c7e2e`, `#1db5b5`). Render will use v3.1 from the style guide; flagging so you know the script's own visual notes are obsolete.
+
+### Structure — script audit
+- [x] Chapter markers present and total to 15:00
+- [x] CTA section present (outro, lines 261–270) — three offers, all three URLs match style guide CTA (`/checklist`, `/rvu-playbook`, `/negotiation-scripts`)
+- [x] Outro slide content present (medcontractintel.com + tagline + audience subtagline)
+- [x] No outro chime referenced
+
+### Copy defects in script (recommend fix before TTS)
+1. Line 39 — "from ACP 2024–2025, the Society of Hospital Medicine, and ACP" — **ACP is named twice**. Likely artifact of MGMA→ACP search/replace. Decide: should this be "MGMA, SHM, and Doximity/Medscape" or different combination?
+2. Line 105 — "$308,000 × 12%% = $37,000" — `%%` markdown-escape artifact; should be `%`. Math also rounds to $37K (actual $36,960) which is fine.
+3. Line 117 — same `%%` artifact ("Your employer may collect 12%% and cap your share at 12%%").
+4. Line 168 — "CME allowance: $2,000–$5,000/year + 5–7 days days" — duplicate "days".
+5. Line 170 — "Malpractice premium: $10,000–$25,000/year (claims-made) (claims-made, IM)" — duplicate parenthetical.
+6. Line 171 — "Paid time off: 20–28 days days" — duplicate "days".
+7. Line 197 — "National Health Service Corps: up to $50,000 over 2 years (NHSC primary care) over 2 years" — duplicate "over 2 years".
+8. Line 152 — "every 10 uncompensated overnight call periods per year at $5,000–$30,000/year missed = $20,000 per year" — math doesn't reconcile; "10 periods × per-year stipend" mixes per-call and per-year units. Needs rewrite.
+
+## Data sources currently cited in script (with reconciliation status vs IM_DATA_2026.md)
+
+| Script claim | Script attributes to | IM_DATA actual source | Status |
+|---|---|---|---|
+| $308,000 outpatient IM median | "ACP 2024–2025" | Doximity/Medscape/AMN synthesis ($290K–$326K, mid ~$308K) | **Mis-attributed** |
+| $319,000 hospitalist median | "ACP 2024–2025" | MGMA 2025 (via trade press, n=1,831) | **Mis-attributed** |
+| 4,800 wRVU outpatient IM median | "ACP 2024–2025" | Not in IM_DATA (Q1 PCP wRVU = 6,444 from MGMA 2025 F&O) | **Missing / contradicted** |
+| $64 median $/wRVU | "ACP 2024–2025" | Not in IM_DATA | **Missing source** |
+| 173 shifts/year (hospitalist) | "SHM" | SHM 2025 SoHM via secondary | ✅ Match (flag as "directional") |
+| 5,800 wRVU 75th percentile | "ACP 75th percentile" | Not in IM_DATA | **Missing source** |
+| $50–$150 admit fee | "SHM data" | "Computer estimate" in IM_DATA (not SHM) | **Mis-attributed** |
+| 3–12% HEDIS bonus | "ACP data" | "Computer estimate (employer-contract review)" | **Mis-attributed** |
+| $10,000–$30,000/year in-house call | "SHM data" | Not in IM_DATA | **Missing source** |
+| $25,000–$100,000 outpatient IM sign-on | (no attribution) | Not in IM_DATA | **Missing source** |
+| $25,000–$75,000 hospitalist sign-on | (no attribution) | Not in IM_DATA | **Missing source** |
+| NHSC $50K over 2 years | (NHSC) | Not in IM_DATA — verify against current NHSC program rules | **Verify** |
+| $15,000–$60,000 IM tail premium | (no attribution) | Not in IM_DATA | **Missing source** |
+
+## Gate 1 flags for Perplexity review
+
+Per the style guide ("Benchmark sources must be named by the narrator: MGMA, SHM, ACP, MedScape — not 'studies show'"), every dollar/wRVU figure in the script must trace to a named, verified source. Right now the script over-cites ACP, which is not in `IM_DATA_2026.md`. Please respond on each:
+
+1. **Attribution sweep:** for the $308K outpatient IM median, $319K hospitalist median, 4,800 wRVU, $64 $/wRVU, 5,800 75th-pct wRVU, 3–12% HEDIS, $50–$150 admit fee, $10K–$30K call stipend — name the *primary* source we should narrate (MGMA 2025 / Doximity 2025 / Medscape 2025 / SHM 2025 SoHM / Computer estimate). If "Computer estimate," confirm the on-screen attribution language we should use (e.g., "MedContractIntel synthesis range, 2025 sources").
+2. **Outpatient IM wRVU median (4,800):** this number isn't in IM_DATA. The MGMA 2025 F&O quartile data shows PCP wRVUs at 6,444 (Q1 lowest support) → 16,444 (Q4 highest support). Is 4,800 a legitimate outpatient IM median to use? If not, replace with what?
+3. **75th-percentile wRVU (5,800):** confirm or replace.
+4. **$/wRVU $64 median:** confirm or replace with synthesis derived from comp ÷ wRVU.
+5. **In-house call stipend $10K–$30K/year:** is this still acceptable as "Computer estimate"? Or should the narration soften ("typical hospital-employed contract stipends in this range")?
+6. **Sign-on bonus ranges (outpatient IM $25K–$100K, hospitalist $25K–$75K):** these come from AMN-style recruiter data — confirm the range and the on-screen source label.
+7. **NHSC loan repayment ($50K / 2 yr):** verify against current 2026 NHSC program rules.
+8. **IM tail premium ($15K–$60K):** confirm the range and source. This is the only Layer 7 dollar figure in the script.
+9. **"ACP" duplication on script line 39:** rewrite the source list. Suggested replacement: "MGMA 2025, SHM, and Doximity 2025" — confirm or correct.
+10. **MedScape vs Medscape:** style guide spells it "MedScape"; IM_DATA spells it "Medscape 2025". Confirm narration spelling — Ryan voice will say "med-scape" either way, but on-screen text should be consistent. Recommend "Medscape 2025".
+
+## What I'll do once Perplexity replies on the 10 items above
+1. Patch `yt-m1-compensation-stack.md` with corrected attributions + fix the 8 copy defects.
+2. Scaffold Remotion project at `med-contract-videos/` per style guide §REMOTION PROJECT STRUCTURE.
+3. Build components (WelcomeSlide, DataCallout, BarChart, BenchmarkRange, ComparisonColumns, CTASlide, OutroSlide, BrandMark) using v3.1 palette.
+4. Generate Ryan-voice narration via ElevenLabs (model `eleven_multilingual_v2`, stability 0.75, similarity 0.85). Pull API key from 1Password EMCI API Keys vault per style guide §AUDIO.
+5. Render `mci-m1-compensation-stack.mp4` at 1920×1080 / 30fps / H.264 / AAC 192k.
+6. Run full Gate 2 (render-time items: animation sync, audio peaks, no-blue check, transition verification).
+7. Re-write this section as **Gate 2 ALL PASS** with rendered file in place and chapter markers verified ±15s.
+
+## Chapter markers (from script, awaiting render confirmation)
+```
+0:00 — Introduction: Why IM Compensation Is Opaque
+1:30 — The Compensation Stack: 7 Layers
+3:00 — Layer 1: Base Salary / Base wRVU
+5:00 — Layer 2: Productivity Incentive
+6:30 — Layer 3: Quality / HEDIS Bonus
+8:00 — Layer 4: Call Stipends
+9:30 — Layer 5: Benefits Package Dollar Value
+11:00 — Layer 6: Sign-On and Loan Repayment
+12:30 — Layer 7: Tail Coverage and Exit Costs
+13:30 — How to Build Your Stack Math Before You Sign
+14:30 — Outro + Free Checklist
+```
+
+## Approve / return
+- Reply with one of:
+  - **APPROVED — yt-m1** (with answers to the 10 Gate 1 items) → I will execute the 7-step build above.
+  - **RETURN — yt-m1** with specific edits → I will patch script and re-submit.
+
+Last updated: 2026-04-25 by Claude Code
 
 ---
 
