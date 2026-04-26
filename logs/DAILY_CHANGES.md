@@ -6,6 +6,19 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ## 2026-04-26 (Sunday) — Day 4 late night → Day 5 bridge
 
+### 01:00 EDT — Perplexity — Shot 1 re-rolled (v3) to fix hallucinated text
+
+**[01:00 EDT] Perplexity — Owner flagged v1 of `veo-hook-physician-contract.mp4` contained nonsense non-English text on the contract pages (Veo interpreted "placeholder typography" literally). Re-rolled twice:**
+
+- **v2** — prompt rewritten to specify "completely blank pages, no text/writing/characters" with full document framing. Result: pages mostly clean but faint ink-mark artifacts still visible in lower-right corner of top page.
+- **v3 (delivered)** — reframed around the stethoscope chrome chest piece sitting on layered paper edges. Page surface is now hidden by the stethoscope and frame crop — no place for Veo to hallucinate text. Slow 4 percent push-in motion preserved. Visual QA: 4 frames sampled, all confirmed text-free.
+- **Replaced at target path:** `/Users/ambamplify/MedContractIntel/med-contract-videos/public/broll/veo-hook-physician-contract.mp4` (was 2.96 MB, now 2.22 MB).
+- **Composition deviation flagged in COMPUTER_RESPONSE.md:** v3 reads as "stethoscope on a stack of papers" rather than "multi-page employment contract." Still works as a brand-neutral medical-paperwork beat for the $308K/$319K data callout sequence.
+- **Total Veo credits this batch (revised):** ~6 generations (4 first-take + 2 re-rolls on Shot 1).
+- **Files re-shared to owner via chat.**
+
+---
+
 ### 00:38 EDT — Perplexity — Veo shots 1–4 delivered for yt-m1 M1B (Path C)
 
 **[00:38 EDT] Perplexity — 4 Veo 3.1 b-roll clips generated, transcoded to spec, response written**
