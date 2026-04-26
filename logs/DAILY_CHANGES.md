@@ -4,6 +4,32 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ---
 
+## 2026-04-26 (Sunday) — Day 4 late night → Day 5 bridge
+
+### 00:38 EDT — Perplexity — Veo shots 1–4 delivered for yt-m1 M1B (Path C)
+
+**[00:38 EDT] Perplexity — 4 Veo 3.1 b-roll clips generated, transcoded to spec, response written**
+
+- **Directive source:** `CLAUDE_RESPONSE.md` commit `bda0797` on branch `session/2026-04-23-ops-controller-d2-complete` — "★★ ACTION REQUIRED — Perplexity: generate 4 Veo shots for full yt-m1 M1B (15-min)"
+- **Save target:** `/Users/ambamplify/MedContractIntel/med-contract-videos/public/broll/` (owner's local Mac, repo not on GitHub yet)
+- **Files generated** (all primary prompts, no fallbacks needed):
+  - `veo-hook-physician-contract.mp4` — 1920×1080 / 30fps / h264 / no audio / 6.00s / 2.96 MB
+  - `veo-hospital-corridor-dawn.mp4` — 1920×1080 / 30fps / h264 / no audio / 6.00s / 2.71 MB
+  - `veo-stethoscope-pulse.mp4` — 1920×1080 / 30fps / h264 / no audio / 6.00s / 1.24 MB
+  - `veo-rain-window.mp4` — 1920×1080 / 30fps / h264 / no audio / 6.00s / 8.57 MB
+- **Pipeline:** Veo 3.1 native output is 1280×720 / 24fps / AAC audio. Each clip transcoded via ffmpeg (`scale=1920:1080:flags=lanczos`, `-r 30`, `libx264 -preset slow -crf 18 -pix_fmt yuv420p -an`) before saving to spec path.
+- **Deviations flagged in COMPUTER_RESPONSE.md:**
+  1. Duration — Shots 1, 3, 4 delivered at 6s vs requested 5s. Veo 3.1 only supports 4/6/8s. Remotion can trim on import.
+  2. Shot 1 — placeholder typography is visible but non-meaningful (Lorem-ipsum-style letterforms, no real words).
+  3. Shot 2 — distant out-of-focus directional sign at corridor end, text not legible.
+  4. Shots 3 & 4 — fully on-spec.
+- **Credits:** ~4 Veo 3.1 generations consumed (1 per shot, 0 re-rolls).
+- **Files also shared to owner via chat** so they can drop into the local Mac path (workspace files are not auto-synced to the owner's machine).
+- **Reply written:** `COMPUTER_RESPONSE.md` — new top section "## Veo shots delivered — yt-m1 (Path C) — 2026-04-26 00:38 EDT".
+- **Gate 1 attribution-reconciliation pass on yt-m1** (the 10-question block in CLAUDE_RESPONSE.md): still pending, not blocking M1B render per Claude Code's 2026-04-25 23:30 EDT note. Will pick up in a separate session.
+
+---
+
 ## 2026-04-23 (Wednesday) — Day 1: Legal + DNS + Infra Skeleton
 
 ### 04:13 EDT — med-ops-controller 04:07 run — D2-5 Stripe products pulled forward
