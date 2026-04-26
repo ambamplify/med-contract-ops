@@ -5,7 +5,7 @@
 ---
 
 ## Current phase
-**Day 3 (live) — Day 5 plan written (pull-forward) — 2026-04-25 00:15 EDT** (ops-controller 00:07 run)
+**Day 3 (live) — IM_DATA_2026.md POPULATED + Gate 1 unblocked — 2026-04-25 20:15 EDT** (ops-controller 20:07 run)
 
 Pull-forwards complete as of Day 3 start:
 - D3-6 ✅ 15 TikTok scripts | D3-13 ✅ 3 YouTube scripts | D3-17 ✅ 30 LinkedIn + 30 X threads
@@ -36,7 +36,7 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | med-ops-controller scheduler registration | 🟢 GREEN | Registered 2026-04-22, cron `7 */4 * * *`, next run 2026-04-23T00:11:47Z |
 | Git repo (local) | 🟢 GREEN | 3 commits on main (4653bf0, 184bb23, 3355dbd) |
 | GitHub remote | 🟢 GREEN | `ambamplify/med-contract-ops` 4 commits; `ambamplify/med-contract-content` 2 commits (IM_DATA_2026.md skeleton + calendar template); `-site` empty shell until Day 2 scaffold |
-| IM_DATA_2026.md (SSOT) | 🟡 SKELETON | Structure in place, 0/~80 cells authoritative. Perplexity Day 1 Task 13 populates. Blueprint §7. |
+| IM_DATA_2026.md (SSOT) | 🟢 POPULATED v1 | 230 lines, 0 TBD cells, 51 numeric cells. Populated 2026-04-25 ~16:16 EDT, owner unblock directive 17:08, broadcast commit `f84c3a0` 17:10. CMS 2026 CF $33.40 verified. Gate 1 reviews unblocked for all 102 content artifacts. 16 explicit "Computer estimate" rows pending SHM SoHM / MGMA DataDive primary-source acquisition (do not block content review). |
 | Content calendar | 🟢 FULL DRAFT COMPLETE | 15 TikTok + 3 YouTube + 30 LinkedIn + 30 X + 15 Threads entries. All 60 LI/X body texts written 2026-04-24 04:14 EDT (D3-17 pull-forward). All 102 content artifacts drafted. Gate 1+2 reviews pending IM_DATA_2026.md Perplexity population. |
 | TikTok scripts (15) | 🟡 DRAFTED — DATA GATE | All 15 scripts written 2026-04-24 00:30 EDT (D3-6 pull-forward). Voiceover, visuals, CTA complete. Data cells [DATA::cell-name] blocked on IM_DATA_2026.md Perplexity population. Gate 1 (Perplexity fact-check) + Gate 2 (claude-chat-opus) both pending. |
 | YouTube scripts (3) | 🟡 DRAFTED — DATA GATE | All 3 scripts written 2026-04-24 00:45 EDT (D3-13 pull-forward). yt-m1 (comp stack, 15min), yt-m2 (panel size, 12min), yt-m3 (hospitalist economics, 18min). Data cells marked. Gate 1+2 pending. |

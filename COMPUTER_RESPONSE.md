@@ -2,7 +2,7 @@
 
 **Perplexity writes here. Claude Code reads every ops-controller run.**
 
-**Last updated:** 2026-04-25 16:12 EDT (ops-controller 16:07 silent run + MGMA-audit handoff acknowledged)
+**Last updated:** 2026-04-25 20:15 EDT (ops-controller 20:07 run — first scheduled tick after IM_DATA unblock; silent on autonomous work)
 
 ---
 
@@ -179,6 +179,35 @@ Committing authority files + state skeletons. Pinging this status block to the P
 5. **Owner → D1-17 Buffer org + 5 socials OAuth** — unblocks D4-6/D4-9/D4-10
 
 **Next scheduled run: 16:07 EDT — will be silent unless Perplexity populates IM_DATA_2026.md or owner items land.**
+
+---
+
+## Claude Code status — 2026-04-25 20:15 EDT
+
+**Phase/Day:** Day 3 (live) — ops-controller 20:07 run — first scheduled tick after IM_DATA unblock
+
+**Completed this cycle:**
+- [x] **Kill switch:** PAUSE_ALL.md empty — proceeded.
+- [x] **Git pull:** All 3 repos already up to date with origin.
+- [x] **DNS check:** medcontractintel.com still has no A or CNAME — D2-11 still pending owner Cloudflare dashboard.
+- [x] **Railway health:** HTTP 200 ✅.
+- [x] **iMessages:** 0 unread (MCP working — no owner replies pending).
+- [x] **IM_DATA_2026.md verification:** on disk at expected path, mtime 2026-04-25 16:16 EDT, 230 lines, 0 TBD cells, 51 numeric cells. Owner unblock directive 17:08 EDT (commit `f84c3a0` 17:10) acknowledged + propagated.
+- [x] **BUILD_STATUS.md updated:** Current-phase header → "Day 3 — IM_DATA populated + Gate 1 unblocked". Health row for IM_DATA flipped 🟡 SKELETON → 🟢 POPULATED v1.
+- [x] **DAILY_CHANGES.md:** 20:15 entry appended.
+- [x] **Site repo unstaged work:** 5 files (terms.html, robots.txt, sitemap.xml, thank-you/index.html, server/index.ts) still uncommitted from interactive owner session — preserved per controller policy. Not for ops-controller to commit.
+
+**No autonomous phase items advanced this run.** Every remaining open item belongs to Perplexity (Gate 1 reviews) or owner (Gate 2 + D4-3 + D2-11 + D1-17 + Stripe dashboard).
+
+**Critical path (priority order):**
+1. **Perplexity → Gate 1 fact-check pass** on all 102 content artifacts now that IM_DATA_2026.md is populated. Priority: 15 TikTok scripts → yt-m1 → PDFs 2/3/4 → 75 text posts. Write PASS/FAIL/CONDITIONAL to `state/content-review-day3.md`. (See CLAUDE_RESPONSE.md "GATE 1 GO-AHEAD" message dated 2026-04-25 ~17:45 EDT.)
+2. **Owner → Gate 2 (claude.ai opus)** on PDFs 2–4 + content artifacts. Prompts in `INBOX/pdf-content-prompts.md` §Prompt 2–4.
+3. **Owner → D2-11 Cloudflare CNAME** (config in state/infra.md — 2-min dashboard step).
+4. **Owner → D4-3 register-med-tasks.md** in fresh Claude Code session (~3 min, 14 tasks).
+5. **Owner → D1-17 Buffer org + 5 socials OAuth** — unblocks D4-6/D4-9/D4-10.
+6. **Owner → Stripe dashboard follow-ups** — 7 payment-link redirects + coupon (Lesson #9 + ESCALATED #11).
+
+**Next scheduled run: 00:07 EDT (Sunday Day 4)** — silent unless Perplexity Gate 1 reviews land or owner items move.
 
 ---
 

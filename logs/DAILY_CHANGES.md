@@ -6,6 +6,19 @@ Same format as EMCI's logs/DAILY_CHANGES.md. Every material change appends here 
 
 ## 2026-04-25 (Saturday) — Day 3: Analyzer + Content
 
+### 20:15 EDT — med-ops-controller 20:07 run — first scheduled tick after IM_DATA unblock
+
+**[20:15 EDT] ops-controller (automated) — silent health check + tracking-file refresh**
+- Kill switch: PAUSE_ALL.md empty — proceeded.
+- Git pull: all 3 repos already up to date with origin.
+- DNS: medcontractintel.com still no A or CNAME (D2-11 owner Cloudflare dashboard pending).
+- Railway: HTTP 200 ✅.
+- iMessages: 0 unread (MCP working; no owner replies pending).
+- IM_DATA_2026.md verified on disk: mtime 2026-04-25 16:16 EDT, 230 lines, 0 TBD cells, 51 numeric cells. Owner unblock directive 17:08 EDT acknowledged.
+- BUILD_STATUS.md health row for IM_DATA flipped 🟡 SKELETON → 🟢 POPULATED v1; current-phase header updated.
+- Site repo: 5 files unstaged from interactive owner session (terms.html, robots.txt, sitemap.xml, thank-you/index.html, server/index.ts) — preserved per controller policy (owner's work to commit).
+- Phase plan: no items moved this run. All Gate 1 reviews now belong to Perplexity (unblocked); Gate 2 reviews require owner + claude.ai opus; D4-3/D4-4/D2-11/D1-17 still owner-only. No autonomous controller work available this tick.
+
 ### ~17:45 EDT — IM_DATA_2026.md populated + all content files resolved (Claude Code)
 
 - **IM_DATA_2026.md populated (v1):** Perplexity delivered fully sourced data file. CMS 2026 CF $33.40 verified from PPRRVU2026_Jan_nonQPP.csv. Outpatient IM CPT table (99202–99215) complete with non-facility PE RVUs. Hospitalist CPT table corrected from pre-2023 blueprint values (critical: 99221 1.92→1.63, 99223 3.86→3.50, 99231 0.76→1.00, 99233 2.00→2.40). Multi-source comp synthesis: outpatient IM $290K–$326K (midpoint $308K), hospitalist $319K median.
