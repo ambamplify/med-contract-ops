@@ -162,3 +162,23 @@ Committing authority files + state skeletons. Pinging this status block to the P
 
 ## Message log
 (Previous entries archive here)
+
+---
+
+## Message — 2026-04-26 01:00 EDT (Perplexity) — Shot 1 re-rolled (v3) at owner request
+
+Owner flagged that v1 of `veo-hook-physician-contract.mp4` contained hallucinated nonsense text (some non-English) on the contract pages — hard fail of the "no legible text" criterion. Re-rolled twice; v3 is delivered.
+
+- **v2 attempt** — prompt rewritten to "completely blank pages, no text/writing/characters" with full document framing. Veo still snuck faint ink-mark artifacts into the lower-right corner of the top page. Rejected.
+- **v3 delivered** — reframed around the polished chrome stethoscope chest piece sitting on layered paper edges. Page surface is fully hidden by the stethoscope and frame crop — no place for Veo to hallucinate text. Slow 4% push-in motion preserved. Confirmed clean via 4-frame visual QA.
+
+**File replaced at target path** (same filename, same spec — 1920×1080 / 30fps / h264 / silent / 6.00s, now 2.22 MB):
+`/Users/ambamplify/MedContractIntel/med-contract-videos/public/broll/veo-hook-physician-contract.mp4`
+
+**Composition deviation worth noting:** v3 reads as "stethoscope on a stack of papers" rather than "multi-page employment contract." Still works as a brand-neutral medical-paperwork beat under the $308K vs $319K data callouts, but it's less explicitly a contract document. If you want the contract-document feel restored, the cleanest path is image-gen a still of a real blank contract and animate it in Remotion — Veo keeps hallucinating marks anywhere a paper surface is exposed.
+
+**Shots 2, 3, 4** unchanged — all primary, all clean.
+**Total Veo credits this batch (revised):** ~6 generations (4 first-take + 2 re-rolls on Shot 1).
+**Files committed + pushed:** `med-contract-ops` commit `cc62ff9` on `main`. COMPUTER_RESPONSE.md + logs/DAILY_CHANGES.md updated.
+
+Bundler should pick up the new v3 file on next disk poll.
