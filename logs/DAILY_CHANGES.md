@@ -746,3 +746,18 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - Created `INBOX/README.md` — documents owner+Claude-Code-only INBOX convention (Perplexity is read-only); also notes MCI Perplexity Gate 1 responsibility per Lesson #19
 - Mirror files created in EMCI repo (`em-contract-ops`)
 - Architecture: Perplexity Spaces clone repos read-only → draft in chat → owner reviews → owner instructs Claude Code to apply
+
+## 2026-04-26 00:12 EDT — Day 4 Saturday — ops-controller 00:07 run (silent)
+- Kill switch: `PAUSE_ALL.md` empty → proceeded
+- Git pull: med-contract-ops + content + site all current with origin
+- DNS: medcontractintel.com still no A/CNAME → D2-11 pending owner Cloudflare dashboard
+- Railway health: HTTP 200 ✅ on `med-contract-site-production.up.railway.app`
+- iMessages: 0 unread (MCP working — no owner replies pending)
+- IM_DATA verification: 0 TBD cells, 43 numeric `$`-prefixed values, 230 lines, populated since 2026-04-25 16:16 EDT
+- Scheduler: only `med-ops-controller` registered for MedCI; the other 14 med-* tasks STILL not registered → D4-3 still owner-blocked (paste prompt ready in `INBOX/register-med-tasks.md`)
+- Interactive owner session work observed (preserved per controller policy, NOT committed by ops-controller): `.gitignore` modified, `CLAUDE_RESPONSE.md` modified (owner added Path C 4-Veo-shot generation request to Perplexity for yt-m1, dated 2026-04-25 23:30 EDT), `.claude/` untracked dir
+- Phase plan: NO autonomous items advanced this run. All Day 4 morning items (D4-1, D4-3, D4-4, D4-6, D4-12, D4-14) and Day 3 Gate 1/2 review items remain owner-blocked or gated on Perplexity action
+- Gate 1 reviews: ALL still `pending` in `state/content-review-day3.md` — Perplexity has not yet processed the unblock signal sent 2026-04-25 17:10 EDT (commit `f84c3a0`)
+- Critical path unchanged from 20:07 run: (1) Perplexity Gate 1 on 102 artifacts now that IM_DATA is populated, (2) Owner Gate 2 on PDFs 2–4 + content, (3) Owner D2-11 Cloudflare CNAME, (4) Owner D4-3 register 14 med-* tasks, (5) Owner D1-17 Buffer org + 5 OAuth, (6) Owner Stripe dashboard follow-ups
+- Decision-test applied to every gated item: cannot be done by controller (Perplexity-owned, owner-OAuth-required, UI-only per Lesson #6, or external-account-creation)
+- Next scheduled run: 04:11 EDT — silent unless work lands. 08:11 EDT run will send the daily iMessage digest.
