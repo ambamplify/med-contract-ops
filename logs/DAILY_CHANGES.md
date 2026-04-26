@@ -762,6 +762,27 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - Decision-test applied to every gated item: cannot be done by controller (Perplexity-owned, owner-OAuth-required, UI-only per Lesson #6, or external-account-creation)
 - Next scheduled run: 04:11 EDT — silent unless work lands. 08:11 EDT run will send the daily iMessage digest.
 
+## 2026-04-26 ~01:00 EDT — D2-8 ✅ DONE: 4 finalized opus PDFs delivered + installed (ops-controller, owner-triggered)
+- **Owner delivered 4 finalized PDFs** from claude.ai opus session, dropped at `~/MedContractIntel/MedcontractIntel Opus PDFs/`:
+  - `medcontract-hospitalist-shift-economics.pdf` (1.26 MB)
+  - `medcontract-im-red-flag-checklist.pdf` (20 KB)
+  - `medcontract-negotiation-script-pack.pdf` (1.28 MB)
+  - `medcontract-wrvu-playbook.pdf` (1.31 MB)
+- **Installed in `med-contract-site` repo** with the filenames the webhook + checklist page expect (commit `1cf1bba`):
+  - `server/pdfs/med-shift-economics.pdf` (replaces 664-byte placeholder)
+  - `server/pdfs/med-wrvu-playbook.pdf` (replaces 668-byte placeholder)
+  - `server/pdfs/med-negotiation-script-pack.pdf` (replaces 663-byte placeholder)
+  - `server/pdfs/med-contract-red-flag-checklist.pdf` (replaces 661-byte placeholder)
+  - `public/assets/med-contract-red-flag-checklist.pdf` (NEW — replaces EMCI residual `em-contract-red-flag-checklist.pdf` for /checklist/ free-download redirect)
+- **EMCI brand drift removed:** deleted `public/assets/em-contract-red-flag-checklist.pdf`.
+- **Build script (Lesson #2):** `cp -r server/pdfs dist/server/pdfs` already in `package.json` build → Railway auto-redeploy carries the binaries into dist.
+- **Owner's other uncommitted site edits preserved** (10 files: legal pages, sitemap.xml, server/{index,letter-docx,pdf-report}.ts, etc.) — only the 6 PDF-related paths were staged for this commit.
+- **Lesson #19 status updated in `state/content-review-day3.md`:**
+  - All 4 PDFs flipped Gate 2 → **PASS** (binaries are direct output of owner Claude Chat Opus session = Gate 2 PASS by definition).
+  - Gate 1 (Perplexity fact-check) still pending for all 4 — Perplexity must verify dollar figures, CMS PFS values (Appendix A in wRVU playbook), MGMA / SHM benchmarks (Appendix B), and state non-compete law (Appendix D + red-flag Flag 9). This is the remaining piece for Launch Gate 18.
+- **PHASE_STATUS.md:** D2-8 checkbox + table row both flipped to done. BUILD_STATUS.md current-phase header updated to "Day 4 (live) — 4 finalized opus PDFs delivered + installed in production" + new health row "4 IM PDFs (production binaries) 🟢 GREEN".
+- **Verification:** `ls server/pdfs/` confirms 4 files at expected sizes; `git log -1` confirms commit `1cf1bba` pushed to `ambamplify/med-contract-site` main.
+
 ## 2026-04-26 00:35 EDT — Subscriptions reference file created (Claude Code)
 - New `state/subscriptions.md` — single reference for all paid services, free-tier accounts, and recurring memberships tied to MCI. Sections: (1) MCI-exclusive subs (most still 🟣 owner-gated for Day 1), (2) shared subs split by what's shared vs separated per business, (3) free-tier accounts (Stripe webhook id, social handles), (4) monthly burn rollup, (5) renewal watchlist (domain auto-renew, Make.com ops budget shared with EMCI, ElevenLabs quota shared).
 - Companion file created in EMCI repo: `~/Desktop/em-contract-ops/state/subscriptions.md` (mirror structure, EMCI viewpoint).

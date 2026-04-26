@@ -5,12 +5,13 @@
 ---
 
 ## Current phase
-**Day 3 (live) — IM_DATA_2026.md POPULATED + Gate 1 unblocked — 2026-04-25 20:15 EDT** (ops-controller 20:07 run)
+**Day 4 (live) — 4 finalized opus PDFs delivered + installed in production — 2026-04-26 ~01:00 EDT**
 
-Pull-forwards complete as of Day 3 start:
+Pull-forwards + Day 4 progress:
 - D3-6 ✅ 15 TikTok scripts | D3-13 ✅ 3 YouTube scripts | D3-17 ✅ 30 LinkedIn + 30 X threads
 - D4-2 ✅ 14 med-* SKILL.md files | D4-5 ✅ Make.com M1 Modules 1+2 (scenario 4846282) | D3-21 ✅ Day 4 plan
-- D2-8 ✅ All 4 PDF content drafts written | D4-15 [~] Day 5 hour-by-hour + §13 Launch Gate quick-ref written
+- **D2-8 ✅ ALL 4 OPUS PDFs DELIVERED + INSTALLED — site repo commit `1cf1bba`. Gate 2 PASS. Gate 1 (Perplexity) still pending.**
+- D4-15 [~] Day 5 hour-by-hour + §13 Launch Gate quick-ref written
 
 **All autonomous content work is exhausted.** Every remaining item needs IM_DATA_2026.md Perplexity population OR owner action.
 Owner priorities: (1) D4-3 register tasks from fresh Claude Code session, (2) D1-17 Buffer, (3) Stripe dashboard follow-ups, (4) Perplexity populate IM_DATA_2026.md, (5) Gate 2 opus reviews on PDFs 2–4 + all content.
@@ -59,6 +60,7 @@ Remaining Day 1 items are all owner-blocked or depend on unblocked items.
 | Stripe webhook | 🟢 GREEN | `we_1TPM9sRS3QYs0eSMtH7Z6Dtt` — live mode, 4 events, Railway URL (temp). Update URL → medcontractintel.com when CNAME resolves. STRIPE_WEBHOOK_SECRET in Railway env. |
 | Smoke test #1 | 🟢 GREEN | homepage/calculator/analyzer all 200. Stripe test-mode checkout requires custom domain (pending D2-11). |
 | Site deploy | 🟢 GREEN | HTTP 200 on `med-contract-site-production.up.railway.app`. Custom domain needs Cloudflare CNAME (owner 2 min — config in state/infra.md). Redeploying with STRIPE_WEBHOOK_SECRET (deploy 29a54ab4). |
+| 4 IM PDFs (production binaries) | 🟢 GREEN | All 4 owner-finalized opus PDFs installed in `med-contract-site/server/pdfs/` + `public/assets/med-contract-red-flag-checklist.pdf` (commit `1cf1bba`). Sizes: shift-economics 1.26 MB / wrvu 1.31 MB / negotiation 1.28 MB / red-flag 20 KB. Gate 2 PASS (owner opus binary). Gate 1 (Perplexity) pending. |
 | Analyzer | 🔴 NOT YET | Day 3 |
 | Content pipeline | 🔴 NOT YET | Day 3 (Lesson #19 dual review gates baked into schedule) |
 | Social accounts | 🔴 NOT YET | Day 1 owner + Day 3 setup |
