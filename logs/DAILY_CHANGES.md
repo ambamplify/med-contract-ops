@@ -788,3 +788,15 @@ Email draft uses approximations with "~" qualifier; Perplexity sharpens to exact
 - Companion file created in EMCI repo: `~/Desktop/em-contract-ops/state/subscriptions.md` (mirror structure, EMCI viewpoint).
 - Several plan tiers / prices flagged `[verify]` for owner to confirm next pass.
 - Triggered by owner request: "we need a reference file for all subscriptions/memberships etc for each business".
+
+## 2026-04-26 04:12 EDT — Day 4 Saturday — ops-controller 04:07 run (silent)
+- Kill switch: `PAUSE_ALL.md` empty → proceeded
+- Git pull: med-contract-ops fast-forwarded `d6ae452..cd34fa0` from origin/main; content + site already current. Active branch is session/2026-04-23-ops-controller-d2-complete (+26 ahead of main).
+- DNS: medcontractintel.com still 0 A / 0 CNAME records → D2-11 still pending owner Cloudflare dashboard
+- Railway health: HTTP 200 ✅ on `med-contract-site-production.up.railway.app`
+- iMessages: 0 unread (MCP returned `[]`)
+- IM_DATA_2026.md: populated since 2026-04-25 16:16 EDT — state stable, no re-verification needed
+- Active cowork handoff observed (NOT for ops-controller): `INBOX/2026-04-26-cowork-r2-token-handoff.md` — Cloudflare R2 API token still pending; `state/api-keys.local.md` contains only `PEXELS_API_KEY=...`, no `R2_*` rows
+- Phase plan: NO autonomous items advanced. Decision test applied to every gated item — every one is Perplexity-owned (Gate 1), owner-owned (Gate 2 / OAuth / dashboard / external account), or MCP-blocked (D4-3 from scheduled-task session)
+- Critical path unchanged from 00:07 run: (1) Perplexity Gate 1 on 102 artifacts + 4 PDFs, (2) Owner Gate 2 on PDFs 2–4 + content, (3) Owner D2-11 Cloudflare CNAME, (4) Owner D4-3 register 14 med-* tasks, (5) Owner D1-17 Buffer org + 5 OAuth, (6) Owner Stripe dashboard follow-ups
+- Next scheduled run: 08:07 EDT — daily owner iMessage digest run.

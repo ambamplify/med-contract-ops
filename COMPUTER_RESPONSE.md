@@ -2,7 +2,7 @@
 
 **Perplexity writes here. Claude Code reads every ops-controller run.**
 
-**Last updated:** 2026-04-25 20:15 EDT (ops-controller 20:07 run — first scheduled tick after IM_DATA unblock; silent on autonomous work)
+**Last updated:** 2026-04-26 04:12 EDT (ops-controller 04:07 run — Day 4 Saturday silent run; D2-8 closed last night)
 
 ---
 
@@ -179,6 +179,46 @@ Committing authority files + state skeletons. Pinging this status block to the P
 5. **Owner → D1-17 Buffer org + 5 socials OAuth** — unblocks D4-6/D4-9/D4-10
 
 **Next scheduled run: 16:07 EDT — will be silent unless Perplexity populates IM_DATA_2026.md or owner items land.**
+
+---
+
+## Claude Code status — 2026-04-26 04:12 EDT
+
+**Phase/Day:** Day 4 (live, Saturday) — ops-controller 04:07 run — silent
+
+**Completed this cycle:**
+- [x] **Kill switch:** `PAUSE_ALL.md` empty → proceeded.
+- [x] **Git pull:** med-contract-ops fast-forwarded `d6ae452..cd34fa0` on origin/main; content + site repos already current. (Active branch is `session/2026-04-23-ops-controller-d2-complete`, +26 ahead of main; controller continues writing to session branch per established pattern.)
+- [x] **DNS check:** medcontractintel.com — 0 A records, 0 CNAME records. D2-11 still pending owner Cloudflare dashboard step (config in `state/infra.md`).
+- [x] **Railway health:** HTTP 200 ✅ on `med-contract-site-production.up.railway.app`.
+- [x] **iMessages:** 0 unread (MCP returned `[]` — no owner replies pending).
+- [x] **IM_DATA_2026.md:** populated since 2026-04-25 16:16 EDT, banner unchanged. No re-verification this run (state stable).
+- [x] **Active cowork handoff observed (NOT for ops-controller to action):** `INBOX/2026-04-26-cowork-r2-token-handoff.md` is an open handoff from the MCI YouTube production session to a Cowork session for Cloudflare R2 API token generation. Token has NOT yet landed — `state/api-keys.local.md` contains only `PEXELS_API_KEY=...`, no `R2_*` rows. Parent (YouTube production) session is the consumer once cowork delivers; ops-controller stays out of the loop.
+- [x] **Untracked working-tree state preserved:** `.claude/` directory + `INBOX/2026-04-26-cowork-r2-token-handoff.md` left untouched (interactive/cowork session work).
+- [x] **DAILY_CHANGES.md:** 04:07 silent-run entry appended.
+- [x] **COMPUTER_RESPONSE.md:** this status block written + `Last updated` header refreshed.
+
+**Phase plan:** No autonomous items advanced. Decision test applied to every still-pending item:
+- Gate 1 reviews on 102 content artifacts + 4 PDFs → **Perplexity-owned** (Lesson #19 Gate 1).
+- Gate 2 reviews on PDFs 2–4 + content → **owner-owned** (claude.ai opus, prompts in `INBOX/pdf-content-prompts.md`).
+- D4-3 register 14 med-* tasks → MCP-blocked from scheduled-task sessions (paste prompt ready in `INBOX/register-med-tasks.md`).
+- D4-4 Run-Now permission pre-approve → owner UI clicks (Lesson #18).
+- D4-6 Make.com Modules 3–9 → owner UI-only after Module 2 (Lesson #6).
+- D2-11 Cloudflare CNAME → owner dashboard (no CF API token autonomously available).
+- D1-17 Buffer org + 5 OAuth, D1-14 TikTok Business, D1-16 Kit, D1-6/D1-7 Google secondary domain + aliases → owner external accounts.
+- D2-7 Stripe payment-link `after_completion` redirects → owner Stripe dashboard (MCP doesn't expose `after_completion` on Payment Links).
+
+Result: silent run, status logging only.
+
+**Critical path (priority order, unchanged from 00:07 run):**
+1. **Perplexity → Gate 1 fact-check pass** on all 102 content artifacts + 4 PDFs against IM_DATA_2026.md. Write PASS/FAIL/CONDITIONAL to `state/content-review-day3.md`.
+2. **Owner → Gate 2 (claude.ai opus)** on PDFs 2–4 + content artifacts. Prompts in `INBOX/pdf-content-prompts.md` §Prompt 2–4.
+3. **Owner → D2-11 Cloudflare CNAME** (config in state/infra.md — 2-min dashboard step).
+4. **Owner → D4-3 register-med-tasks.md** in fresh Claude Code session (~3 min, 14 tasks).
+5. **Owner → D1-17 Buffer org + 5 socials OAuth** — unblocks D4-6/D4-9/D4-10.
+6. **Owner → Stripe dashboard follow-ups** — 7 payment-link redirects + coupon (Lesson #9 + ESCALATED #11).
+
+**Next scheduled run: 08:07 EDT — DIGEST RUN.** Will compose + send Day 4 owner iMessage digest (~1,500 chars, numbered owner decisions).
 
 ---
 
